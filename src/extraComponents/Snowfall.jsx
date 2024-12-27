@@ -31,7 +31,7 @@ const generateSnowflakes = () => {
   for (let i = 0; i < numberOfSnowflakes; i++) {
     const randomLeft = Math.random() * 100; // Random position from left
     const randomDelay = Math.random() * 5; // Random delay for animation
-    const randomSize = 5 + Math.random() * 5; // Random size for snowflakes
+    const randomSize = 4 + Math.random() * 5; // Random size for snowflakes
 
     snowflakes.push(
       <div
@@ -61,7 +61,6 @@ const Snowfall = () => {
         overflow: hidden;
         width: 100%;
         height: 100vh;
-        background-color: #282c34; /* Dark background to show snowflakes */
       `}
     >
       {generateSnowflakes()}

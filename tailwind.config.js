@@ -9,7 +9,10 @@ export default {
       colors: {
         "dark-gray": "#272829",
         "light-gray": "#3D3E42"
-      }
+      },
+      fontFamily: {
+        "poppins": ['Poppins', 'sans-serif'], // Set Poppins as the default sans font
+      },
     },
   },
   plugins: [],
