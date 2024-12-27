@@ -3,23 +3,26 @@ import LogoComponent from '../extraComponents/Logo'
 import { Link } from 'react-router'
 import { IoSearch } from "react-icons/io5";
 
-export default function navbar() {
+export default function Navbar() {
   return (
-    <div className='flex'>
+    <div className='flex justify-between w-full'>
       <LogoComponent />
 
-      <nav>
-        <ul className='flex'>
-          <li><Link to={"/"}>Home</Link></li>
-          <li><Link to={"/a"}>Skills</Link></li>
-          <li><Link to={"/b"}>Projects</Link></li>
-        </ul>
-      </nav>
+      <div className='flex justify-between'>
+        <nav>
+          <ul className='flex'>
+            <li><Link to={"/"}>Home</Link></li>
+            <li><Link to={"/a"}>Skills</Link></li>
+            <li><Link to={"/b"}>Projects</Link></li>
+          </ul>
+        </nav>
+      </div>
 
       <div className="search-bar flex">
-        <input type="text" className='h-[56px] bg-light-gray' />
-        <IoSearch />
+        <input type="text" placeholder='Search' className='h-[56px] hover:w-full' />
+        <IoSearch id='search-icon' />
       </div>
+
     </div>
   )
 }
