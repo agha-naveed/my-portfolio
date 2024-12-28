@@ -10,6 +10,7 @@ const snowflakeStyle = css`
   background-color: white;
   border-radius: 50%;
   opacity: 0.8;
+  z-index: 100;
   animation: fall 5s linear infinite;
 
   @keyframes fall {
