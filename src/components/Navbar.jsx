@@ -1,9 +1,32 @@
-import React from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import LogoComponent from '../extraComponents/Logo'
 import { Link } from 'react-router'
 import { IoSearch } from "react-icons/io5";
 
 export default function Navbar() {
+
+  const [searchWidth, setSearchWidth] = useState(false)
+  const divRef = useRef(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (divRef.current && !divRef.current.contains(event.target)) {
+        setSearchWidth(false);
+      }
+    };
+
+    document.addEventListener('click', handleClickOutside);
+
+    return () => {
+      document.removeEventListener('click', handleClickOutside);
+    };
+  }, []);
+
+  const handleClick = () => {
+    setSearchWidth(true);
+  };
+
+  
   return (
     <div className='lg:flex grid lg:justify-between justify-center w-full'>
       <LogoComponent />
@@ -22,7 +45,8 @@ export default function Navbar() {
       </div>
 
       <div className="search-bar lg:flex hidden">
-        <input type="text" placeholder='Search' className='h-[56px] w-[64%] hover:w-[90%] outline-none text-[22px]' />
+        <input ref={divRef} onClick={handleClick} type="text" placeholder='Search'
+        className={`${searchWidth ? "w-[90%]" : "w-[64%]"}  h-[56px] outline-none text-[22px]`} />
 
         <IoSearch id='search-icon' />
       </div>
