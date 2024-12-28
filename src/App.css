@@ -9,9 +9,6 @@
     color: #b4b4b4;
     padding: 12px 52px 12px 20px;
     border-radius: 12px;
-    font-size: 22px;
-    outline: none;
-    width: 64%;
     justify-content: right;
     transition: 0.2s linear;
 }
@@ -21,4 +18,9 @@
     font-size: 20px;
     color: #b4b4b4;
     height: 56px;
+}
+
+
+.p-40-80 {
+    padding: 40px 80px;
 }

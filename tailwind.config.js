@@ -8,10 +8,11 @@ export default {
     extend: {
       colors: {
         "dark-gray": "#272829",
-        "light-gray": "#3D3E42"
+        "light-gray": "#3D3E42",
+        "text-clr": "#b4b4b4"
       },
       fontFamily: {
-        "poppins": ['Poppins', 'sans-serif'], // Set Poppins as the default sans font
+        "poppins": ['Poppins', 'sans-serif']
       },
     },
   },
