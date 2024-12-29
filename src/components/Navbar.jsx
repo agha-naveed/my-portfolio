@@ -35,8 +35,8 @@ export default function Navbar() {
         <nav className='content-center text-text-clr text-[18.5px]'>
           <ul className='flex'>
             <li><Link to={"/"} className='px-[18px] py-[8px] !text-white'>Home</Link></li>
-            <li><Link to={"/a"} className='px-[18px] py-[8px]'>Skills</Link></li>
-            <li><Link to={"/b"} className='px-[18px] py-[8px]'>Projects</Link></li>
+            <li><Link to={"/a"} className='px-[18px] transition-all hover:text-white py-[8px]'>Skills</Link></li>
+            <li><Link to={"/b"} className='px-[18px] transition-all hover:text-white py-[8px]'>Projects</Link></li>
           </ul>
         </nav>
 

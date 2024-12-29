@@ -13,6 +13,7 @@ export default {
         "yellow-text": "#FFC86B"
       },
       fontFamily: {
+        "poppins-light": ['poppins-light'],
         "poppins-regular": ['poppins-regular'],
         "poppins-medium": ['poppins-medium'],
         "poppins-semibold": ['poppins-semibold'],
