@@ -11,9 +11,9 @@ export default function Header() {
       <div className="container mx-auto w-full relative z-10">
         <Navbar />
 
-        <header className='w-[95%] h-full justify-center lg:flex grid relative z-10'>
+        <header className='lg:w-[95%] w-full h-full justify-center lg:flex grid relative z-10'>
           
-          <div className='content-center'>
+          <div className='content-center place-self-center'>
             <span className='flex'>
               <h4 className='text-white font-poppins-light text-2xl'>I'M</h4>
               <h1 className='text-yellow-text text-[60px] font-poppins-medium w-[90%]'>Agha Naveed</h1>
@@ -24,11 +24,11 @@ export default function Header() {
               <h3 className='text-white font-poppins-regular text-[32px] mb-8'>Web Developer / Programmer</h3>
             </span>
 
-            <Link className='text-yellow-text text-[26px] border-[4px] rounded-lg border-yellow-text px-7 py-3 mt-5'>Contact Me</Link>
+            <Link className='text-yellow-text text-[26px] border-[4px] rounded-lg border-yellow-text px-7 py-3 mt-5 justify-self-center lg:inline grid'>Contact Me</Link>
             
           </div>
           
-          <div className='w-fit'>
+          <div className='w-fit select-none'>
             <img src={myPic} decoding='async' className='w-full relative top-[40px]' alt="Agha Naveed Image" />
           </div>
         </header>
