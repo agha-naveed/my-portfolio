@@ -45,9 +45,9 @@ const shineAnimation = css`
 `;
 
 const LogoComponent = () => (
-  <div className="logo" css={logoStyles}>
+  <div className="logo self-center mb-3" css={logoStyles}>
     <h2 className="btn-shine" css={[shineTextStyles, shineAnimation]}>
-      <a href="#" className='font-poppins-medium'>Agha Naveed</a>
+      <a href="#" className='lg:text-[26px] text-[28px] font-poppins-medium'>Agha Naveed</a>
     </h2>
     <img decoding="async" loading="lazy" src="img/my-logo.webp" alt="Agha Naveed logo" css={imgStyles} />
   </div>
