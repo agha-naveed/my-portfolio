@@ -27,7 +27,7 @@ const snowflakeStyle = css`
 
 const generateSnowflakes = () => {
   const snowflakes = [];
-  const numberOfSnowflakes = 50; // Number of snowflakes
+  const numberOfSnowflakes = 30;
 
   for (let i = 0; i < numberOfSnowflakes; i++) {
     const randomLeft = Math.random() * 100; // Random position from left

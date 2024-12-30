@@ -8,11 +8,11 @@ export default function Header() {
   return (
 
     <div className='w-full h-auto bg-dark-gray justify-items-center p-40-80 relative'>
-      <div className="container mx-auto w-full relative grid gap-20 z-10">
+      <div className="container mx-auto w-full relative grid gap-5 z-10">
         
         <Navbar />
 
-        <header className='lg:w-[95%] w-full h-full justify-center lg:flex grid relative z-10'>
+        <header className='lg:w-[95%] md:p-0 p-10 w-full h-full justify-center lg:flex grid relative z-10'>
           
           <div className='content-center place-self-center'>
             <span className='flex place-self-center'>
@@ -29,8 +29,8 @@ export default function Header() {
             
           </div>
           
-          <div className='w-fit select-none'>
-            <img src={myPic} decoding='async' className='w-full relative top-[40px]' alt="Agha Naveed Image" />
+          <div className='w-fit select-none place-items-center'>
+            <img src={myPic} decoding='async' className='md:w-full w-[90%] relative top-[40px]' alt="Agha Naveed Image" />
           </div>
         </header>
 
