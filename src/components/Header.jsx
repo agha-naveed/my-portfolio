@@ -5,6 +5,7 @@ import myPic from '../assets/img/my-picture.png';
 import { Link } from 'react-router';
 
 export default function Header() {
+
   return (
 
     <div className='w-full h-auto bg-dark-gray justify-items-center p-40-80 relative'>
