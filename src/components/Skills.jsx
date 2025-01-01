@@ -1,4 +1,7 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 import html from '../assets/img/skills-logo/html-logo.svg'
 import css from '../assets/img/skills-logo/css-logo.svg'
 import js from '../assets/img/skills-logo/javascript-logo.svg'
@@ -16,6 +19,9 @@ import photoshop from '../assets/img/skills-logo/photoshop.svg'
 import wordpress from '../assets/img/skills-logo/wordpress.svg'
 
 export default function Skills() {
+  useEffect(() => {
+    AOS.init();
+  }, [])
   return (
     <div className='w-full h-auto bg-light-gray p-40-80'>
       
@@ -31,11 +37,11 @@ export default function Skills() {
           </div>
         </section>
 
-        <section className=''>
+        <section className='py-32'>
 
-          <h1 className='text-white text-[38px] font-poppins-semibold text-center py-6'>Skills</h1>
+          <h1 className='text-white text-[36px] font-poppins-semibold text-center py-6'>Skills</h1>
 
-          <div data-aos="fade-up" data-aos-duration="1000" className='skills-logos flex flex-wrap gap-4 justify-center'>
+          <div data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-duration="1200" className='skills-logos flex flex-wrap gap-4 justify-center'>
           
             <div className='overflow-hidden'>
               <img src={html} className='z-10' alt="html" />
