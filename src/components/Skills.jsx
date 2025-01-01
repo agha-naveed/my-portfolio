@@ -10,7 +10,7 @@ import nodejs from '../assets/img/skills-logo/nodejs.svg'
 
 export default function Skills() {
   return (
-    <div className='w-full h-full bg-light-gray p-40-80'>
+    <div className='w-full h-auto bg-light-gray p-40-80'>
       
       <div className="container mx-auto justify-items-center">
 
@@ -24,10 +24,44 @@ export default function Skills() {
           </div>
         </section>
 
-        <section>
-          <h3 className='text-white text-[38px] font-poppins-semibold'>My SKILLS</h3>
+        <section className=''>
+          <h1 className='text-white text-[38px] font-poppins-semibold'>Skills</h1>
 
-          
+          <div className='skills-logos flex flex-wrap gap-4 justify-center'>
+            <div>
+              <img src={html} alt="html" />
+              <span>HTML</span>
+            </div>
+            <div>
+              <img src={css} alt="css" />
+              <span>CSS</span>
+            </div>
+            <div>
+              <img src={js} alt="javascript" />
+              <span>JavaScript</span>
+            </div>
+            <div>
+              <img src={bootstrap} alt="Bootstrap" />
+              <span>Bootstrap</span>
+            </div>
+            <div>
+              <img src={tailwind} alt="TailwindCSS" />
+              <span>Tailwind</span>
+            </div>
+            <div>
+              <img src={react} alt="React.Js" />
+              <span>React.JS</span>
+            </div>
+            <div>
+              <img src={express} alt="Express.js" />
+              <span>Express.JS</span>
+            </div>
+            <div>
+              <img src={nodejs} alt="Node.Js" />
+              <span>Node.JS</span>
+            </div>
+            
+          </div>
         </section>
 
       </div>

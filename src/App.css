@@ -58,12 +58,27 @@
   stroke-dasharray: 20 300;
   stroke-dashoffset: -32.42;
 }
-  
 
 
+.skills-logos div {
+  width: 200px;
+  height: 200px;
+  background-color: #313233;
+  display: flex;
+  color: white;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  font-weight: 500;
+  gap: 20px;
+  font-size: 18px;
+}
 
-
-
+.skills-logos div img {
+  width: 30%;
+  /* height: 50px; */
+}
 
 
 
