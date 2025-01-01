@@ -24,18 +24,10 @@ export default function Skills() {
           </div>
         </section>
 
-        <section className=''>
-          <h1 className='text-white text-[38px] font-poppins-semibold'>Skills</h1>
-          <div>
-            <img src={html} alt="html" />
-            <img src={css} alt="css" />
-            <img src={js} alt="javascript" />
-            <img src={bootstrap} alt="bootstrap" />
-            <img src={tailwind} alt="tailwind" />
-            <img src={react} alt="react.js" />
-            <img src={express} alt="express.js" />
-            <img src={nodejs} alt="node.js" />
-          </div>
+        <section>
+          <h3 className='text-white text-[38px] font-poppins-semibold'>My SKILLS</h3>
+
+          
         </section>
 
       </div>

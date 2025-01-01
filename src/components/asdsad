@@ -1,0 +1,38 @@
+<section className=''>
+          <h1 className='text-white text-[38px] font-poppins-semibold'>Skills</h1>          
+          <div className='skills-logos'>
+            <div>
+              <img src={html} alt="html" />
+              <span>HTML</span>
+            </div>
+            <div>
+              <img src={css} alt="css" />
+              <span>CSS</span>
+            </div>
+            <div>
+              <img src={js} alt="javascript" />
+              <span>JavaScript</span>
+            </div>
+            <div>
+              <img src={bootstrap} alt="Bootstrap" />
+              <span>Bootstrap</span>
+            </div>
+            <div>
+              <img src={tailwind} alt="TailwindCSS" />
+              <span>Tailwind</span>
+            </div>
+            <div>
+              <img src={react} alt="React.Js" />
+              <span>React.JS</span>
+            </div>
+            <div>
+              <img src={express} alt="Express.js" />
+              <span>Express.JS</span>
+            </div>
+            <div>
+              <img src={nodejs} alt="Node.Js" />
+              <span>Node.JS</span>
+            </div>
+            
+          </div>
+        </section>
