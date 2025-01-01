@@ -7,6 +7,13 @@ import tailwind from '../assets/img/skills-logo/tailwind-logo.svg'
 import react from '../assets/img/skills-logo/react.svg'
 import express from '../assets/img/skills-logo/express.svg'
 import nodejs from '../assets/img/skills-logo/nodejs.svg'
+import mysql from '../assets/img/skills-logo/mysql.svg'
+import mongodb from '../assets/img/skills-logo/mongo.svg'
+import python from '../assets/img/skills-logo/python.svg'
+import cpp from '../assets/img/skills-logo/cpp.svg'
+import java from '../assets/img/skills-logo/java.svg'
+import photoshop from '../assets/img/skills-logo/photoshop.svg'
+import wordpress from '../assets/img/skills-logo/wordpress.svg'
 
 export default function Skills() {
   return (
@@ -25,12 +32,14 @@ export default function Skills() {
         </section>
 
         <section className=''>
-          <h1 className='text-white text-[38px] font-poppins-semibold'>Skills</h1>
 
-          <div className='skills-logos flex flex-wrap gap-4 justify-center'>
-            <div>
-              <img src={html} alt="html" />
-              <span>HTML</span>
+          <h1 className='text-white text-[38px] font-poppins-semibold text-center py-6'>Skills</h1>
+
+          <div data-aos="fade-up" data-aos-duration="1000" className='skills-logos flex flex-wrap gap-4 justify-center'>
+          
+            <div className='overflow-hidden'>
+              <img src={html} className='z-10' alt="html" />
+              <span className='z-10'>HTML</span>
             </div>
             <div>
               <img src={css} alt="css" />
@@ -60,6 +69,35 @@ export default function Skills() {
               <img src={nodejs} alt="Node.Js" />
               <span>Node.JS</span>
             </div>
+            <div>
+              <img src={mongodb} alt="MongoDB" />
+              <span>MongoDB</span>
+            </div>
+            <div>
+              <img src={mysql} alt="MySQL" />
+              <span>MySQL</span>
+            </div>
+            <div>
+              <img src={python} alt="Python" />
+              <span>Python</span>
+            </div>
+            <div>
+              <img src={cpp} alt="c++" />
+              <span>C++</span>
+            </div>
+            <div>
+              <img src={java} alt="Java" />
+              <span>Java</span>
+            </div>
+            <div>
+              <img src={photoshop} alt="Photoshop" />
+              <span>Photoshop</span>
+            </div>
+            <div>
+              <img src={wordpress} alt="wordpress" />
+              <span>Wordpress</span>
+            </div>
+
             
           </div>
         </section>

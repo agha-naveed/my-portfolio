@@ -76,8 +76,7 @@
 }
 
 .skills-logos div img {
-  width: 30%;
-  /* height: 50px; */
+  width: 28%;
 }
 
 
@@ -89,5 +88,9 @@
 @media only screen and (max-width: 768px) {
   .p-40-80 {
     padding: 0 !important;
-  }  
+  }
+  .skills-logos div {
+    width: 150px;
+    height: 150px;
+  }
 }
