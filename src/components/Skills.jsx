@@ -2,21 +2,6 @@ import React, { useEffect } from 'react'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-import html from '../assets/img/skills-logo/html-logo.svg'
-import css from '../assets/img/skills-logo/css-logo.svg'
-import js from '../assets/img/skills-logo/javascript-logo.svg'
-import bootstrap from '../assets/img/skills-logo/bootstrap-logo.svg'
-import tailwind from '../assets/img/skills-logo/tailwind-logo.svg'
-import react from '../assets/img/skills-logo/react.svg'
-import express from '../assets/img/skills-logo/express.svg'
-import nodejs from '../assets/img/skills-logo/nodejs.svg'
-import mysql from '../assets/img/skills-logo/mysql.svg'
-import mongodb from '../assets/img/skills-logo/mongo.svg'
-import python from '../assets/img/skills-logo/python.svg'
-import cpp from '../assets/img/skills-logo/cpp.svg'
-import java from '../assets/img/skills-logo/java.svg'
-import photoshop from '../assets/img/skills-logo/photoshop.svg'
-import wordpress from '../assets/img/skills-logo/wordpress.svg'
 
 export default function Skills() {
   useEffect(() => {
@@ -44,9 +29,11 @@ export default function Skills() {
 
           <div data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-duration="1200" className='skills-logos flex flex-wrap gap-4 justify-center'>
           
-          <div className="skills-section">
-            <div className='window w-[350px]'>
-              <div className="window-tab flex items-center gap-5 py-2 px-3 rounded-lg bg-white">
+          <div className="skills-section flex flex-wrap gap-4 justify-center">
+
+            <div className='window w-[350px] h-fit relative shadow-2xl select-none'>
+
+              <div className="window-tab flex items-center gap-5 py-2 px-3 rounded-t-lg bg-zinc-200">
 
                 <div className='flex gap-2'>
                   <span className='w-4 h-4 bg-red-500 rounded-full'></span>
@@ -56,10 +43,61 @@ export default function Skills() {
 
                 <h3 className='font-poppins-semibold text-[18px]'>Front-End Development</h3>
               </div>
-              <div className="window-screen">
 
+              <div className="window-screen grid items-center h-auto gap-2 py-2 px-3 rounded-b-lg bg-white">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>React Js</span>
               </div>
+
             </div>
+            
+            
+            <div className='window w-[350px] h-fit relative shadow-2xl select-none'>
+
+              <div className="window-tab flex items-center gap-5 py-2 px-3 rounded-t-lg bg-zinc-200">
+
+                <div className='flex gap-2'>
+                  <span className='w-4 h-4 bg-red-500 rounded-full'></span>
+                  <span className='w-4 h-4 bg-orange-400 rounded-full'></span>
+                  <span className='w-4 h-4 bg-green-500 rounded-full'></span>
+                </div>
+
+                <h3 className='font-poppins-semibold text-[18px]'>Backend Development</h3>
+              </div>
+
+              <div className="window-screen grid items-center h-auto gap-2 py-2 px-3 rounded-b-lg bg-white">
+                <span>Express Js</span>
+                <span>Node Js</span>
+                <span>C++</span>
+                <span>Java</span>
+                <span>Python</span>
+              </div>
+
+            </div>
+            
+            
+            <div className='window w-[350px] h-fit relative shadow-2xl select-none'>
+
+              <div className="window-tab flex items-center gap-5 py-2 px-3 rounded-t-lg bg-zinc-200">
+
+                <div className='flex gap-2'>
+                  <span className='w-4 h-4 bg-red-500 rounded-full'></span>
+                  <span className='w-4 h-4 bg-orange-400 rounded-full'></span>
+                  <span className='w-4 h-4 bg-green-500 rounded-full'></span>
+                </div>
+
+                <h3 className='font-poppins-semibold text-[18px]'>Database</h3>
+              </div>
+
+              <div className="window-screen grid items-center h-auto gap-2 py-2 px-3 rounded-b-lg bg-white">
+                <span>MongoDB</span>
+                <span>MySQL</span>
+              </div>
+
+            </div>
+            
           </div>
 
             
