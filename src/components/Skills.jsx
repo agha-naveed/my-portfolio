@@ -27,7 +27,7 @@ export default function Skills() {
       
       <div className="container mx-auto justify-items-center">
 
-        <section className='w-[80%]'>
+        <section className='w-[80%] py-20'>
           <h1 className='text-white font-poppins-semibold text-[38px] py-1'>About</h1>
           <div className='flex gap-4'>
             <span className='block h-[3px] w-[120px] bg-yellow-text relative top-[10px]'></span>
@@ -37,72 +37,13 @@ export default function Skills() {
           </div>
         </section>
 
-        <section className='py-32'>
+        <section className='py-20'>
 
           <h1 className='text-white text-[36px] font-poppins-semibold text-center py-6'>Skills</h1>
 
           <div data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-duration="1200" className='skills-logos flex flex-wrap gap-4 justify-center'>
           
-            <div className='overflow-hidden'>
-              <img src={html} className='z-10' alt="html" />
-              <span className='z-10'>HTML</span>
-            </div>
-            <div>
-              <img src={css} alt="css" />
-              <span>CSS</span>
-            </div>
-            <div>
-              <img src={js} alt="javascript" />
-              <span>JavaScript</span>
-            </div>
-            <div>
-              <img src={bootstrap} alt="Bootstrap" />
-              <span>Bootstrap</span>
-            </div>
-            <div>
-              <img src={tailwind} alt="TailwindCSS" />
-              <span>Tailwind</span>
-            </div>
-            <div>
-              <img src={react} alt="React.Js" />
-              <span>React.JS</span>
-            </div>
-            <div>
-              <img src={express} alt="Express.js" />
-              <span>Express.JS</span>
-            </div>
-            <div>
-              <img src={nodejs} alt="Node.Js" />
-              <span>Node.JS</span>
-            </div>
-            <div>
-              <img src={mongodb} alt="MongoDB" />
-              <span>MongoDB</span>
-            </div>
-            <div>
-              <img src={mysql} alt="MySQL" />
-              <span>MySQL</span>
-            </div>
-            <div>
-              <img src={python} alt="Python" />
-              <span>Python</span>
-            </div>
-            <div>
-              <img src={cpp} alt="c++" />
-              <span>C++</span>
-            </div>
-            <div>
-              <img src={java} alt="Java" />
-              <span>Java</span>
-            </div>
-            <div>
-              <img src={photoshop} alt="Photoshop" />
-              <span>Photoshop</span>
-            </div>
-            <div>
-              <img src={wordpress} alt="wordpress" />
-              <span>Wordpress</span>
-            </div>
+            
 
             
           </div>
