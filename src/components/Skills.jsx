@@ -37,13 +37,30 @@ export default function Skills() {
           </div>
         </section>
 
+
         <section className='py-20'>
 
           <h1 className='text-white text-[36px] font-poppins-semibold text-center py-6'>Skills</h1>
 
           <div data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-duration="1200" className='skills-logos flex flex-wrap gap-4 justify-center'>
           
-            
+          <div className="skills-section">
+            <div className='window w-[350px]'>
+              <div className="window-tab flex items-center gap-5 py-2 px-3 rounded-lg bg-white">
+
+                <div className='flex gap-2'>
+                  <span className='w-4 h-4 bg-red-500 rounded-full'></span>
+                  <span className='w-4 h-4 bg-orange-400 rounded-full'></span>
+                  <span className='w-4 h-4 bg-green-500 rounded-full'></span>
+                </div>
+
+                <h3 className='font-poppins-semibold text-[18px]'>Front-End Development</h3>
+              </div>
+              <div className="window-screen">
+
+              </div>
+            </div>
+          </div>
 
             
           </div>
