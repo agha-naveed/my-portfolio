@@ -1,12 +1,27 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 
 export default function Skills() {
+
+  let [fMax, set_fMax] = useState(true)
+  let [bMax, set_bMax] = useState(true)
+  let [dMax, set_dMax] = useState(true)
+
+
+  function minimize(data) {
+    data(false)
+  }
+  function maximize(data) {
+    data(true)
+  }
+
   useEffect(() => {
     AOS.init();
   }, [])
+
+
   return (
     <div className='w-full h-auto bg-light-gray p-40-80'>
       
@@ -37,22 +52,31 @@ export default function Skills() {
 
                 <div className='flex gap-2'>
                   <span className='w-4 h-4 bg-red-500 rounded-full'></span>
-                  <span className='w-4 h-4 bg-orange-400 rounded-full'></span>
-                  <span className='w-4 h-4 bg-green-500 rounded-full'></span>
+                  <span onClick={() => set_fMax(true)} className='w-4 h-4 hover:cursor-pointer bg-orange-400 rounded-full'></span>
+                  
+                  <span onClick={() => set_fMax(false)} className='w-4 h-4 hover:cursor-pointer bg-green-500 rounded-full'></span>
                 </div>
 
                 <h3 className='font-poppins-semibold text-[18px]'>Front-End Development</h3>
               </div>
 
-              <div className="window-screen grid items-center h-auto gap-2 py-2 px-3 rounded-b-lg bg-white">
-                <span>HTML</span>
-                <span>CSS</span>
-                <span>JavaScript</span>
-                <span>React Js</span>
+              <div className={`window-screen grid items-center transition-all ${fMax ? "h-auto" : "h-0"}  gap-2 py-2 px-3 rounded-b-lg bg-white`}>
+                {
+                    fMax ?
+                    <>
+                      <span>HTML</span>
+                      <span>CSS</span>
+                      <span>JavaScript</span>
+                      <span>React Js</span>
+                    </>
+                    :
+                    ""
+                }
               </div>
 
             </div>
-            
+
+
             
             <div className='window w-[350px] h-fit relative shadow-2xl select-none'>
 
@@ -60,22 +84,31 @@ export default function Skills() {
 
                 <div className='flex gap-2'>
                   <span className='w-4 h-4 bg-red-500 rounded-full'></span>
-                  <span className='w-4 h-4 bg-orange-400 rounded-full'></span>
-                  <span className='w-4 h-4 bg-green-500 rounded-full'></span>
+                  <span onClick={() => set_bMax(true)} title='Maximize' className='w-4 h-4 hover:cursor-pointer bg-orange-400 rounded-full'></span>
+                  
+                  <span onClick={() => set_bMax(false)} title='Minimize' className='w-4 h-4 hover:cursor-pointer bg-green-500 rounded-full'></span>
                 </div>
 
-                <h3 className='font-poppins-semibold text-[18px]'>Backend Development</h3>
+                <h3 className='font-poppins-semibold text-[18px]'>Back-End Development</h3>
               </div>
 
-              <div className="window-screen grid items-center h-auto gap-2 py-2 px-3 rounded-b-lg bg-white">
-                <span>Express Js</span>
-                <span>Node Js</span>
-                <span>C++</span>
-                <span>Java</span>
-                <span>Python</span>
+              <div className={`window-screen grid items-center transition-all ${bMax ? "h-auto" : "h-0"}  gap-2 py-2 px-3 rounded-b-lg bg-white`}>
+                {
+                    bMax ?
+                    <>
+                      <span>Express Js</span>
+                      <span>Node Js</span>
+                      <span>Python</span>
+                      <span>C++</span>
+                      <span>Java</span>
+                    </>
+                    :
+                    ""
+                }
               </div>
 
             </div>
+
             
             
             <div className='window w-[350px] h-fit relative shadow-2xl select-none'>
@@ -84,19 +117,31 @@ export default function Skills() {
 
                 <div className='flex gap-2'>
                   <span className='w-4 h-4 bg-red-500 rounded-full'></span>
-                  <span className='w-4 h-4 bg-orange-400 rounded-full'></span>
-                  <span className='w-4 h-4 bg-green-500 rounded-full'></span>
+                  <span onClick={() => set_dMax(true)} title='Maximize' className='w-4 h-4 hover:cursor-pointer bg-orange-400 rounded-full'></span>
+                  
+                  <span onClick={() => set_dMax(false)} title='Minimize' className='w-4 h-4 hover:cursor-pointer bg-green-500 rounded-full'></span>
                 </div>
 
                 <h3 className='font-poppins-semibold text-[18px]'>Database</h3>
               </div>
 
-              <div className="window-screen grid items-center h-auto gap-2 py-2 px-3 rounded-b-lg bg-white">
-                <span>MongoDB</span>
-                <span>MySQL</span>
+              <div className={`window-screen grid items-center transition-all ${dMax ? "h-auto" : "h-0"}  gap-2 py-2 px-3 rounded-b-lg bg-white`}>
+                {
+                    dMax ?
+                    <>
+                      <span>MongoDB</span>
+                      <span>MySQL</span>
+                    </>
+                    :
+                    ""
+                }
               </div>
 
             </div>
+
+
+            
+            
             
           </div>
 
