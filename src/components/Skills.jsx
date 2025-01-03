@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -8,15 +8,55 @@ export default function Skills() {
   let [fMax, set_fMax] = useState(true)
   let [bMax, set_bMax] = useState(true)
   let [dMax, set_dMax] = useState(true)
+  
+  const [positions, setPositions] = useState([
+    { x: 0, y: 0 }, // Position for the first window
+    { x: 0, y: 0 }, // Position for the second window
+    { x: 0, y: 0 }, // Position for the third window
+  ]);
+  const [isDragging, setIsDragging] = useState(false);
+  const [draggedWindowIndex, setDraggedWindowIndex] = useState(null);
 
+  const windowRefs = useRef([useRef(null), useRef(null), useRef(null)]);
+  
+  useEffect(() => {
+    // Mouse move handler
+    const handleMouseMove = (e) => {
+      if (isDragging && draggedWindowIndex !== null) {
+        setPositions((prevPositions) => {
+          const newPositions = [...prevPositions];
+          const newX = prevPositions[draggedWindowIndex].x + e.movementX;
+          const newY = prevPositions[draggedWindowIndex].y + e.movementY;
+          newPositions[draggedWindowIndex] = { x: newX, y: newY };
+          return newPositions;
+        });
+      }
+    };
 
-  function minimize(data) {
-    data(false)
-  }
-  function maximize(data) {
-    data(true)
-  }
+    // Mouse up handler
+    const handleMouseUp = () => {
+      setIsDragging(false);
+    };
 
+    // Add event listeners for mouse move and mouse up
+    window.addEventListener('mousemove', handleMouseMove);
+    window.addEventListener('mouseup', handleMouseUp);
+
+    // Cleanup event listeners on component unmount
+    return () => {
+      window.removeEventListener('mousemove', handleMouseMove);
+      window.removeEventListener('mouseup', handleMouseUp);
+    };
+  }, [isDragging, draggedWindowIndex]);
+
+  // Start dragging when mouse is pressed down on a window
+  const handleMouseDown = (e, index) => {
+    setIsDragging(true);
+    setDraggedWindowIndex(index);
+  };
+
+  
+  
   useEffect(() => {
     AOS.init();
   }, [])
@@ -38,17 +78,17 @@ export default function Skills() {
         </section>
 
 
-        <section className='py-20'>
+        <section className='py-10'>
 
           <h1 className='text-white text-[36px] font-poppins-semibold text-center py-6'>Skills</h1>
 
           <div data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-duration="1200" className='skills-logos flex flex-wrap gap-4 justify-center'>
           
-          <div className="skills-section flex flex-wrap gap-4 justify-center">
+          <div className="skills-section flex columns-3xs flex-wrap gap-4 justify-center">
 
-            <div className='window w-[350px] h-fit relative shadow-2xl select-none'>
+            <div ref={windowRefs.current[0]} style={{ transform: `translate(${positions[0].x}px, ${positions[0].y}px)` }} className='window w-[350px] h-fit relative shadow-2xl select-none'>
 
-              <div className="window-tab flex items-center gap-5 py-2 px-3 rounded-t-lg bg-zinc-200">
+              <div onMouseDown={(e) => handleMouseDown(e, 0)} className="window-tab flex items-center gap-5 py-2 px-3 rounded-t-lg bg-zinc-200">
 
                 <div className='flex gap-2'>
                   <span className='w-4 h-4 bg-red-500 rounded-full'></span>
@@ -78,9 +118,9 @@ export default function Skills() {
 
 
             
-            <div className='window w-[350px] h-fit relative shadow-2xl select-none'>
+            <div ref={windowRefs.current[1]} style={{ transform: `translate(${positions[1].x}px, ${positions[1].y}px)` }} className='window w-[350px] h-fit relative shadow-2xl select-none'>
 
-              <div className="window-tab flex items-center gap-5 py-2 px-3 rounded-t-lg bg-zinc-200">
+              <div onMouseDown={(e) => handleMouseDown(e, 1)} className="window-tab flex items-center gap-5 py-2 px-3 rounded-t-lg bg-zinc-200">
 
                 <div className='flex gap-2'>
                   <span className='w-4 h-4 bg-red-500 rounded-full'></span>
@@ -111,9 +151,9 @@ export default function Skills() {
 
             
             
-            <div className='window w-[350px] h-fit relative shadow-2xl select-none'>
+            <div ref={windowRefs.current[2]} style={{ transform: `translate(${positions[2].x}px, ${positions[2].y}px)` }} className='window w-[350px] h-fit relative shadow-2xl select-none'>
 
-              <div className="window-tab flex items-center gap-5 py-2 px-3 rounded-t-lg bg-zinc-200">
+              <div onMouseDown={(e) => handleMouseDown(e, 2)} className="window-tab flex items-center gap-5 py-2 px-3 rounded-t-lg bg-zinc-200">
 
                 <div className='flex gap-2'>
                   <span className='w-4 h-4 bg-red-500 rounded-full'></span>
