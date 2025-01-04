@@ -56,7 +56,11 @@
   stroke-dashoffset: -32.42;
 }
 
-
+canvas {
+  width: 50vw !important;
+  height: auto !important;
+  position: relative;
+}
 
 .p-40-80 {
     padding: 40px 80px;
