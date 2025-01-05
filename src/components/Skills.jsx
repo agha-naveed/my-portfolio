@@ -84,9 +84,9 @@ export default function Skills() {
 
           <div data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-duration="1200" className='skills-logos flex flex-wrap gap-4 justify-center'>
           
-          <div className="skills-section flex columns-3xs flex-wrap gap-4 justify-center">
+          <div className="skills-section flex columns-3xs flex-wrap gap-4 justify-center p-6">
 
-            <div ref={windowRefs.current[0]} style={{ transform: `translate(${positions[0].x}px, ${positions[0].y}px)` }} className='window w-[350px] h-fit relative shadow-2xl select-none'>
+            <div ref={windowRefs.current[0]} style={{ transform: `translate(${positions[0].x}px, ${positions[0].y}px)` }} className='window md:w-[350px] w-full h-fit relative shadow-2xl select-none'>
 
               <div onMouseDown={(e) => handleMouseDown(e, 0)} className="window-tab flex items-center gap-5 py-2 px-3 rounded-t-lg bg-zinc-200">
 
@@ -118,7 +118,7 @@ export default function Skills() {
 
 
             
-            <div ref={windowRefs.current[1]} style={{ transform: `translate(${positions[1].x}px, ${positions[1].y}px)` }} className='window w-[350px] h-fit relative shadow-2xl select-none'>
+            <div ref={windowRefs.current[1]} style={{ transform: `translate(${positions[1].x}px, ${positions[1].y}px)` }} className='window md:w-[350px] w-full h-fit relative shadow-2xl select-none'>
 
               <div onMouseDown={(e) => handleMouseDown(e, 1)} className="window-tab flex items-center gap-5 py-2 px-3 rounded-t-lg bg-zinc-200">
 
@@ -151,7 +151,7 @@ export default function Skills() {
 
             
             
-            <div ref={windowRefs.current[2]} style={{ transform: `translate(${positions[2].x}px, ${positions[2].y}px)` }} className='window w-[350px] h-fit relative shadow-2xl select-none'>
+            <div ref={windowRefs.current[2]} style={{ transform: `translate(${positions[2].x}px, ${positions[2].y}px)` }} className='window md:w-[350px] w-full h-fit relative shadow-2xl select-none'>
 
               <div onMouseDown={(e) => handleMouseDown(e, 2)} className="window-tab flex items-center gap-5 py-2 px-3 rounded-t-lg bg-zinc-200">
 

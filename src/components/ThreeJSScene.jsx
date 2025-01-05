@@ -3,10 +3,7 @@ import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 import { RGBELoader } from "three/examples/jsm/loaders/RGBELoader.js";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
-// import computerModel from "../../public/model/programmer_desktop_3d_pc.glb";
-// import computerModel from "../../public/model/imac_computer.glb";
-// import computerModel from "../../public/model/computer.glb";
-import computerModel from "../../public/model/4k_monitor_lg_32_inches.glb";
+import computerModel from "../../public/model/untitled.glb";
 
 
 const ThreeJSScene = () => {
@@ -21,18 +18,19 @@ const ThreeJSScene = () => {
       0.1,
       1000
     );
-    camera.position.set(0, 1, 2);
+    camera.position.set(0, 0, 2);
   
     const renderer = new THREE.WebGLRenderer({
       canvas: canvasRef.current,
-      antialias: true,
+      antialias: false,
       alpha: true,
     });
     renderer.setSize(window.innerWidth, window.innerHeight);
-    renderer.setPixelRatio(window.devicePixelRatio);
+    renderer.setPixelRatio(window.devicePixelRatio * 0.5);
     renderer.toneMapping = THREE.ACESFilmicToneMapping;
     renderer.toneMappingExposure = 1;
     renderer.outputEncoding = THREE.sRGBEncoding;
+    
   
     // Environment without setting the background
     const rgbeLoader = new RGBELoader();
@@ -53,8 +51,8 @@ const ThreeJSScene = () => {
         model = gltf.scene;
         model.rotation.y = 0;
         model.rotationAutoUpdate = false;
-        model.scale.set(3.5, 3.5, 3.5);
-        model.position.set(0, -1, 0);
+        model.scale.set(2.7, 2.7, 2.7);
+        model.position.set(0, -0.5, 0);
         scene.add(model);
       },
       undefined,

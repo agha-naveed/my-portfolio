@@ -3,7 +3,7 @@ import ThreeJSScene from './ThreeJSScene'
 
 export default function Model() {
   return (
-    <div>
+    <div className='justify-items-center'>
       <ThreeJSScene />
     </div>
   )
