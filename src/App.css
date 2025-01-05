@@ -67,4 +67,10 @@ canvas {
   .p-40-80 {
     padding: 0 !important;
   }
+  canvas {
+    width: 100% !important;
+  }
+  .canvas-height {
+    /* height: 600px !important; */
+  }
 }

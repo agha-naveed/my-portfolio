@@ -42,6 +42,21 @@ const ThreeJSScene = () => {
       }
     );
   
+    function getScaleForDevice() {
+      const width = window.innerWidth;
+      const height = window.innerHeight;
+    
+      // Set a scale factor depending on the screen width
+      if (width <= 600) {  // If it's a mobile screen size
+        return 1.5; // smaller scale for mobile
+      } else if (width <= 1024) {  // Tablet size
+        return 2.0; // medium scale for tablet
+      } else {  // Desktop size
+        return 2.7; // larger scale for desktop
+      }
+    }
+
+
     // Load GLTF Model
     let model;
     const loader = new GLTFLoader();
@@ -50,8 +65,12 @@ const ThreeJSScene = () => {
       (gltf) => {
         model = gltf.scene;
         model.rotation.y = 0;
+
+        const scaleFactor = getScaleForDevice();
+
         model.rotationAutoUpdate = false;
-        model.scale.set(2.7, 2.7, 2.7);
+        // model.scale.set(2.7, 2.7, 2.7);
+        model.scale.set(scaleFactor, scaleFactor, scaleFactor);
         model.position.set(0, -0.5, 0);
         scene.add(model);
       },
@@ -69,10 +88,11 @@ const ThreeJSScene = () => {
   
     // Resize Listener
     const handleResize = () => {
-      const width = window.innerWidth;
-      const height = window.innerHeight;
-      renderer.setSize(width, height);
-      camera.aspect = width / height;
+      
+      const scaleFactor = getScaleForDevice();
+
+      renderer.setSize(scaleFactor, scaleFactor);
+      camera.aspect = scaleFactor / scaleFactor;
       camera.updateProjectionMatrix();
     };
   
@@ -103,7 +123,7 @@ const ThreeJSScene = () => {
   return (
     <canvas
       ref={canvasRef}
-      style={{ width: "100%", height: "100%", display: "block" }}
+      style={{ width: "100%", height: "100%", display: "block" }} className="canvas-height"
     />
   );
 };
