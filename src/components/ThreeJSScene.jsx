@@ -1,7 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
-import { RGBELoader } from "three/examples/jsm/loaders/RGBELoader.js";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
 import computerModel from "../../public/model/untitled.glb";
 
@@ -30,18 +29,8 @@ const ThreeJSScene = () => {
     renderer.toneMapping = THREE.ACESFilmicToneMapping;
     renderer.toneMappingExposure = 1;
     renderer.outputEncoding = THREE.sRGBEncoding;
-    
-  
-    // Environment without setting the background
-    const rgbeLoader = new RGBELoader();
-    rgbeLoader.load(
-      "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/1k/billiard_hall_1k.hdr",
-      (texture) => {
-        texture.mapping = THREE.EquirectangularReflectionMapping;
-        scene.environment = texture;
-      }
-    );
-  
+
+   
     function getScaleForDevice() {
       const width = window.innerWidth;
       const height = window.innerHeight;
