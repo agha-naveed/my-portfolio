@@ -48,7 +48,7 @@ const ThreeJSScene = () => {
     
       // Set a scale factor depending on the screen width
       if (width <= 600) {  // If it's a mobile screen size
-        return 1.5; // smaller scale for mobile
+        return 1.2; // smaller scale for mobile
       } else if (width <= 1024) {  // Tablet size
         return 2.0; // medium scale for tablet
       } else {  // Desktop size
