@@ -37,7 +37,7 @@ export default function Header() {
 
       </div>
 
-      <div className="absolute top-0 left-0 w-full z-0">
+      <div className="md:block hidden absolute top-0 left-0 w-full z-0">
         <Snowfall />
       </div>
     </div>
