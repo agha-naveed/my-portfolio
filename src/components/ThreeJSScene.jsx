@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
+import { RGBELoader } from "three/examples/jsm/loaders/RGBELoader.js";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
 import computerModel from "../../public/model/untitled.glb";
 
@@ -29,8 +30,18 @@ const ThreeJSScene = () => {
     renderer.toneMapping = THREE.ACESFilmicToneMapping;
     renderer.toneMappingExposure = 1;
     renderer.outputEncoding = THREE.sRGBEncoding;
-
-   
+    
+  
+    // Environment without setting the background
+    const rgbeLoader = new RGBELoader();
+    rgbeLoader.load(
+      "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/1k/billiard_hall_1k.hdr",
+      (texture) => {
+        texture.mapping = THREE.EquirectangularReflectionMapping;
+        scene.environment = texture;
+      }
+    );
+  
     function getScaleForDevice() {
       const width = window.innerWidth;
       const height = window.innerHeight;
@@ -58,7 +69,6 @@ const ThreeJSScene = () => {
         const scaleFactor = getScaleForDevice();
 
         model.rotationAutoUpdate = false;
-        // model.scale.set(2.7, 2.7, 2.7);
         model.scale.set(scaleFactor, scaleFactor, scaleFactor);
         model.position.set(0, -0.5, 0);
         scene.add(model);
@@ -73,7 +83,8 @@ const ThreeJSScene = () => {
     const controls = new OrbitControls(camera, renderer.domElement);
     controls.enableDamping = true;
     controls.dampingFactor = 0.25;
-    controls.enableZoom = true;
+    controls.enableZoom = false;
+    controls.enabled = false;
   
     // Resize Listener
     const handleResize = () => {
