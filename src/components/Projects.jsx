@@ -7,7 +7,7 @@ export default function Projects() {
       <div className='h-screen w-full bg-dark-gray relative -z-10'>
       </div>
 
-      <div className="relative -z-10">
+      <div className="relative opacity-20 -z-10">
         <ParticlesComponent />
       </div>
     </>
