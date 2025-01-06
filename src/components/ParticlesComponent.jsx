@@ -24,7 +24,7 @@ const ParticlesComponent = (props) => {
     () => ({
       background: {
         color: {
-          value: "#1E2F97",
+          value: "transparent",
         },
       },
       fpsLimit: 120,
@@ -92,7 +92,11 @@ const ParticlesComponent = (props) => {
   );
 
 
-  return <Particles id={props.id} init={particlesLoaded} options={options} />; 
+  return (
+    // <div className="relative -z-10">
+      <Particles id={props.id} init={particlesLoaded} options={options} />
+    // </div>
+  )
 };
 
 export default ParticlesComponent;
