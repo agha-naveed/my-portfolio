@@ -23,6 +23,7 @@ export default function Navbar() {
     return () => {
       document.removeEventListener('click', handleClickOutside);
     };
+    
   }, []);
 
   
@@ -36,7 +37,7 @@ export default function Navbar() {
 
   
   return (
-    <div data-aos="fade-down" data-aos-duration="800" className='flex lg:flex-row flex-col lg:justify-between md:pt-0 pt-[70px] justify-center w-full'>
+    <div data-aos="fade-down" data-aos-duration="900" className='flex lg:flex-row flex-col lg:justify-between md:pt-0 pt-[70px] justify-center w-full'>
       <div className='flex justify-center'>
       <LogoComponent />
         
