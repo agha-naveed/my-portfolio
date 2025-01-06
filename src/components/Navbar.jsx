@@ -36,7 +36,7 @@ export default function Navbar() {
 
   
   return (
-    <div className='flex lg:flex-row flex-col lg:justify-between md:pt-0 pt-[70px] justify-center w-full'>
+    <div data-aos="fade-down" data-aos-duration="800" className='flex lg:flex-row flex-col lg:justify-between md:pt-0 pt-[70px] justify-center w-full'>
       <div className='flex justify-center'>
       <LogoComponent />
         
