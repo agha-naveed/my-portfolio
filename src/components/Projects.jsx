@@ -4,7 +4,7 @@ import ParticlesComponent from './ParticlesComponent'
 export default function Projects() {
   return (
     <>
-      <div className='project-container h-auto w-full bg-dark-gray relative -z-10'>
+      <div id='project-section' className='project-container h-auto w-full bg-dark-gray relative -z-10'>
         <div className="container mx-auto p-40-80">
         
           <div className="project-section grid gap-16 justify-items-center container mx-auto md:py-14 md:px-0 p-5">

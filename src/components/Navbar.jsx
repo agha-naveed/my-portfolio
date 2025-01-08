@@ -58,7 +58,7 @@ export default function Navbar() {
           <ul className='flex md:flex-row flex-col lg:w-fit w-full'>
             <li className='py-2'><Link to={"/"} className='md:px-[18px] md:py-[8px] !text-white'>Home</Link></li>
             <li className='py-2'><Link to={"/a"} className='md:px-[18px] transition-all hover:text-white md:py-[8px]'>Skills</Link></li>
-            <li className='py-2'><Link to={"/b"} className='md:px-[18px] transition-all hover:text-white md:py-[8px]'>Projects</Link></li>
+            <li className='py-2'><Link to={"/#project-section"} className='md:px-[18px] transition-all hover:text-white md:py-[8px]'>Projects</Link></li>
           </ul>
         
           <IoSearch className='block lg:hidden bg-light-gray place-self-center text-text-clr text-xl p-[10px] md:mt-0 mt-2 h-[40px] w-[40px] rounded-[50%]' />
