@@ -65,7 +65,7 @@ export default function Skills() {
   return (
     <div className='w-full h-auto bg-light-gray p-40-80'>
       
-      <div className="container mx-auto justify-items-center">
+      <div className="container mx-auto relative justify-items-center">
 
         <section className='w-[80%] py-20'>
           <h1 className='text-white font-poppins-semibold text-[38px] py-1' data-aos="fade-up" data-aos-duration="700" >About</h1>
@@ -78,7 +78,7 @@ export default function Skills() {
         </section>
 
 
-        <section className='py-10'>
+        <section className='py-10 skills'>
 
           <h1 className='text-white text-[36px] font-poppins-semibold text-center py-6'>Skills</h1>
 

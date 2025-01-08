@@ -80,7 +80,26 @@
   background-color: #FFC86B;
 }
 
-
+.skills::before {
+  content: "SKILLS";
+  position: fixed;
+  top: 240px;
+  right: -200px;
+  letter-spacing: -10px;
+  color: #2728291c;
+  font-size: 350px;
+  font-family: "poppins-extraBold";
+}
+.project-container::before {
+  content: "PROJECTS";
+  position: fixed;
+  top: 240px;
+  left: -200px;
+  letter-spacing: -10px;
+  color: rgba(14, 13, 13, 0.137);
+  font-size: 300px;
+  font-family: "poppins-extraBold";
+}
 
 @media only screen and (max-width: 768px) {
   .p-40-80 {
