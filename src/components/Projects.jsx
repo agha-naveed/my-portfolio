@@ -17,7 +17,7 @@ export default function Projects() {
             
             <div className='lg:flex flex-col hidden items-center gap-2  justify-between'>
               <div className='p-circle w-6 h-6 bg-white rounded-full'></div>
-              <div className='w-1 h-[74%] bg-gray-50'></div>
+              <div className='w-1 h-[74%] bg-zinc-500'></div>
             </div>
 
             <div className='grid gap-2'>
@@ -28,11 +28,11 @@ export default function Projects() {
           </div>
         
           <div data-aos="fade-up" data-aos-duration="1000" className='project flex md:flex-row flex-col gap-5 lg:w-[75%]'>
-            <div className='date-bg font-poppins-regular text-white text-2xl bg-light-gray h-fit p-5 pt-6 pr-8 text-center md:w-auto w-fit'>2023</div>
+            <div className='date-bg font-poppins-regular text-white text-2xl bg-light-gray h-fit p-5 pt-6 pr-8 text-center md:w-auto w-fit'>2024</div>
             
             <div className='lg:flex flex-col hidden items-center gap-2  justify-between'>
               <div className='p-circle w-6 h-6 bg-white rounded-full'></div>
-              <div className='w-1 h-[74%] bg-gray-50'></div>
+              <div className='w-1 h-[74%] bg-zinc-500'></div>
             </div>
 
             <div className='grid gap-2'>
@@ -43,11 +43,11 @@ export default function Projects() {
           </div>
 
           <div data-aos="fade-up" data-aos-duration="1000" className='project flex md:flex-row flex-col gap-5 lg:w-[75%]'>
-            <div className='date-bg font-poppins-regular text-white text-2xl bg-light-gray h-fit p-5 pt-6 pr-8 text-center md:w-auto w-fit'>2023</div>
+            <div className='date-bg font-poppins-regular text-white text-2xl bg-light-gray h-fit p-5 pt-6 pr-8 text-center md:w-auto w-fit'>2024</div>
             
             <div className='lg:flex flex-col hidden items-center gap-2  justify-between'>
               <div className='p-circle w-6 h-6 bg-white rounded-full'></div>
-              <div className='w-1 h-[74%] bg-gray-50'></div>
+              <div className='w-1 h-[74%] bg-zinc-500'></div>
             </div>
 
             <div className='grid gap-2'>
