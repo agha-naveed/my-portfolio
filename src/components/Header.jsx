@@ -25,8 +25,8 @@ export default function Header() {
             <span>
               <h3 className='text-white font-poppins-regular md:text-[32px] text-[25px] lg:text-left text-center mb-8'>Web Developer / Programmer</h3>
             </span>
-
-            <Link className='text-yellow-text md:text-[26px] text-[22px] border-[4px] rounded-lg border-yellow-text px-7 py-3 mt-5 justify-self-center lg:inline grid'>Contact Me</Link>
+            
+            <Link className='btn bg-move text-yellow-text md:text-[26px] text-[22px] border-[4px] rounded-lg border-yellow-text px-7 py-3 mt-5 justify-self-center lg:inline grid'>Contact Me</Link>
             
           </div>
           
