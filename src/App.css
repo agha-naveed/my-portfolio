@@ -63,13 +63,18 @@
 .date-bg {
   clip-path: polygon(0% 20%, 76% 20%, 100% 50%, 76% 80%, 0% 80%);
 }
-
 .project {
   transition: 1s ease-out;
 }
+
+.p-circle, .p-heading {
+  transition: 0.1s ease-out;
+}
+
 .project:hover .p-heading {
   color: #FFC86B;
 }
+
 .project:hover .p-circle {
   box-shadow: 0 0 15px 2px #FFC86B;
   background-color: #FFC86B;
