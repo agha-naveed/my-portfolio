@@ -60,12 +60,12 @@
 .p-40-80 {
     padding: 40px 80px;
 }
+.date-bg {
+  clip-path: polygon(0% 20%, 76% 20%, 100% 50%, 76% 80%, 0% 80%);
+}
 
 @media only screen and (max-width: 768px) {
   .p-40-80 {
     padding: 0 !important;
-  }
-  canvas {
-    width: 100% !important;
   }
 }
