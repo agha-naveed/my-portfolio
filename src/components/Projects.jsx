@@ -3,17 +3,18 @@ import ParticlesComponent from './ParticlesComponent'
 import chatbot from '../assets/img/projects/chatbot.webp'
 
 export default function Projects() {
-  const flipBoxRef = useRef(null); // Reference to the flip box
+  const flipBoxRef = useRef(null);
   const [transformStyles, setTransformStyles] = useState({
     rotateX: 0,
     rotateY: 0,
-    shineX: 0,
+    shineX: 0, // Default shine position (centered)
     shineY: 0,
     scale: 1,
-    boxShadow: '',
+    boxShadow: "",
     op: 0,
   });
-
+  const [isMoving, setIsMoving] = useState(false);
+  const timeoutRef = useRef(null);
   const handleMouseMove = (e) => {
     const flipBox = flipBoxRef.current;
     if (!flipBox) return;
@@ -23,35 +24,45 @@ export default function Projects() {
     const y = e.clientY - rect.top;
 
     // Calculate rotation values based on mouse position
-    const rotateX = ((y / rect.height) - 0.5) * 45;
-    const rotateY = ((x / rect.width) - 0.5) * -45;
+    const rotateX = ((y / rect.height) - 0.5) * 45; // Tilt X-axis
+    const rotateY = ((x / rect.width) - 0.5) * -45; // Tilt Y-axis
 
-    // Calculate shine values
-    const shineX = ((x / rect.width) * 100).toFixed(2);
-    const shineY = ((y / rect.height) * 100).toFixed(2);
-
-    // Update the state for transform and other styles
+    // Calculate shine position
+    const shineX = ((x / rect.width) * 100).toFixed(2); // Shine X as percentage
+    const shineY = ((y / rect.height) * 100).toFixed(2); // Shine Y as percentage
+    if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    // Update state with new transform styles
     setTransformStyles({
       rotateX,
       rotateY,
       shineX,
       shineY,
-      scale: 1.1,
-      boxShadow: '0 20px 25px rgba(0, 0, 0, 0.425)',
-      op: 0.1,
+      scale: 1.1, // Slightly increase scale for hover effect
+      boxShadow: "0 20px 35px rgba(0, 0, 0, 0.5)", // Shadow for depth
+      op: 0.5, // Increase shine opacity
     });
+
+    setIsMoving(true);
+
+    timeoutRef.current = setTimeout(() => {
+      setTransformStyles((prevStyles) => ({ ...prevStyles, op: 0 }));
+      setIsMoving(false);
+    }, 300);
+    
   };
 
   const handleMouseLeave = () => {
+    // Reset styles when the mouse leaves
     setTransformStyles({
       rotateX: 0,
       rotateY: 0,
-      shineX: 0,
-      shineY: 0,
+      shineX: 50,
+      shineY: 50,
       scale: 1,
-      boxShadow: '',
+      boxShadow: "",
       op: 0,
     });
+    setIsMoving(false);
   };
 
   
@@ -115,29 +126,29 @@ export default function Projects() {
 
           <section>
             
-          <div
-            ref={flipBoxRef}
-            className="relative w-fit h-auto overflow-hidden transition-transform duration-200 ease-out"
-            style={{
-              transform: `perspective(1000px) rotateX(${transformStyles.rotateX}deg) rotateY(${transformStyles.rotateY}deg) scale(${transformStyles.scale})`,
-              boxShadow: transformStyles.boxShadow,
-            }}
-            onMouseMove={handleMouseMove}
-            onMouseLeave={handleMouseLeave} >
+      <div
+        ref={flipBoxRef}
+        className="relative w-72 h-92 rounded-lg overflow-hidden transition-transform duration-300 ease-out"
+        onMouseMove={handleMouseMove}
+        onMouseLeave={handleMouseLeave}
+        style={{
+          transform: `perspective(1000px) rotateX(${transformStyles.rotateX}deg) rotateY(${transformStyles.rotateY}deg) scale(${transformStyles.scale})`,
+          boxShadow: transformStyles.boxShadow,
+        }}
+      >
+        <div
+          className="absolute top-0 left-0 w-full h-full pointer-events-none z-10 rounded-lg"
+          style={{
+            background: `radial-gradient(circle at ${transformStyles.shineX}% ${transformStyles.shineY}%, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.1) 60%)`,
+            opacity: 0.2,
+            transition: "background-position 0.1s ease, opacity 0.2s ease-out",
+          }}
+        ></div>
 
-            <div
-              className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-white via-transparent to-transparent pointer-events-none transition-all duration-100"
-              style={{
-                backgroundPosition: `${transformStyles.shineX}% ${transformStyles.shineY}%`,
-                opacity: transformStyles.op,
-              }}></div>
-
-              <img src={chatbot} className='relative z-20 pointer-events-none w-72' alt="" />
-            
-            </div>
-
-
-
+                
+                  <img src={chatbot} className='relative pointer-events-none w-72 z-1' alt="" />
+              
+              </div>
 
           </section>
 
@@ -145,7 +156,7 @@ export default function Projects() {
       </div>
 
       <div className="relative opacity-20 -z-10">
-        {/* <ParticlesComponent /> */}
+        {/* <ParticlesComponent />   */}
       </div>
     </>
   )
