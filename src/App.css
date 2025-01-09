@@ -71,7 +71,6 @@
 .p-circle, .p-heading {
   transition: 0.1s ease-out;
 }
-
 .project:hover .p-heading {
   color: #FFC86B;
 }
