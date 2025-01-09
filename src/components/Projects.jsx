@@ -11,7 +11,7 @@ export default function Projects() {
 
             <h1 data-aos="fade-up" data-aos-duration="600" className='z-10 text-white font-poppins-semibold relative top-5 text-[38px] py-1'>Project</h1>
             
-            <div data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" className='project flex md:flex-row flex-col gap-5 lg:w-[75%]'>
+            <div data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" className='project z-10 flex md:flex-row flex-col gap-5 lg:w-[75%]'>
               <div className='date-bg font-poppins-regular text-white text-2xl bg-light-gray h-fit p-5 pt-6 pr-8 text-center md:w-auto w-fit'>2023</div>
               
               <div className='lg:flex flex-col hidden items-center gap-2  justify-between'>
@@ -26,7 +26,7 @@ export default function Projects() {
 
             </div>
           
-            <div data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" className='project flex md:flex-row flex-col gap-5 lg:w-[75%]'>
+            <div data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" className='project z-10 flex md:flex-row flex-col gap-5 lg:w-[75%]'>
               <div className='date-bg font-poppins-regular text-white text-2xl bg-light-gray h-fit p-5 pt-6 pr-8 text-center md:w-auto w-fit'>2024</div>
               
               <div className='lg:flex flex-col hidden items-center gap-2  justify-between'>
@@ -41,7 +41,7 @@ export default function Projects() {
 
             </div>
 
-            <div data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" className='project flex md:flex-row flex-col gap-5 lg:w-[75%]'>
+            <div data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" className='project z-10 flex md:flex-row flex-col gap-5 lg:w-[75%]'>
               <div className='date-bg font-poppins-regular text-white text-2xl bg-light-gray h-fit p-5 pt-6 pr-8 text-center md:w-auto w-fit'>2024</div>
               
               <div className='lg:flex flex-col hidden items-center gap-2  justify-between'>
