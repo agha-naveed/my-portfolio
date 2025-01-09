@@ -36,7 +36,7 @@ export default function Projects() {
       rotateY,
       shineX,
       shineY,
-      scale: 1,
+      scale: 1.1,
       boxShadow: '0 20px 25px rgba(0, 0, 0, 0.425)',
       op: 0.1,
     });
@@ -53,6 +53,7 @@ export default function Projects() {
       op: 0,
     });
   };
+
   
 
   return (
@@ -114,30 +115,30 @@ export default function Projects() {
 
           <section>
             
-            <div
-              ref={flipBoxRef}
-              className="flip-box w-fit transition-1"
-              onMouseMove={handleMouseMove}
-              onMouseLeave={handleMouseLeave}
-              style={{
-                transform: `perspective(1000px) rotateX(${transformStyles.rotateX}deg) rotateY(${transformStyles.rotateY}deg)`,
-                scale: transformStyles.scale,
-                boxShadow: transformStyles.boxShadow,
-              }}
-            >
-              <div
-                className="shine"
-                style={{
-                  '--shine-x': `${transformStyles.shineX}%`,
-                  '--shine-y': `${transformStyles.shineY}%`,
-                  opacity: transformStyles.op,
-                }}
-              >
-                {/* You can add any content inside the box here */}
-              </div>
-              <img src={chatbot} className='relative z-20 pointer-events-none w-72' alt="" />
+          <div
+            ref={flipBoxRef}
+            className="relative w-fit h-auto overflow-hidden transition-transform duration-200 ease-out"
+            style={{
+              transform: `perspective(1000px) rotateX(${transformStyles.rotateX}deg) rotateY(${transformStyles.rotateY}deg) scale(${transformStyles.scale})`,
+              boxShadow: transformStyles.boxShadow,
+            }}
+            onMouseMove={handleMouseMove}
+            onMouseLeave={handleMouseLeave} >
 
+            <div
+              className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-white via-transparent to-transparent pointer-events-none transition-all duration-100"
+              style={{
+                backgroundPosition: `${transformStyles.shineX}% ${transformStyles.shineY}%`,
+                opacity: transformStyles.op,
+              }}></div>
+
+              <img src={chatbot} className='relative z-20 pointer-events-none w-72' alt="" />
+            
             </div>
+
+
+
+
           </section>
 
         </div>
