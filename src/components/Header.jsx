@@ -3,6 +3,7 @@ import Snowfall from '../extraComponents/Snowfall';
 import Navbar from './Navbar';
 import myPic from '../assets/img/my-picture.png';
 import { Link } from 'react-router';
+import SocialLogos from '../extraComponents/SocialLogos';
 
 export default function Header() {
 
@@ -33,6 +34,9 @@ export default function Header() {
           <div data-aos="fade-up-left" data-aos-duration="600" className='w-fit place-items-center'>
             <img src={myPic} decoding='async' className='md:w-full w-[90%] relative top-[40px]' alt="Agha Naveed Image" />
           </div>
+
+          <SocialLogos />
+
         </header>
 
       </div>
