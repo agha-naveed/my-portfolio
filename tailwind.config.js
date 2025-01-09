@@ -6,6 +6,9 @@ export default {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        "insta-logo": "radial-gradient(circle at 30% 110%, #ffdb8b 0%, #ee653d 25%, #d42e81 50%, #a237b6 75%, #3e57bc 100% )"
+      },
       colors: {
         "dark-gray": "#272829",
         "light-gray": "#3D3E42",

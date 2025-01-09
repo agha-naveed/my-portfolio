@@ -75,6 +75,24 @@
   color: #FFC86B;
 }
 
+.s-m-logos div:hover::before {
+  width: 40px;
+  height: 40px;
+}
+.s-m-logos div::before {
+  transition: 0.1s ease-out;
+  content: "";
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  border-radius: 50%;
+  z-index: -1;
+}
+.insta-div::before {
+  background: radial-gradient(circle at 30% 110%, 
+        #ffdb8b 0%, #ee653d 25%, #d42e81 50%, #a237b6 75%, #3e57bc 100% );
+}
+
 .project:hover .p-circle {
   box-shadow: 0 0 15px 2px #FFC86B;
   background-color: #FFC86B;
