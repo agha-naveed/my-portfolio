@@ -1,7 +1,60 @@
-import React from 'react'
+import React, { useState, useRef } from 'react'
 import ParticlesComponent from './ParticlesComponent'
+import chatbot from '../assets/img/projects/chatbot.webp'
 
 export default function Projects() {
+  const flipBoxRef = useRef(null); // Reference to the flip box
+  const [transformStyles, setTransformStyles] = useState({
+    rotateX: 0,
+    rotateY: 0,
+    shineX: 0,
+    shineY: 0,
+    scale: 1,
+    boxShadow: '',
+    op: 0,
+  });
+
+  const handleMouseMove = (e) => {
+    const flipBox = flipBoxRef.current;
+    if (!flipBox) return;
+
+    const rect = flipBox.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+
+    // Calculate rotation values based on mouse position
+    const rotateX = ((y / rect.height) - 0.5) * 45;
+    const rotateY = ((x / rect.width) - 0.5) * -45;
+
+    // Calculate shine values
+    const shineX = ((x / rect.width) * 100).toFixed(2);
+    const shineY = ((y / rect.height) * 100).toFixed(2);
+
+    // Update the state for transform and other styles
+    setTransformStyles({
+      rotateX,
+      rotateY,
+      shineX,
+      shineY,
+      scale: 1,
+      boxShadow: '0 20px 25px rgba(0, 0, 0, 0.425)',
+      op: 0.1,
+    });
+  };
+
+  const handleMouseLeave = () => {
+    setTransformStyles({
+      rotateX: 0,
+      rotateY: 0,
+      shineX: 0,
+      shineY: 0,
+      scale: 1,
+      boxShadow: '',
+      op: 0,
+    });
+  };
+  
+
   return (
     <>
       <div id='project-section' className='project-container h-auto w-full bg-dark-gray relative -z-10'>
@@ -58,11 +111,40 @@ export default function Projects() {
 
           </div>
 
+
+          <section>
+            
+            <div
+              ref={flipBoxRef}
+              className="flip-box w-fit transition-1"
+              onMouseMove={handleMouseMove}
+              onMouseLeave={handleMouseLeave}
+              style={{
+                transform: `perspective(1000px) rotateX(${transformStyles.rotateX}deg) rotateY(${transformStyles.rotateY}deg)`,
+                scale: transformStyles.scale,
+                boxShadow: transformStyles.boxShadow,
+              }}
+            >
+              <div
+                className="shine"
+                style={{
+                  '--shine-x': `${transformStyles.shineX}%`,
+                  '--shine-y': `${transformStyles.shineY}%`,
+                  opacity: transformStyles.op,
+                }}
+              >
+                {/* You can add any content inside the box here */}
+              </div>
+              <img src={chatbot} className='relative z-20 pointer-events-none w-72' alt="" />
+
+            </div>
+          </section>
+
         </div>
       </div>
 
       <div className="relative opacity-20 -z-10">
-        <ParticlesComponent />
+        {/* <ParticlesComponent /> */}
       </div>
     </>
   )

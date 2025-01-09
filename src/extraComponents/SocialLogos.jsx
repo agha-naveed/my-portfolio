@@ -5,7 +5,7 @@ import { FiGithub } from "react-icons/fi";
 
 export default function SocialLogos({display, hidden}) {
   return (
-    <div className='justify-items-center content-end grid gap-5 ml-10'>
+    <div className='justify-items-center content-end lg:grid hidden gap-5 ml-10'>
         
         <div className={`w-[3px] h-24 bg-yellow-text ${hidden}`} ></div>
 

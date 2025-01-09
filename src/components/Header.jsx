@@ -35,6 +35,7 @@ export default function Header() {
             <img src={myPic} decoding='async' className='md:w-full w-[90%] relative top-[40px]' alt="Agha Naveed Image" />
           </div>
 
+          
           <SocialLogos display = "grid" hidden = "block" />
 
         </header>

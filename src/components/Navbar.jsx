@@ -39,7 +39,7 @@ export default function Navbar() {
   return (
     <div data-aos="fade-down" data-aos-duration="900" className='flex lg:flex-row flex-col lg:justify-between md:pt-0 pt-[70px] justify-center w-full'>
       <div className='flex justify-center'>
-      <LogoComponent />
+        <LogoComponent />
         
         <label className="hamburger md:hidden block relative sm:-right-28 -right-5">
           <input type="checkbox" />

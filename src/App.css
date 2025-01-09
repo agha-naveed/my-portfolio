@@ -134,6 +134,11 @@
   z-index: 0;
 }
 
+
+.transition-1 {
+  transition: 0.02s ease-out;
+}
+
 @media only screen and (max-width: 768px) {
   .p-40-80 {
     padding: 0 !important;
