@@ -1,5 +1,4 @@
 import React from 'react'
-import { css } from '@emotion/react';
 import Snowfall from '../extraComponents/Snowfall';
 import Navbar from './Navbar';
 import myPic from '../assets/img/my-picture.png';

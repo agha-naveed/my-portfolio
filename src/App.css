@@ -88,10 +88,23 @@
   border-radius: 50%;
   z-index: -1;
 }
-.insta-div::before {
+.fb-logo::before {
+  background-color: #316FF6;
+}
+.linkedin-logo::before {
+  background-color: #0077B5;
+}
+.x-logo::before {
+  background-color: white;
+}
+.insta-logo::before {
   background: radial-gradient(circle at 30% 110%, 
         #ffdb8b 0%, #ee653d 25%, #d42e81 50%, #a237b6 75%, #3e57bc 100% );
 }
+.git-logo::before {
+  background-color: black;
+}
+
 
 .project:hover .p-circle {
   box-shadow: 0 0 15px 2px #FFC86B;
