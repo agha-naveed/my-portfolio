@@ -69,6 +69,7 @@ export default function Projects() {
   return (
     <>
       <div id='project-section' className='project-container h-auto w-full bg-dark-gray relative -z-10'>
+        
         <div className="container mx-auto p-40-80">
         
           <div className="project-section grid gap-16 justify-items-center container mx-auto md:py-14 md:px-0 p-5">
@@ -123,26 +124,26 @@ export default function Projects() {
           </div>
 
 
-          <section>
+          <section className='relative z-20'>
             
-      <div
-        ref={flipBoxRef}
-        className="relative z-[200] w-72 h-92 rounded-lg overflow-hidden transition-transform duration-300 ease-out"
-        onMouseMove={handleMouseMove}
-        onMouseLeave={handleMouseLeave}
-        style={{
-          transform: `perspective(1000px) rotateX(${transformStyles.rotateX}deg) rotateY(${transformStyles.rotateY}deg) scale(${transformStyles.scale})`,
-          boxShadow: transformStyles.boxShadow,
-        }}
-      >
-        <div
-          className="absolute top-0 left-0 w-full h-full pointer-events-none z-10 rounded-lg"
-          style={{
-            background: `radial-gradient(circle at ${transformStyles.shineX}% ${transformStyles.shineY}%, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.1) 60%)`,
-            opacity: 0.2,
-            transition: "background-position 0.1s ease, opacity 0.2s ease-out",
-          }}
-        ></div>
+            <div
+              ref={flipBoxRef}
+              className="relative z-[200] w-72 h-92 rounded-lg overflow-hidden transition-transform duration-300 ease-out"
+              onMouseMove={handleMouseMove}
+              onMouseLeave={handleMouseLeave}
+              style={{
+                transform: `perspective(1000px) rotateX(${transformStyles.rotateX}deg) rotateY(${transformStyles.rotateY}deg) scale(${transformStyles.scale})`,
+                boxShadow: transformStyles.boxShadow,
+              }}
+            >
+              <div
+                className="absolute top-0 left-0 w-full h-full pointer-events-none z-10 rounded-lg"
+                style={{
+                  background: `radial-gradient(circle at ${transformStyles.shineX}% ${transformStyles.shineY}%, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.1) 60%)`,
+                  opacity: 0.2,
+                  transition: "background-position 0.1s ease, opacity 0.2s ease-out",
+                }}
+              ></div>
 
                 
                   <img src={chatbot} className='relative pointer-events-none w-72 z-1' alt="" />
@@ -154,7 +155,7 @@ export default function Projects() {
         </div>
       </div>
 
-      <div className="relative opacity-20 -z-[1]">
+      <div className="relative sm:block hidden opacity-20 z-[-10]">
         <ParticlesComponent />
       </div>
     </>

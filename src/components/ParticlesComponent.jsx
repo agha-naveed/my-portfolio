@@ -92,11 +92,8 @@ const ParticlesComponent = (props) => {
   );
 
 
-  return (
-    // <div className="relative -z-10">
-      <Particles id={props.id} init={particlesLoaded} options={options} />
-    // </div>
-  )
+  return <Particles id={props.id} init={particlesLoaded} options={options} />
+   
 };
 
 export default ParticlesComponent;
