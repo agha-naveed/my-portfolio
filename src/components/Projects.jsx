@@ -52,7 +52,6 @@ export default function Projects() {
   };
 
   const handleMouseLeave = () => {
-    // Reset styles when the mouse leaves
     setTransformStyles({
       rotateX: 0,
       rotateY: 0,
@@ -128,7 +127,7 @@ export default function Projects() {
             
       <div
         ref={flipBoxRef}
-        className="relative w-72 h-92 rounded-lg overflow-hidden transition-transform duration-300 ease-out"
+        className="relative z-[200] w-72 h-92 rounded-lg overflow-hidden transition-transform duration-300 ease-out"
         onMouseMove={handleMouseMove}
         onMouseLeave={handleMouseLeave}
         style={{
@@ -155,8 +154,8 @@ export default function Projects() {
         </div>
       </div>
 
-      <div className="relative opacity-20 -z-10">
-        {/* <ParticlesComponent />   */}
+      <div className="relative opacity-20 -z-[1]">
+        <ParticlesComponent />
       </div>
     </>
   )

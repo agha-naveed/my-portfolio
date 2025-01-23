@@ -108,6 +108,7 @@ export default function Skills() {
                       <span>CSS</span>
                       <span>JavaScript</span>
                       <span>React Js</span>
+                      <span>Next.Js</span>
                     </>
                     :
                     ""
