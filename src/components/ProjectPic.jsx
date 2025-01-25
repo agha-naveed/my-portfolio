@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
-import chatbot from '../assets/img/projects/chatbot.webp'
 
-export default function ProjectPic() {
+export default function ProjectPic({data}) {
     const flipBoxRef = useRef(null);
   const [transformStyles, setTransformStyles] = useState({
     rotateX: 0,
@@ -64,32 +63,25 @@ export default function ProjectPic() {
   };
 
   return (
-      <section className='relative z-20 bg-light-gray'>
-        <div className='container mx-auto py-10'>
-            
-            
-            <div
-              ref={flipBoxRef}
-              className="relative z-[200] w-72 h-92 rounded-lg overflow-hidden transition-transform duration-200 ease-out"
-              onMouseMove={handleMouseMove}
-              onMouseLeave={handleMouseLeave}
-              style={{
-                transform: `perspective(1000px) rotateX(${transformStyles.rotateX}deg) rotateY(${transformStyles.rotateY}deg) scale(${transformStyles.scale})`,
-                boxShadow: transformStyles.boxShadow,
-            }}
-            >
-              <div
-                className="absolute top-0 left-0 w-full h-full pointer-events-none z-10 rounded-lg"
-                style={{
-                    background: `radial-gradient(circle at ${transformStyles.shineX}% ${transformStyles.shineY}%, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.1) 60%)`,
-                    opacity: 0.2,
-                  transition: "background-position 0.1s ease, opacity 0.2s ease-out",
-                }}>
-              </div>
-                    <img src={chatbot} className='relative pointer-events-none w-72 z-1' alt="" />
-              </div>
+    <div
+        ref={flipBoxRef}
+        className="relative z-[200] w-72 h-92 rounded-lg overflow-hidden transition-transform duration-200 ease-out"
+        onMouseMove={handleMouseMove}
+        onMouseLeave={handleMouseLeave}
+        style={{
+        transform: `perspective(1000px) rotateX(${transformStyles.rotateX}deg) rotateY(${transformStyles.rotateY}deg) scale(${transformStyles.scale})`,
+        boxShadow: transformStyles.boxShadow,
+    }}
+    >
+        <div
+        className="absolute top-0 left-0 w-full h-full pointer-events-none z-10 rounded-lg"
+        style={{
+            background: `radial-gradient(circle at ${transformStyles.shineX}% ${transformStyles.shineY}%, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.1) 60%)`,
+            opacity: 0.2,
+            transition: "background-position 0.1s ease, opacity 0.2s ease-out",
+        }}>
         </div>
-        
-    </section>
+        <img src={data} className='relative pointer-events-none w-72 z-1' alt="" />
+    </div>
   )
 }

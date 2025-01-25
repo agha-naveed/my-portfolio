@@ -2,7 +2,7 @@ import React from 'react';
 import Header from './components/Header'
 import Skills from './components/Skills'
 import Projects from './components/Projects'
-import ProjectPic from './components/ProjectPic';
+import ProjectGallery from './components/ProjectGallery';
 
 export default function Home() {
     return (
@@ -10,7 +10,7 @@ export default function Home() {
             <Header />
             <Skills />
             <Projects />
-            <ProjectPic />
+            <ProjectGallery />
         </div>
     )
 }
