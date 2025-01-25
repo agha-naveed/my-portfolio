@@ -61,8 +61,42 @@ export default function ProjectPic({data, style}) {
     });
     setIsMoving(false);
   };
+  const [isImageLoaded, setIsImageLoaded] = useState(false);
+
+  const handleImageLoad = () => {
+    setIsImageLoaded(true); // Image is fully loaded, trigger the slide
+  };
+
+  const [isInView, setIsInView] = useState(false);
+  const imageRef = useRef(null);
+  const [src, setSrc] = useState('')
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const entry = entries[0];
+        if (entry.isIntersecting) {
+          setIsInView(true);
+          setSrc(data)
+        }
+      },
+      { threshold: 0.9 }
+    );
+
+    if (imageRef.current) {
+      observer.observe(imageRef.current);
+    }
+
+    return () => {
+      if (imageRef.current) {
+        observer.unobserve(imageRef.current);
+      }
+    };
+  }, []);
+
 
   return (
+    
     <>
       <div
           ref={flipBoxRef}
@@ -82,7 +116,9 @@ export default function ProjectPic({data, style}) {
               transition: "background-position 0.1s ease, opacity 0.2s ease-out",
           }}>
           </div>
-          <img src={data} className='relative pointer-events-none w-80 z-1' alt="" />
+          <div ref={imageRef}>
+            <img src={src} style={{transform: (isInView) ? "translateX(0)" : "translate(100%)"}} onLoad={handleImageLoad} className='transition-2 relative pointer-events-none w-80 z-1' alt="" />
+          </div>
       </div>
     </>
   )
