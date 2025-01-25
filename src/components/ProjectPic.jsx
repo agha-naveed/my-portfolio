@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 
-export default function ProjectPic({data}) {
+export default function ProjectPic({data, style}) {
     const flipBoxRef = useRef(null);
   const [transformStyles, setTransformStyles] = useState({
     rotateX: 0,
@@ -63,25 +63,27 @@ export default function ProjectPic({data}) {
   };
 
   return (
-    <div
-        ref={flipBoxRef}
-        className="relative z-[200] w-72 h-92 rounded-lg overflow-hidden transition-transform duration-200 ease-out"
-        onMouseMove={handleMouseMove}
-        onMouseLeave={handleMouseLeave}
-        style={{
-        transform: `perspective(1000px) rotateX(${transformStyles.rotateX}deg) rotateY(${transformStyles.rotateY}deg) scale(${transformStyles.scale})`,
-        boxShadow: transformStyles.boxShadow,
-    }}
-    >
-        <div
-        className="absolute top-0 left-0 w-full h-full pointer-events-none z-10 rounded-lg"
-        style={{
-            background: `radial-gradient(circle at ${transformStyles.shineX}% ${transformStyles.shineY}%, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.1) 60%)`,
-            opacity: 0.2,
-            transition: "background-position 0.1s ease, opacity 0.2s ease-out",
-        }}>
-        </div>
-        <img src={data} className='relative pointer-events-none w-72 z-1' alt="" />
-    </div>
+    <>
+      <div
+          ref={flipBoxRef}
+          className="relative z-[200] w-80 rounded-lg overflow-hidden transition-transform duration-200 ease-out"
+          onMouseMove={handleMouseMove}
+          onMouseLeave={handleMouseLeave}
+          style={{
+          transform: `perspective(1000px) rotateX(${transformStyles.rotateX}deg) rotateY(${transformStyles.rotateY}deg) scale(${transformStyles.scale})`,
+          boxShadow: transformStyles.boxShadow,
+      }}
+      >
+          <div
+          className="absolute top-0 left-0 w-full h-full pointer-events-none z-10 rounded-lg"
+          style={{
+              background: `radial-gradient(circle at ${transformStyles.shineX}% ${transformStyles.shineY}%, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.1) 60%)`,
+              opacity: 0.2,
+              transition: "background-position 0.1s ease, opacity 0.2s ease-out",
+          }}>
+          </div>
+          <img src={data} className='relative pointer-events-none w-80 z-1' alt="" />
+      </div>
+    </>
   )
 }

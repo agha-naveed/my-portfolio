@@ -9,9 +9,11 @@ export default function ProjectGallery() {
   return (
     <div className='bg-light-gray'>
         <div className='container mx-auto py-10 justify-items-center'>
-            <div className='grid grid-cols-2 gap-10'>
+            <div className='grid grid-cols-3 gap-y-16 gap-x-24'>
                 <ProjectPic data={chatbot} />
                 <ProjectPic data={libLms} />
+                <ProjectPic data={musicPlayer} />
+                <ProjectPic data={otpGen} />
                 <ProjectPic data={musicPlayer} />
                 <ProjectPic data={otpGen} />
             </div>
