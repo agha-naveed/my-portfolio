@@ -92,7 +92,9 @@ export default function ProjectPic({data, myClass}) {
 
   return (
     
-    <div className={`${myClass} project-pic`}>
+    <div className={`${myClass} project-pic p-5 relative`}>
+    <div className={`${myClass} project-pic-bg project-pic p-5 relative`}></div>
+
       <div
           ref={flipBoxRef}
           className="relative z-[200] sm:w-80 w-64 rounded-lg overflow-hidden transition-transform duration-200 ease-out"

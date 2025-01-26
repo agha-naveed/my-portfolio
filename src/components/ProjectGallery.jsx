@@ -9,7 +9,7 @@ export default function ProjectGallery() {
   return (
     <div className='bg-light-gray'>
         <div className='container mx-auto py-10 justify-items-center'>
-            <div className='flex flex-wrap justify-between lg:gap-y-16 lg:gap-x-24 gap-10'>
+            <div className='flex flex-wrap justify-between lg:gap-y-16 lg:gap-x-24 gap-10 overflow-hidden'>
                 <ProjectPic data={chatbot} myClass={"chatbot"}/>
                 <ProjectPic data={libLms} myClass={"lib-lms"} />
                 <ProjectPic data={musicPlayer} myClass={"music-player"} />

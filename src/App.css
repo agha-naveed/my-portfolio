@@ -167,6 +167,35 @@
   z-index: 200;
   transition: 0.15s ease-out;
 }
+.chatbot {
+  z-index: 3000;
+}
+.chatbot:hover .chatbot::after {
+  display: block;
+}
+/* .project-pic-bg { */
+  /* width: 100vw; */
+  /* height: 100vh; */
+  /* background-color: blue; */
+  /* position: absolute; */
+/* } */
+
+.chatbot:hover::after {
+  /* background-color: orange; */
+}
+.chatbot::after {
+  content: "";
+  display: none;
+  min-width: 100vw;
+  min-height: 100vh;
+  background-color: rgba(24, 24, 24, 0.288);
+  /* background-color: red; */
+  backdrop-filter: blur(10px);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
 .chatbot::before {
   content: "AI Chatbot";
 }
