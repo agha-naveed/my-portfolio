@@ -61,11 +61,6 @@ export default function ProjectPic({data, style}) {
     });
     setIsMoving(false);
   };
-  const [isImageLoaded, setIsImageLoaded] = useState(false);
-
-  const handleImageLoad = () => {
-    setIsImageLoaded(true); // Image is fully loaded, trigger the slide
-  };
 
   const [isInView, setIsInView] = useState(false);
   const imageRef = useRef(null);
