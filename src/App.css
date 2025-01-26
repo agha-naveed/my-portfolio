@@ -170,32 +170,25 @@
 .chatbot {
   z-index: 3000;
 }
-.chatbot:hover .chatbot::after {
+.chatbot:hover .project-pic-bg {
   display: block;
 }
-/* .project-pic-bg { */
-  /* width: 100vw; */
-  /* height: 100vh; */
-  /* background-color: blue; */
-  /* position: absolute; */
-/* } */
-
-.chatbot:hover::after {
-  /* background-color: orange; */
+.project-pic-bg:hover {
+  display: none !important;
 }
-.chatbot::after {
-  content: "";
+
+.project-pic-bg {
   display: none;
-  min-width: 100vw;
-  min-height: 100vh;
-  background-color: rgba(24, 24, 24, 0.288);
-  /* background-color: red; */
-  backdrop-filter: blur(10px);
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 100;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.342);
+  backdrop-filter: blur(10px);
+  z-index: 1;
 }
+
 .chatbot::before {
   content: "AI Chatbot";
 }
