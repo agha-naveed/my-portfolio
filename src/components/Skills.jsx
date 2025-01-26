@@ -79,7 +79,7 @@ export default function Skills() {
 
 
         <section className='py-10 skills'>
-
+          
         </section>
 
       </div>

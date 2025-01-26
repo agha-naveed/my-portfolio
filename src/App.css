@@ -173,12 +173,12 @@
   width: 100%;
   text-align: center;
   color: #FFC86B;
-  opacity: 0.6;
   font-family: "poppins-bold";
   letter-spacing: -1px;
   position: fixed;
-  top: -20%;
+  top: -10px;
   left: 50%;
+  opacity: 0;
   transform: translateX(-50%);
   z-index: 200;
   transition: 0.15s ease-out;
@@ -200,6 +200,7 @@
   content: "AI Chatbot";
 }
 .chatbot:hover::before {
+  opacity: 1;
   top: 20px;
 }
 .lib-lms::before {
@@ -207,16 +208,19 @@
 }
 .lib-lms:hover::before {
   top: 20px;
+  opacity: 1;
 }
 .music-player::before {
   content: "Music Player";
 }
 .music-player:hover::before {
+  opacity: 1;
   top: 20px;
 }
 .otp-gen::before {
   content: "OTP Generator";
 }
 .otp-gen:hover::before {
+  opacity: 1;
   top: 20px;
 }
