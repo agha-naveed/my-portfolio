@@ -43,9 +43,10 @@ export default function Skills() {
         </section>
 
 
-        <section className='py-10 skills'>
-          <h2>Skills</h2>
-          <div className='flex flex-wrap gap-5 justify-center'>
+        <section className='py-10 skills grid gap-8'>
+          <h2 className='text-center text-[40px] font-poppins-semibold text-white' data-aos="fade-up" data-aos-duration="600">Skills</h2>
+
+          <div className='flex flex-wrap gap-5 justify-center' data-aos="fade-up" data-aos-duration="1000">
             <div className='w-52 h-52 flex flex-col justify-center items-center bg-skills-bg gap-4 rounded-xl'>
               <img src={html} alt="HTML" className='w-[26%]' />
               <span className='font-poppins-medium text-white text-xl'>HTML</span>
