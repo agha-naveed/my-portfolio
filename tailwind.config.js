@@ -12,6 +12,7 @@ export default {
       colors: {
         "dark-gray": "#272829",
         "light-gray": "#3D3E42",
+        "skills-bg": "#313233",
         "text-clr": "#b4b4b4",
         "yellow-text": "#FFC86B",
       },

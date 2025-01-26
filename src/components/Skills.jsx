@@ -1,60 +1,25 @@
-import React, { useEffect, useState, useRef } from 'react'
+import React, { useEffect } from 'react'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import html from '../assets/img/skills-logo/html-logo.svg'
+import css from '../assets/img/skills-logo/css-logo.svg'
+import js from '../assets/img/skills-logo/javascript-logo.svg'
+import bootstrap from '../assets/img/skills-logo/bootstrap-logo.svg'
+import tailwind from '../assets/img/skills-logo/tailwind-logo.svg'
+import react from '../assets/img/skills-logo/react.svg'
+import nextjs from '../assets/img/skills-logo/nextjs.svg'
+import expressjs from '../assets/img/skills-logo/express.svg'
+import nodejs from '../assets/img/skills-logo/nodejs.svg'
+import mysql from '../assets/img/skills-logo/mysql.svg'
+import mongodb from '../assets/img/skills-logo/mongo.svg'
+import photoshop from '../assets/img/skills-logo/photoshop.svg'
+import python from '../assets/img/skills-logo/python.svg'
+import java from '../assets/img/skills-logo/java.svg'
+import wordpress from '../assets/img/skills-logo/wordpress.svg'
+import cpp from '../assets/img/skills-logo/cpp.svg'
 
 
 export default function Skills() {
-
-  let [fMax, set_fMax] = useState(true)
-  let [bMax, set_bMax] = useState(true)
-  let [dMax, set_dMax] = useState(true)
-  
-  const [positions, setPositions] = useState([
-    { x: 0, y: 0 }, // Position for the first window
-    { x: 0, y: 0 }, // Position for the second window
-    { x: 0, y: 0 }, // Position for the third window
-  ]);
-  const [isDragging, setIsDragging] = useState(false);
-  const [draggedWindowIndex, setDraggedWindowIndex] = useState(null);
-
-  const windowRefs = useRef([useRef(null), useRef(null), useRef(null)]);
-  
-  useEffect(() => {
-    // Mouse move handler
-    const handleMouseMove = (e) => {
-      if (isDragging && draggedWindowIndex !== null) {
-        setPositions((prevPositions) => {
-          const newPositions = [...prevPositions];
-          const newX = prevPositions[draggedWindowIndex].x + e.movementX;
-          const newY = prevPositions[draggedWindowIndex].y + e.movementY;
-          newPositions[draggedWindowIndex] = { x: newX, y: newY };
-          return newPositions;
-        });
-      }
-    };
-
-    // Mouse up handler
-    const handleMouseUp = () => {
-      setIsDragging(false);
-    };
-
-    // Add event listeners for mouse move and mouse up
-    window.addEventListener('mousemove', handleMouseMove);
-    window.addEventListener('mouseup', handleMouseUp);
-
-    // Cleanup event listeners on component unmount
-    return () => {
-      window.removeEventListener('mousemove', handleMouseMove);
-      window.removeEventListener('mouseup', handleMouseUp);
-    };
-  }, [isDragging, draggedWindowIndex]);
-
-  // Start dragging when mouse is pressed down on a window
-  const handleMouseDown = (e, index) => {
-    setIsDragging(true);
-    setDraggedWindowIndex(index);
-  };
-
   
   
   useEffect(() => {
@@ -79,7 +44,73 @@ export default function Skills() {
 
 
         <section className='py-10 skills'>
-          
+          <h2>Skills</h2>
+          <div className='flex flex-wrap gap-5 justify-center'>
+            <div className='w-52 h-52 flex flex-col justify-center items-center bg-skills-bg gap-4 rounded-xl'>
+              <img src={html} alt="HTML" className='w-[26%]' />
+              <span className='font-poppins-medium text-white text-xl'>HTML</span>
+            </div>
+            <div className='w-52 h-52 flex flex-col justify-center items-center bg-skills-bg gap-4 rounded-xl'>
+              <img src={css} alt="CSS" className='w-[26%]' />
+              <span className='font-poppins-medium text-white text-xl'>CSS</span>
+            </div>
+            <div className='w-52 h-52 flex flex-col justify-center items-center bg-skills-bg gap-4 rounded-xl'>
+              <img src={js} alt="JavaScript" className='w-[26%]' />
+              <span className='font-poppins-medium text-white text-xl'>JavaScript</span>
+            </div>
+            <div className='w-52 h-52 flex flex-col justify-center items-center bg-skills-bg gap-4 rounded-xl'>
+              <img src={bootstrap} alt="Bootstrap" className='w-[26%]' />
+              <span className='font-poppins-medium text-white text-xl'>Bootstrap</span>
+            </div>
+            <div className='w-52 h-52 flex flex-col justify-center items-center bg-skills-bg gap-4 rounded-xl'>
+              <img src={tailwind} alt="Tailwind" className='w-[26%]' />
+              <span className='font-poppins-medium text-white text-xl'>Tailwind</span>
+            </div>
+            <div className='w-52 h-52 flex flex-col justify-center items-center bg-skills-bg gap-4 rounded-xl'>
+              <img src={react} alt="React Js" className='w-[26%]' />
+              <span className='font-poppins-medium text-white text-xl'>React Js</span>
+            </div>
+            <div className='w-52 h-52 flex flex-col justify-center items-center bg-skills-bg gap-4 rounded-xl'>
+              <img src={nextjs} alt="Next Js" className='w-[26%]' />
+              <span className='font-poppins-medium text-white text-xl'>Next Js</span>
+            </div>
+            <div className='w-52 h-52 flex flex-col justify-center items-center bg-skills-bg gap-4 rounded-xl'>
+              <img src={expressjs} alt="Express Js" className='w-[26%]' />
+              <span className='font-poppins-medium text-white text-xl'>Express Js</span>
+            </div>
+            <div className='w-52 h-52 flex flex-col justify-center items-center bg-skills-bg gap-4 rounded-xl'>
+              <img src={nodejs} alt="Node Js" className='w-[26%]' />
+              <span className='font-poppins-medium text-white text-xl'>Node Js</span>
+            </div>
+            <div className='w-52 h-52 flex flex-col justify-center items-center bg-skills-bg gap-4 rounded-xl'>
+              <img src={mongodb} alt="MongoDB" className='w-[26%]' />
+              <span className='font-poppins-medium text-white text-xl'>MongoDB</span>
+            </div>
+            <div className='w-52 h-52 flex flex-col justify-center items-center bg-skills-bg gap-4 rounded-xl'>
+              <img src={mysql} alt="MySQL" className='w-[26%]' />
+              <span className='font-poppins-medium text-white text-xl'>MySQL</span>
+            </div>
+            <div className='w-52 h-52 flex flex-col justify-center items-center bg-skills-bg gap-4 rounded-xl'>
+              <img src={python} alt="Python" className='w-[26%]' />
+              <span className='font-poppins-medium text-white text-xl'>Python</span>
+            </div>
+            <div className='w-52 h-52 flex flex-col justify-center items-center bg-skills-bg gap-4 rounded-xl'>
+              <img src={photoshop} alt="Photoshop" className='w-[26%]' />
+              <span className='font-poppins-medium text-white text-xl'>Photoshop</span>
+            </div>
+            <div className='w-52 h-52 flex flex-col justify-center items-center bg-skills-bg gap-4 rounded-xl'>
+              <img src={cpp} alt="C++" className='w-[26%]' />
+              <span className='font-poppins-medium text-white text-xl'>C++</span>
+            </div>
+            <div className='w-52 h-52 flex flex-col justify-center items-center bg-skills-bg gap-4 rounded-xl'>
+              <img src={java} alt="Java" className='w-[26%]' />
+              <span className='font-poppins-medium text-white text-xl'>Java</span>
+            </div>
+            <div className='w-52 h-52 flex flex-col justify-center items-center bg-skills-bg gap-4 rounded-xl'>
+              <img src={wordpress} alt="Wordpress" className='w-[26%]' />
+              <span className='font-poppins-medium text-white text-xl'>Wordpress</span>
+            </div>
+          </div>
         </section>
 
       </div>
