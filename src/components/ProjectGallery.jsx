@@ -18,7 +18,6 @@ export default function ProjectGallery() {
                 <ProjectPic data={otpGen} myClass={"otp-gen"} />
             </div>
         </div>
-        
     </div>
   )
 }

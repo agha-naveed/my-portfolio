@@ -159,28 +159,35 @@
 .chatbot::before, .lib-lms::before, .music-player::before, .otp-gen::before {
   font-size: 45px;
   color: white;
-  position: fixed;
   font-family: "poppins-medium";
+  position: fixed;
   top: -10%;
   left: 50%;
   transform: translateX(-50%);
   z-index: 200;
   transition: 0.15s ease-out;
 }
-
-.chatbot:hover::before {
+.chatbot::before {
   content: "AI Chatbot";
+}
+.chatbot:hover::before {
   top: 20px;
+}
+.lib-lms::before {
+  content: "Library Management System";
 }
 .lib-lms:hover::before {
-  content: "Library Management System";
   top: 20px;
 }
-.mucis-player:hover::before {
+.music-player::before {
   content: "Music Player";
+}
+.music-player:hover::before {
   top: 20px;
+}
+.otp-gen::before {
+  content: "OTP Generator";
 }
 .otp-gen:hover::before {
-  content: "OTP Generator";
   top: 20px;
 }
