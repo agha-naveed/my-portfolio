@@ -5,7 +5,7 @@ export default function ProjectPic({data, myClass}) {
   const [transformStyles, setTransformStyles] = useState({
     rotateX: 0,
     rotateY: 0,
-    shineX: 0, // Default shine position (centered)
+    shineX: 0,
     shineY: 0,
     scale: 1,
     boxShadow: "",
@@ -21,23 +21,23 @@ export default function ProjectPic({data, myClass}) {
     const x = e.clientX - rect.left;
     const y = e.clientY - rect.top;
 
-    // Calculate rotation values based on mouse position
-    const rotateX = ((y / rect.height) - 0.5) * 45; // Tilt X-axis
-    const rotateY = ((x / rect.width) - 0.5) * -45; // Tilt Y-axis
+    
+    const rotateX = ((y / rect.height) - 0.5) * 45;
+    const rotateY = ((x / rect.width) - 0.5) * -45;
 
-    // Calculate shine position
-    const shineX = ((x / rect.width) * 100).toFixed(2); // Shine X as percentage
-    const shineY = ((y / rect.height) * 100).toFixed(2); // Shine Y as percentage
+    
+    const shineX = ((x / rect.width) * 100).toFixed(2);
+    const shineY = ((y / rect.height) * 100).toFixed(2);
     if (timeoutRef.current) clearTimeout(timeoutRef.current);
-    // Update state with new transform styles
+
     setTransformStyles({
       rotateX,
       rotateY,
       shineX,
       shineY,
-      scale: 1.1, // Slightly increase scale for hover effect
-      boxShadow: "0 20px 35px rgba(0, 0, 0, 0.5)", // Shadow for depth
-      op: 0.5, // Increase shine opacity
+      scale: 1.1,
+      boxShadow: "0 20px 35px rgba(0, 0, 0, 0.5)",
+      op: 0.5,
     });
 
     setIsMoving(true);
