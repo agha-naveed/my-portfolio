@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 
-export default function ProjectPic({data, style}) {
+export default function ProjectPic({data, myClass}) {
     const flipBoxRef = useRef(null);
   const [transformStyles, setTransformStyles] = useState({
     rotateX: 0,
@@ -92,10 +92,10 @@ export default function ProjectPic({data, style}) {
 
   return (
     
-    <>
+    <div className={`${myClass} project-pic`}>
       <div
           ref={flipBoxRef}
-          className="relative z-[200] w-80 rounded-lg overflow-hidden transition-transform duration-200 ease-out"
+          className="relative z-[200] sm:w-80 w-64 rounded-lg overflow-hidden transition-transform duration-200 ease-out"
           onMouseMove={handleMouseMove}
           onMouseLeave={handleMouseLeave}
           style={{
@@ -112,9 +112,9 @@ export default function ProjectPic({data, style}) {
           }}>
           </div>
           <div ref={imageRef}>
-            <img src={src} style={{transform: (isInView) ? "translateX(0)" : "translate(100%)"}} onLoad={handleImageLoad} className='transition-2 relative pointer-events-none w-80 z-1' alt="" />
+            <img src={src} style={{transform: (isInView) ? "translateX(0)" : "translate(100%)"}} className='transition-2 relative pointer-events-none sm:w-80 w-64 z-1' alt="" />
           </div>
       </div>
-    </>
+    </div>
   )
 }
