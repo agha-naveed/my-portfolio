@@ -167,10 +167,11 @@
   z-index: 200;
   transition: 0.15s ease-out;
 }
-.chatbot {
-  z-index: 3000;
-}
-.chatbot:hover .project-pic-bg {
+
+.chatbot:hover .project-pic-bg, 
+.lib-lms:hover .project-pic-bg, 
+.music-player:hover .project-pic-bg, 
+.otp-gen:hover .project-pic-bg {
   display: block;
 }
 .project-pic-bg:hover {
@@ -179,7 +180,7 @@
 
 .project-pic-bg {
   display: none;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100vw;

@@ -92,30 +92,32 @@ export default function ProjectPic({data, myClass}) {
 
   return (
     
-    <div className={`${myClass} project-pic p-5`}>
-    <div className={`${myClass} project-pic-bg`}></div>
+    <div className='p-6'>
+      <div className={`${myClass} hover:z-[3000] project-pic w-auto h-auto relative`}>
+        <div className={`project-pic-bg`}></div>
 
-      <div
-          ref={flipBoxRef}
-          className="relative z-[200] sm:w-80 w-64 rounded-lg overflow-hidden transition-transform duration-200 ease-out"
-          onMouseMove={handleMouseMove}
-          onMouseLeave={handleMouseLeave}
-          style={{
-          transform: `perspective(1000px) rotateX(${transformStyles.rotateX}deg) rotateY(${transformStyles.rotateY}deg) scale(${transformStyles.scale})`,
-          boxShadow: transformStyles.boxShadow,
-      }}
-      >
-          <div
-          className="absolute top-0 left-0 w-full h-full pointer-events-none z-10 rounded-lg"
-          style={{
-              background: `radial-gradient(circle at ${transformStyles.shineX}% ${transformStyles.shineY}%, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.1) 60%)`,
-              opacity: 0.2,
-              transition: "background-position 0.1s ease, opacity 0.2s ease-out",
-          }}>
-          </div>
-          <div ref={imageRef}>
-            <img src={src} style={{transform: (isInView) ? "translateX(0)" : "translate(100%)"}} className='transition-2 relative pointer-events-none sm:w-80 w-64 z-1' alt="" />
-          </div>
+        <div
+            ref={flipBoxRef}
+            className="relative z-[200] sm:w-80 w-64 rounded-lg overflow-hidden transition-transform duration-200 ease-out"
+            onMouseMove={handleMouseMove}
+            onMouseLeave={handleMouseLeave}
+            style={{
+            transform: `perspective(1000px) rotateX(${transformStyles.rotateX}deg) rotateY(${transformStyles.rotateY}deg) scale(${transformStyles.scale})`,
+            // boxShadow: transformStyles.boxShadow,
+        }}
+        >
+            <div
+            className="absolute top-0 left-0 w-full h-full pointer-events-none z-10 rounded-lg"
+            style={{
+                background: `radial-gradient(circle at ${transformStyles.shineX}% ${transformStyles.shineY}%, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.1) 60%)`,
+                opacity: 0.2,
+                transition: "background-position 0.1s ease, opacity 0.2s ease-out",
+            }}>
+            </div>
+            <div ref={imageRef}>
+              <img src={src} style={{transform: (isInView) ? "translateX(0)" : "translate(100%)"}} className='transition-2 relative pointer-events-none sm:w-80 w-64 z-1' alt="" />
+            </div>
+        </div>
       </div>
     </div>
   )
