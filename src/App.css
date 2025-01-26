@@ -156,17 +156,7 @@
 }
 
 
-.chatbot::before, .lib-lms::before, .music-player::before, .otp-gen::before {
-  font-size: 45px;
-  color: white;
-  font-family: "poppins-medium";
-  position: fixed;
-  top: -10%;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 200;
-  transition: 0.15s ease-out;
-}
+
 
 .chatbot:hover .project-pic-bg, 
 .lib-lms:hover .project-pic-bg, 
@@ -174,8 +164,24 @@
 .otp-gen:hover .project-pic-bg {
   display: block;
 }
+
 .project-pic-bg:hover {
   display: none !important;
+}
+.chatbot::before, .lib-lms::before, .music-player::before, .otp-gen::before {
+  font-size: 60px;
+  width: 100%;
+  text-align: center;
+  color: #FFC86B;
+  opacity: 0.6;
+  font-family: "poppins-bold";
+  letter-spacing: -1px;
+  position: fixed;
+  top: -20%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 200;
+  transition: 0.15s ease-out;
 }
 
 .project-pic-bg {
