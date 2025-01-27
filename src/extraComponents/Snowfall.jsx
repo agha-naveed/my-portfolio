@@ -1,5 +1,4 @@
 /** @jsxImportSource @emotion/react */
-import React from 'react';
 import { css } from '@emotion/react';
 
 const snowflakeStyle = css`
@@ -56,9 +55,9 @@ const generateSnowflakes = () => {
 
 const Snowfall = () => {
   return (
-    <div
+    <div className='pointer-events-none'
       css={css`
-        position: relative;
+        position: absolute;
         overflow: hidden;
         width: 100%;
         height: 100vh;

@@ -4,7 +4,7 @@ import { Outlet } from 'react-router';
 
 export default function App() {
   return (
-    <div className='h-screen w-full'>
+    <div className='h-screen w-full cursor-none'>
       <Outlet />
     </div>
   );
