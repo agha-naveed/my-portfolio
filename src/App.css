@@ -53,9 +53,23 @@
   stroke-dashoffset: -32.42;
 }
 
-
-.window {
-  box-shadow: 0px 6px 20px #0000005e;
+.contact-btn {
+  transition: 0.1s ease-in-out;
+  transition-delay: 0.44s;
+}
+.contact-btn:hover::after {
+  transform: scale(1.5) translate(00px, -100px);
+}
+.contact-btn::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  width: 200px;
+  height: 260px;
+  border-radius: 50%;
+  transform: scale(1) translate(-100px, 80px);
+  background-color: #FFC86B;
+  transition: transform 1s cubic-bezier(.66, .00, .34, 1.00);
 }
 
 .p-40-80 {
