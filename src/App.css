@@ -161,6 +161,10 @@
   overflow: hidden;
   position: relative;
 }
+.skills-pic div span {
+  transition: 0.1s ease-in-out;
+  transition-delay: 0.44s;
+}
 .skills-pic div:hover span {
   color: #272829;
 }
