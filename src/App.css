@@ -155,9 +155,34 @@
   background-color: #FFC86B;
 }
 
+/* ------ skills-pic ------- */
+.skills-pic div {
+  z-index: 10;
+  overflow: hidden;
+  position: relative;
+}
+.skills-pic div:hover span {
+  color: #272829;
+}
+.skills-pic div::after {
+  content: '';
+  position: absolute;
+  width: 200px;
+  height: 260px;
+  transform: scale(1) translate(-100px, 280px);
+  border-radius: 50%;
+  background-color: #FFC86B;
+  transition: transform 1s cubic-bezier(.66, .00, .34, 1.00);
+}
+.skills-pic div:hover::after {
+  transform: translate(0);
+  transform: scale(1.5);
+}
+
+/* ------ skills-pic Ended ------ */
 
 
-
+/* ------ Project Section ------- */
 .chatbot:hover .project-pic-bg, 
 .lib-lms:hover .project-pic-bg, 
 .music-player:hover .project-pic-bg, 
