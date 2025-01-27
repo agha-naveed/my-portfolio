@@ -48,20 +48,18 @@ const CustomCursor = () => {
   // Define cursor styles for different states
   const cursorStyles = {
     default: {
-      width: '13px',
-      height: '13px',
+      width: '40px',
+      height: '40px',
       backgroundColor: 'black',
+      top: '-13px',
+      left: '-13px'
     },
     text: {
-      width: '7px',
-      height: '30px',
-      backgroundColor: 'red',
-      borderRadius: "2px !important"
-    },
-    image: {
-      width: '25px',
-      height: '25px',
-      backgroundColor: 'red', // Red when hovering image
+      width: '60px',
+      height: '60px',
+      backgroundColor: 'black',
+      top: '-24px',
+      left: '-24px'
     },
   };
 
@@ -75,28 +73,27 @@ const CustomCursor = () => {
           pointerEvents: 'none',
           borderRadius: '50%',
           backgroundColor: cursorStyles[cursorType].backgroundColor,
-          width: cursorStyles[cursorType].width,
-          height: cursorStyles[cursorType].height,
+          width: '13px',
+          height: '13px',
           transform: `translate3d(${cursorPos.x - 10}px, ${cursorPos.y - 10}px, 0)`,
           transition: 'transform 0.1s ease-out',
           zIndex: 40000,
         }}
       />
-      
       <motion.div
         style={{
           position: 'fixed',
-          top: '-13px',
-          left: '-13px',
+          top: cursorStyles[cursorType].top,
+          left: cursorStyles[cursorType].left,
           mixBlendMode: 'difference',
           pointerEvents: 'none',
-          width: '40px',
-          height: '40px',
+          width: cursorStyles[cursorType].width,
+          height: cursorStyles[cursorType].height,
           borderRadius: '50%',
           backgroundColor: 'white',
           border: '2px solid white',
           transform: `translate3d(${cursorPos.x - 10}px, ${cursorPos.y - 10}px, 0)`,
-          transition: 'transform 0.4s ease-out',
+          transition: 'transform 0.4s ease-out, width 0.2s ease-out, height 0.2s ease-out, left 0.2s ease, top 0.2s ease',
           zIndex: 4000,
         }}
       />

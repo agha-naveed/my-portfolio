@@ -254,3 +254,14 @@
   opacity: 1;
   top: 20px;
 }
+
+
+
+@keyframes blinks {
+  0% {
+    visibility: hidden;
+  }
+  100% {
+    visibility: visible;
+  }
+}
