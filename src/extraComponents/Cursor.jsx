@@ -61,6 +61,10 @@ const CustomCursor = () => {
       top: '-24px',
       left: '-24px'
     },
+    image: {
+      width: 0,
+      height: 0
+    }
   };
 
   return (

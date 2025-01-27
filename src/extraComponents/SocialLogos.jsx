@@ -10,19 +10,19 @@ export default function SocialLogos({display, hidden}) {
         <div className={`w-[3px] h-24 bg-yellow-text ${hidden}`} ></div>
 
         <div className={`text-white s-m-logos text-[26px] ${display} gap-2`}>
-          <div className='fb-logo cursor-pointer w-10 h-10 flex justify-center items-center p-2'>
+          <div className='fb-logo hover-image w-10 h-10 flex justify-center items-center p-2'>
             <FaFacebookF/>
           </div>
-          <div className='linkedin-logo cursor-pointer w-10 h-10 flex justify-center items-center p-2'>
+          <div className='linkedin-logo hover-image w-10 h-10 flex justify-center items-center p-2'>
             <FaLinkedinIn/>
           </div>
-          <div className='x-logo transition-all hover:text-black cursor-pointer w-10 h-10 flex justify-center items-center p-2'>
+          <div className='x-logo transition-all hover:text-black hover-image w-10 h-10 flex justify-center items-center p-2'>
             <PiXLogoBold/>
           </div>
-          <div className='insta-logo transition-all cursor-pointer w-10 h-10 rounded-full flex justify-center items-center'>
+          <div className='insta-logo transition-all hover-image w-10 h-10 rounded-full flex justify-center items-center'>
             <FaInstagram />
           </div>
-          <div className='git-logo cursor-pointer w-10 h-10 flex justify-center items-center p-2'>
+          <div className='git-logo hover-image w-10 h-10 flex justify-center items-center p-2'>
             <FiGithub />
           </div>
         </div>
