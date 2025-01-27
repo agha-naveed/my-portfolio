@@ -66,7 +66,7 @@ export default function Navbar() {
 
       <div className="search-bar lg:flex hidden">
         <input ref={divRef} onClick={handleClick} type="text" placeholder='Search'
-        className={`${searchWidth ? "w-[90%]" : "w-[64%]"}  h-[56px] outline-none text-[22px]`} />
+        className={`${searchWidth ? "w-[90%]" : "w-[64%]"} hover-text h-[56px] outline-none text-[22px]`} />
 
         <IoSearch id='search-icon' />
       </div>

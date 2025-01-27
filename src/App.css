@@ -1,3 +1,7 @@
+* {
+  cursor: none;
+}
+
 .search-bar {
   justify-content: right;
 }
@@ -220,7 +224,7 @@
   font-family: "poppins-bold";
   letter-spacing: -1px;
   position: fixed;
-  top: -20%;
+  top: -50%;
   left: 50%;
   opacity: 0;
   transform: translateX(-50%);

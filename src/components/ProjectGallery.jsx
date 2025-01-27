@@ -20,6 +20,29 @@ export default function ProjectGallery() {
                 <ProjectPic data={otpGen} myClass={"otp-gen"} />
             </div>
         </div>
+        <div className="container mx-auto flex justify-center">
+          <div>
+              <h3 className='font-poppins-semibold text-white text-4xl'>Other</h3>
+              <p className='font-poppins-medium text-[18px] text-yellow-text'>Check out my other Projects:</p>
+
+              <div className='flex px-14'>
+
+                <ul className='flex flex-col gap-3'>
+                  <li><h3 className='text-[24px] text-yellow-text font-poppins-semibold relative left-[-18px]'>Archives</h3></li>
+                  <li className='list-[circle] text-white font-poppins-regular'>Weather App</li>
+                  <li className='list-[circle] text-white font-poppins-regular'>Twitter Clone</li>
+                  <li className='list-[circle] text-white font-poppins-regular'>Password Strength Checker</li>
+                </ul>
+                
+                <ul>
+                  <li><h3 className='text-[24px] text-yellow-text font-poppins-semibold relative left-[-18px]'>Random</h3></li>
+                  <li className='list-[circle] text-white font-poppins-regular'>Old Portfolio</li>
+                </ul>
+
+              </div>
+            </div>
+        </div>
+
     </div>
   )
 }
