@@ -45,67 +45,67 @@ export default function Skills() {
           <h2 className='text-center text-[40px] font-poppins-semibold text-white' data-aos="fade-up" data-aos-duration="600">Skills</h2>
 
           <div className='skills-pic flex flex-wrap gap-5 justify-center' data-aos="fade-up" data-aos-duration="1000">
-            <div className='md:w-52 md:h-52 w-36 h-36 flex flex-col justify-center items-center bg-skills-bg gap-4 rounded-xl relative'>
+            <div className='hover-text md:w-52 md:h-52 w-36 h-36 flex flex-col justify-center items-center bg-skills-bg gap-4 rounded-xl relative'>
               <img src={html} alt="HTML" className='w-[26%] z-10' />
               <span className='font-poppins-regular text-white md:text-xl z-10'>HTML</span>
             </div>
-            <div className='md:w-52 md:h-52 w-36 h-36 flex flex-col justify-center items-center bg-skills-bg gap-4 rounded-xl'>
+            <div className='hover-text md:w-52 md:h-52 w-36 h-36 flex flex-col justify-center items-center bg-skills-bg gap-4 rounded-xl'>
               <img src={css} alt="CSS" className='w-[26%] z-10' />
               <span className='font-poppins-regular text-white md:text-xl z-10'>CSS</span>
             </div>
-            <div className='md:w-52 md:h-52 w-36 h-36 flex flex-col justify-center items-center bg-skills-bg gap-4 rounded-xl'>
+            <div className='hover-text md:w-52 md:h-52 w-36 h-36 flex flex-col justify-center items-center bg-skills-bg gap-4 rounded-xl'>
               <img src={js} alt="JavaScript" className='w-[26%] z-10' />
               <span className='font-poppins-regular text-white md:text-xl z-10'>JavaScript</span>
             </div>
-            <div className='md:w-52 md:h-52 w-36 h-36 flex flex-col justify-center items-center bg-skills-bg gap-4 rounded-xl'>
+            <div className='hover-text md:w-52 md:h-52 w-36 h-36 flex flex-col justify-center items-center bg-skills-bg gap-4 rounded-xl'>
               <img src={bootstrap} alt="Bootstrap" className='w-[26%] z-10' />
               <span className='font-poppins-regular text-white md:text-xl z-10'>Bootstrap</span>
             </div>
-            <div className='md:w-52 md:h-52 w-36 h-36 flex flex-col justify-center items-center bg-skills-bg gap-4 rounded-xl'>
+            <div className='hover-text md:w-52 md:h-52 w-36 h-36 flex flex-col justify-center items-center bg-skills-bg gap-4 rounded-xl'>
               <img src={tailwind} alt="Tailwind" className='w-[26%] z-10' />
               <span className='font-poppins-regular text-white md:text-xl z-10'>Tailwind</span>
             </div>
-            <div className='md:w-52 md:h-52 w-36 h-36 flex flex-col justify-center items-center bg-skills-bg gap-4 rounded-xl'>
+            <div className='hover-text md:w-52 md:h-52 w-36 h-36 flex flex-col justify-center items-center bg-skills-bg gap-4 rounded-xl'>
               <img src={react} alt="React Js" className='w-[26%] z-10' />
               <span className='font-poppins-regular text-white md:text-xl z-10'>React Js</span>
             </div>
-            <div className='md:w-52 md:h-52 w-36 h-36 flex flex-col justify-center items-center bg-skills-bg gap-4 rounded-xl'>
+            <div className='hover-text md:w-52 md:h-52 w-36 h-36 flex flex-col justify-center items-center bg-skills-bg gap-4 rounded-xl'>
               <img src={nextjs} alt="Next Js" className='w-[26%] z-10' />
               <span className='font-poppins-regular text-white md:text-xl z-10'>Next Js</span>
             </div>
-            <div className='md:w-52 md:h-52 w-36 h-36 flex flex-col justify-center items-center bg-skills-bg gap-4 rounded-xl'>
+            <div className='hover-text md:w-52 md:h-52 w-36 h-36 flex flex-col justify-center items-center bg-skills-bg gap-4 rounded-xl'>
               <img src={expressjs} alt="Express Js" className='w-[26%] z-10' />
               <span className='font-poppins-regular text-white md:text-xl z-10'>Express Js</span>
             </div>
-            <div className='md:w-52 md:h-52 w-36 h-36 flex flex-col justify-center items-center bg-skills-bg gap-4 rounded-xl'>
+            <div className='hover-text md:w-52 md:h-52 w-36 h-36 flex flex-col justify-center items-center bg-skills-bg gap-4 rounded-xl'>
               <img src={nodejs} alt="Node Js" className='w-[26%] z-10' />
               <span className='font-poppins-regular text-white md:text-xl z-10'>Node Js</span>
             </div>
-            <div className='md:w-52 md:h-52 w-36 h-36 flex flex-col justify-center items-center bg-skills-bg gap-4 rounded-xl'>
+            <div className='hover-text md:w-52 md:h-52 w-36 h-36 flex flex-col justify-center items-center bg-skills-bg gap-4 rounded-xl'>
               <img src={mongodb} alt="MongoDB" className='w-[26%] z-10' />
               <span className='font-poppins-regular text-white md:text-xl z-10'>MongoDB</span>
             </div>
-            <div className='md:w-52 md:h-52 w-36 h-36 flex flex-col justify-center items-center bg-skills-bg gap-4 rounded-xl'>
+            <div className='hover-text md:w-52 md:h-52 w-36 h-36 flex flex-col justify-center items-center bg-skills-bg gap-4 rounded-xl'>
               <img src={mysql} alt="MySQL" className='w-[26%] z-10' />
               <span className='font-poppins-regular text-white md:text-xl z-10'>MySQL</span>
             </div>
-            <div className='md:w-52 md:h-52 w-36 h-36 flex flex-col justify-center items-center bg-skills-bg gap-4 rounded-xl'>
+            <div className='hover-text md:w-52 md:h-52 w-36 h-36 flex flex-col justify-center items-center bg-skills-bg gap-4 rounded-xl'>
               <img src={python} alt="Python" className='w-[26%] z-10' />
               <span className='font-poppins-regular text-white md:text-xl z-10'>Python</span>
             </div>
-            <div className='md:w-52 md:h-52 w-36 h-36 flex flex-col justify-center items-center bg-skills-bg gap-4 rounded-xl'>
+            <div className='hover-text md:w-52 md:h-52 w-36 h-36 flex flex-col justify-center items-center bg-skills-bg gap-4 rounded-xl'>
               <img src={photoshop} alt="Photoshop" className='w-[26%] z-10' />
               <span className='font-poppins-regular text-white md:text-xl z-10'>Photoshop</span>
             </div>
-            <div className='md:w-52 md:h-52 w-36 h-36 flex flex-col justify-center items-center bg-skills-bg gap-4 rounded-xl'>
+            <div className='hover-text md:w-52 md:h-52 w-36 h-36 flex flex-col justify-center items-center bg-skills-bg gap-4 rounded-xl'>
               <img src={cpp} alt="C++" className='w-[26%] z-10' />
               <span className='font-poppins-regular text-white md:text-xl z-10'>C++</span>
             </div>
-            <div className='md:w-52 md:h-52 w-36 h-36 flex flex-col justify-center items-center bg-skills-bg gap-4 rounded-xl'>
+            <div className='hover-text md:w-52 md:h-52 w-36 h-36 flex flex-col justify-center items-center bg-skills-bg gap-4 rounded-xl'>
               <img src={java} alt="Java" className='w-[26%] z-10' />
               <span className='font-poppins-regular text-white md:text-xl z-10'>Java</span>
             </div>
-            <div className='md:w-52 md:h-52 w-36 h-36 flex flex-col justify-center items-center bg-skills-bg gap-4 rounded-xl'>
+            <div className='hover-text md:w-52 md:h-52 w-36 h-36 flex flex-col justify-center items-center bg-skills-bg gap-4 rounded-xl'>
               <img src={wordpress} alt="Wordpress" className='w-[26%] z-10' />
               <span className='font-poppins-regular text-white md:text-xl z-10'>Wordpress</span>
             </div>

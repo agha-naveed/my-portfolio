@@ -94,6 +94,7 @@ const CustomCursor = () => {
           width: cursorStyles[cursorType].width,
           height: cursorStyles[cursorType].height,
           borderRadius: '50%',
+          opacity: 0.7,
           backgroundColor: 'white',
           border: '2px solid white',
           transform: `translate3d(${cursorPos.x - 10}px, ${cursorPos.y - 10}px, 0)`,

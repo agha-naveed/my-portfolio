@@ -80,7 +80,7 @@
   height: 40px;
 }
 .s-m-logos div::before {
-  transition: 0.1s ease-out;
+  transition: 0.2s ease-out;
   content: "";
   position: absolute;
   width: 0px;
@@ -253,15 +253,4 @@
 .otp-gen:hover::before {
   opacity: 1;
   top: 20px;
-}
-
-
-
-@keyframes blinks {
-  0% {
-    visibility: hidden;
-  }
-  100% {
-    visibility: visible;
-  }
 }
