@@ -52,8 +52,6 @@ export default function OtherProject() {
                         </div>
                     </Link>
                 </li>
-                
-                
             </ul>
             
             <ul className='flex flex-col gap-4 w-[500px]'>

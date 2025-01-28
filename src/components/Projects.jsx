@@ -77,7 +77,7 @@ export default function Projects() {
               <ProjectPic data={otpGen} myClass={"otp-gen"} />
           </div>
 
-          <div>
+          <div className='px-10 pt-10 pb-44'>
               <div className='mb-8 grid gap-3s'>
                 <h3 className='font-poppins-semibold text-white text-4xl'>Other</h3>
                 <p className='font-poppins-medium text-[18px] text-yellow-text'>Check out my other Projects:</p>
