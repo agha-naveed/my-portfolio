@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 const CustomCursor = () => {
   const [cursorPos, setCursorPos] = useState({ x: 0, y: 0 });
-  const [cursorType, setCursorType] = useState('default'); // New state to track cursor type
+  const [cursorType, setCursorType] = useState('default');
 
   useEffect(() => {
     const updateCursorPos = (e) => {
@@ -14,7 +14,7 @@ const CustomCursor = () => {
     const handleMouseEnterImage = () => setCursorType('image');
     const handleMouseLeave = () => setCursorType('default');
 
-    // Add event listeners for text and image elements
+    
     const textElements = document.querySelectorAll('.hover-text');
     const imageElements = document.querySelectorAll('.hover-image');
 
