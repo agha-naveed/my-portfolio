@@ -1,11 +1,12 @@
-import React, { useState, useRef } from 'react'
+import React from 'react'
 import ParticlesComponent from './ParticlesComponent'
+import { Link } from 'react-router'
 import ProjectPic from './ProjectPic'
 import chatbot from '../assets/img/projects/chatbot.webp'
 import libLms from '../assets/img/projects/lib_lms.webp'
 import musicPlayer from '../assets/img/projects/music_player.webp'
 import otpGen from '../assets/img/projects/otp_generator.webp'
-
+import weatherApp from '../assets/img/project-hover-img/weather_app.webp'
 
 export default function Projects() {
   
@@ -88,10 +89,30 @@ export default function Projects() {
                 <ul className='flex flex-col gap-3 w-[500px]'>
                   <li><h3 className='text-[24px] text-yellow-text font-poppins-semibold relative left-[-18px]'>Archives</h3></li>
                   <li className='list-[circle] text-white font-poppins-regular'>
-                    Weather App
+                    <Link to="https://agha-naveed.github.io/weather-app/" className='z-[200] group relative hover:text-yellow-text hover-text hover:px-[10px] transition-all' target='_blank'>
+                      Weather App
+                      <div className='absolute top-5 left-10 w-[200px] z-[200]'>
+                        <img src={weatherApp} className='w-full hidden group-hover:block' alt="Weather App Image" />
+                      </div>
+                    </Link>
                   </li>
-                  <li className='list-[circle] text-white font-poppins-regular'>Twitter Clone</li>
-                  <li className='list-[circle] text-white font-poppins-regular'>Password Strength Checker</li>
+                  <li className='list-[circle] text-white font-poppins-regular'>
+                    <Link to="https://agha-naveed.github.io/weather-app/" className='z-[200] group relative hover:text-yellow-text hover-text hover:px-[10px] transition-all' target='_blank'>
+                      Weather App
+                      <div className='absolute top-5 left-10 w-[200px] z-[200]'>
+                        <img src={weatherApp} className='w-full hidden group-hover:block' alt="Weather App Image" />
+                      </div>
+                    </Link>
+                  </li>
+                  <li className='list-[circle] text-white font-poppins-regular'>
+                    <Link to="https://agha-naveed.github.io/weather-app/" className='z-[200] group relative hover:text-yellow-text hover-text hover:px-[10px] transition-all' target='_blank'>
+                      Weather App
+                      <div className='absolute top-5 left-10 w-[200px] z-[200]'>
+                        <img src={weatherApp} className='w-full hidden group-hover:block' alt="Weather App Image" />
+                      </div>
+                    </Link>
+                  </li>
+                  
                 </ul>
                 
                 <ul className='flex flex-col gap-3 w-[500px]'>
