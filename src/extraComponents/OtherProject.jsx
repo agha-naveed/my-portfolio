@@ -17,7 +17,7 @@ export default function OtherProject() {
     };
 
     return (
-        <div className='flex lg:justify-between flex-wrap gap-4'>
+        <div className='flex flex-wrap gap-4'>
             <ul className='flex flex-col gap-4 lg:w-[500px]'>
                 <li><h3 className='text-[24px] text-yellow-text font-poppins-semibold relative left-[-18px]'>Archives</h3></li>
                 <li className='list-[circle] text-white font-poppins-regular'>

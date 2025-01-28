@@ -6,10 +6,10 @@ export default function Footer() {
     return (
         <footer className='relative'>
             <div className='w-full bg-light-gray pb-12'>
-                <div className='flex items-center gap-14 relative -top-[30px]'>
-                    <div className='w-full h-1 bg-yellow-text'></div>
+                <div className='md:flex grid items-center place-content-center md:gap-14 relative -top-[30px]'>
+                    <div className='w-full h-1 bg-yellow-text md:block hidden'></div>
                     <div className='text-[40px] text-white font-poppins-semibold'>Contact</div>
-                    <div className='w-full h-1 bg-yellow-text'></div>
+                    <div className='md:w-full w-24 h-1 bg-yellow-text justify-self-center'></div>
                 </div>
                 <div className='container mx-auto py-6'>
                     <Button />
