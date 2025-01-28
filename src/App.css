@@ -283,7 +283,7 @@
   transition-delay: 0.44s;
 }
 .contact-icons:hover::after {
-  transform: scale(2) translate(20px, -100px);
+  transform: scale(2) translate(20px, -70px);
 }
 .contact-icons::after {
   content: "";
@@ -292,6 +292,6 @@
   height: 260px;
   background-color: #FFC86B;
   border-radius: 50%;
-  transform: scale(1) translate(-50px, 60px);
+  transform: scale(1) translate(-50px, 100px);
   transition: transform 1s cubic-bezier(.66, .00, .34, 1.00);
 }
