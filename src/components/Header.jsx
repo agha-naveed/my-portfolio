@@ -35,7 +35,7 @@ export default function Header() {
           </div>
 
           
-          <SocialLogos display = "grid" hidden = "block" />
+          <SocialLogos display = "grid" hidden = "block" margin = "ml-10" />
 
         </header>
 

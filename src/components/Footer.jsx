@@ -1,17 +1,27 @@
 import React from 'react'
+import Button from '../extraComponents/Button'
+import SocialLogos from '../extraComponents/SocialLogos'
 
 export default function Footer() {
     return (
         <footer className='relative'>
-            <div className='w-full h-[100px] bg-light-gray'>
-                <div className='flex items-center gap-14 relative -top-5'>
+            <div className='w-full bg-light-gray pb-12'>
+                <div className='flex items-center gap-14 relative -top-[30px]'>
                     <div className='w-full h-1 bg-yellow-text'></div>
-                    <div className='text-4xl text-white font-poppins-semibold'>Contact</div>
+                    <div className='text-[40px] text-white font-poppins-semibold'>Contact</div>
                     <div className='w-full h-1 bg-yellow-text'></div>
                 </div>
-                <div className='container mx-auto'>
-
+                <div className='container mx-auto py-6'>
+                    <Button />
                 </div>
+            </div>
+            <div className='w-full bg-dark-gray'>
+                <div className='flex items-center gap-14 relative -top-[20px]'>
+                    <div className='w-full h-1 bg-yellow-text'></div>
+                    <SocialLogos display={"flex"} hidden={"hidden"} margin={0} />
+                    <div className='w-full h-1 bg-yellow-text'></div>
+                </div>
+                <p className='text-white font-poppins-regular text-center p-2 text-[15px]'>Designed @AghaNaveed_ 2025</p>
             </div>
         </footer>
     )
