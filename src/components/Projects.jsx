@@ -1,5 +1,11 @@
 import React, { useState, useRef } from 'react'
 import ParticlesComponent from './ParticlesComponent'
+import ProjectPic from './ProjectPic'
+import chatbot from '../assets/img/projects/chatbot.webp'
+import libLms from '../assets/img/projects/lib_lms.webp'
+import musicPlayer from '../assets/img/projects/music_player.webp'
+import otpGen from '../assets/img/projects/otp_generator.webp'
+
 
 export default function Projects() {
   
@@ -9,7 +15,7 @@ export default function Projects() {
     <>
       <div id='project-section' className='project-container h-auto w-full bg-dark-gray relative -z-10'>
         
-        <div className="container mx-auto p-40-80">
+        <div className="container mx-auto p-40-80 grid gap-20">
         
           <div className="project-section grid gap-16 justify-items-center container mx-auto md:py-14 md:px-0 p-5">
 
@@ -60,6 +66,36 @@ export default function Projects() {
 
             </div>
 
+          </div>
+
+          <div className='flex flex-wrap md:justify-between justify-center overflow-hidden'>
+              <ProjectPic data={chatbot} myClass={"chatbot"}/>
+              <ProjectPic data={libLms} myClass={"lib-lms"} />
+              <ProjectPic data={musicPlayer} myClass={"music-player"} />
+              <ProjectPic data={otpGen} myClass={"otp-gen"} />
+              <ProjectPic data={musicPlayer} myClass={"music-player"} />
+              <ProjectPic data={otpGen} myClass={"otp-gen"} />
+          </div>
+
+          <div>
+              <h3 className='font-poppins-semibold text-white text-4xl'>Other</h3>
+              <p className='font-poppins-medium text-[18px] text-yellow-text'>Check out my other Projects:</p>
+
+              <div className='flex px-14'>
+
+                <ul className='flex flex-col gap-3'>
+                  <li><h3 className='text-[24px] text-yellow-text font-poppins-semibold relative left-[-18px]'>Archives</h3></li>
+                  <li className='list-[circle] text-white font-poppins-regular'>Weather App</li>
+                  <li className='list-[circle] text-white font-poppins-regular'>Twitter Clone</li>
+                  <li className='list-[circle] text-white font-poppins-regular'>Password Strength Checker</li>
+                </ul>
+                
+                <ul>
+                  <li><h3 className='text-[24px] text-yellow-text font-poppins-semibold relative left-[-18px]'>Random</h3></li>
+                  <li className='list-[circle] text-white font-poppins-regular'>Old Portfolio</li>
+                </ul>
+
+              </div>
           </div>
 
         </div>
