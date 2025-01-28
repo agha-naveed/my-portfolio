@@ -17,9 +17,9 @@ export default function Footer() {
             </div>
             <div className='w-full bg-dark-gray'>
                 <div className='flex items-center gap-14 relative -top-[20px]'>
-                    <div className='w-full h-1 bg-yellow-text'></div>
+                    <div className='w-full h-1 bg-yellow-text md:block hidden'></div>
                     <SocialLogos display={"flex"} hidden={"hidden"} margin={0} />
-                    <div className='w-full h-1 bg-yellow-text'></div>
+                    <div className='md:w-full w-24 h-1 bg-yellow-text justify-self-center'></div>
                 </div>
                 <p className='text-white font-poppins-regular text-center p-2 text-[15px]'>Designed @AghaNaveed_ 2025</p>
             </div>

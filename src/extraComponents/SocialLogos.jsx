@@ -3,9 +3,9 @@ import { FaFacebookF, FaLinkedinIn, FaInstagram } from "react-icons/fa";
 import { PiXLogoBold } from "react-icons/pi";
 import { FiGithub } from "react-icons/fi";
 
-export default function SocialLogos({display, hidden, margin}) {
+export default function SocialLogos({display, hidden, margin, responsive}) {
   return (
-    <div className={`justify-items-center content-end lg:grid hidden gap-5 z-[2000] ${margin}`}>
+    <div className={`justify-items-center content-end lg:grid ${responsive} gap-5 z-[2000] ${margin}`}>
         
         <div className={`w-[3px] h-24 bg-yellow-text ${hidden}`} ></div>
 
@@ -26,6 +26,7 @@ export default function SocialLogos({display, hidden, margin}) {
             <FiGithub />
           </div>
         </div>
+        
     </div>
   )
 }
