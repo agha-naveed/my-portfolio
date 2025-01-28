@@ -17,8 +17,8 @@ export default function OtherProject() {
     };
 
     return (
-        <>
-            <ul className='flex flex-col gap-4 w-[500px]'>
+        <div className='flex lg:justify-between flex-wrap gap-4'>
+            <ul className='flex flex-col gap-4 lg:w-[500px]'>
                 <li><h3 className='text-[24px] text-yellow-text font-poppins-semibold relative left-[-18px]'>Archives</h3></li>
                 <li className='list-[circle] text-white font-poppins-regular'>
                     <Link to="https://agha-naveed.github.io/weather-app/" className='z-[200] group relative hover:text-yellow-text hover-text hover:px-[10px] transition-all' target='_blank' onMouseMove={handleMouseMove}>
@@ -54,7 +54,7 @@ export default function OtherProject() {
                 </li>
             </ul>
             
-            <ul className='flex flex-col gap-4 w-[500px]'>
+            <ul className='flex flex-col gap-4'>
                 <li><h3 className='text-[24px] text-yellow-text font-poppins-semibold relative left-[-18px]'>Random</h3></li>
                 <li className='list-[circle] text-white font-poppins-regular'>
                     <Link to="https://agha-naveed.github.io/weather-app/" className='z-[200] group relative hover:text-yellow-text hover-text hover:px-[10px] transition-all' target='_blank' onMouseMove={handleMouseMove}>
@@ -67,6 +67,6 @@ export default function OtherProject() {
                     </Link>
                 </li>
             </ul>
-        </>
+        </div>
     )
 }

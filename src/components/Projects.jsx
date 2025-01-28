@@ -68,7 +68,7 @@ export default function Projects() {
 
           </div>
 
-          <div className='flex flex-wrap md:justify-between justify-center overflow-hidden'>
+          <div className='flex flex-wrap lg:justify-between justify-center overflow-hidden'>
               <ProjectPic data={chatbot} myClass={"chatbot"}/>
               <ProjectPic data={libLms} myClass={"lib-lms"} />
               <ProjectPic data={musicPlayer} myClass={"music-player"} />
@@ -77,13 +77,13 @@ export default function Projects() {
               <ProjectPic data={otpGen} myClass={"otp-gen"} />
           </div>
 
-          <div className='px-10 pt-10 pb-44'>
-              <div className='mb-8 grid gap-3s'>
+          <div className='px-10 md:pt-10 md:pb-44 py-28'>
+              <div className='mb-8 grid gap-3'>
                 <h3 className='font-poppins-semibold text-white text-4xl'>Other</h3>
                 <p className='font-poppins-medium text-[18px] text-yellow-text'>Check out my other Projects:</p>
               </div>
 
-              <div className='flex px-14'>
+              <div className='md:px-14 px-4'>
                 <OtherProject />
               </div>
           </div>
