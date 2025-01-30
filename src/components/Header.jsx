@@ -4,6 +4,7 @@ import Navbar from './Navbar';
 import myPic from '../assets/img/my-picture.png';
 import { Link } from 'react-router';
 import SocialLogos from '../extraComponents/SocialLogos';
+import MyLoader from '../extraComponents/Loading';
 export default function Header() {
 
   return (
