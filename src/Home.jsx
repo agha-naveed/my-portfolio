@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, Suspense } from 'react';
 import Header from './components/Header'
 import Skills from './components/Skills'
 import Projects from './components/Projects'
 import Cursor from './extraComponents/Cursor';
 import Footer from './components/Footer';
+import MyLoader from './extraComponents/Loading'
 
 
 export default function Home() {
@@ -27,13 +28,16 @@ export default function Home() {
 
     return (
         <div className='w-full md:h-full'>
-            <div className={`${deviceType == "desktop" ? "block" : "hidden"}`}>
-                <Cursor />
-            </div>
-            <Header />
-            <Skills />
-            <Projects />
-            <Footer />
+
+            <Suspense fallback={<MyLoader />}>
+                <div className={`${deviceType == "desktop" ? "block" : "hidden"}`}>
+                    <Cursor />
+                </div>
+                <Header />
+                <Skills />
+                <Projects />
+                <Footer />
+            </Suspense>
         </div>
     )
 }
