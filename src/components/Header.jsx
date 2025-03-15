@@ -24,7 +24,7 @@ export default function Header() {
 
 
             <span>
-              <h3 className='hover-text text-white font-poppins-regular md:text-[32px] text-[25px] lg:text-left text-center mb-8'>Web Developer / Programmer</h3>
+              <h3 className='text-white font-poppins-regular md:text-[32px] text-[25px] lg:text-left text-center mb-8'>Web Developer / Programmer</h3>
             </span>
             
             <Link className='contact-btn w-fit md:place-self-start justify-self-center relative overflow-hidden hover:text-[#272829] z-30 border-[5px] border-yellow-text font-poppins-regular text-yellow-text md:text-[22px] text-[22px] rounded-lg px-6 py-3 mt-5 grid hover-text'>Contact Me</Link>

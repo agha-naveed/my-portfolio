@@ -28,11 +28,9 @@ const CustomCursor = () => {
       el.addEventListener('mouseleave', handleMouseLeave);
     });
 
-    // Update cursor position on mousemove
     window.addEventListener('mousemove', updateCursorPos);
 
     return () => {
-      // Cleanup event listeners
       textElements.forEach((el) => {
         el.removeEventListener('mouseenter', handleMouseEnterText);
         el.removeEventListener('mouseleave', handleMouseLeave);
@@ -45,21 +43,20 @@ const CustomCursor = () => {
     };
   }, []);
 
-  // Define cursor styles for different states
   const cursorStyles = {
     default: {
       width: '40px',
       height: '40px',
-      backgroundColor: 'black',
-      top: '-13px',
-      left: '-13px'
+      backgroundColor: 'white',
+      top: '-15px',
+      left: '-15px'
     },
     text: {
       width: '60px',
       height: '60px',
-      backgroundColor: 'black',
-      top: '-24px',
-      left: '-24px'
+      backgroundColor: 'white',
+      top: '-25px',
+      left: '-25px'
     },
     image: {
       width: 0,
@@ -75,10 +72,11 @@ const CustomCursor = () => {
           top: 0,
           left: 0,
           pointerEvents: 'none',
+          mixBlendMode: 'difference',
           borderRadius: '50%',
           backgroundColor: cursorStyles[cursorType].backgroundColor,
-          width: '13px',
-          height: '13px',
+          width: '8px',
+          height: '8px',
           transform: `translate3d(${cursorPos.x - 10}px, ${cursorPos.y - 10}px, 0)`,
           transition: 'transform 0.1s ease-out',
           zIndex: 40000,
@@ -95,10 +93,10 @@ const CustomCursor = () => {
           height: cursorStyles[cursorType].height,
           borderRadius: '50%',
           opacity: 0.7,
-          backgroundColor: 'white',
+          backgroundColor: 'transparent',
           border: '2px solid white',
           transform: `translate3d(${cursorPos.x - 10}px, ${cursorPos.y - 10}px, 0)`,
-          transition: 'transform 0.4s ease-out, width 0.2s ease-out, height 0.2s ease-out, left 0.2s ease, top 0.2s ease',
+          transition: 'transform 0.25s ease-out, width 0.2s ease-out, height 0.2s ease-out, left 0.2s ease, top 0.2s ease',
           zIndex: 4000,
         }}
       />
