@@ -10,8 +10,8 @@ export default {
         "insta-logo": "radial-gradient(circle at 30% 110%, #ffdb8b 0%, #ee653d 25%, #d42e81 50%, #a237b6 75%, #3e57bc 100% )"
       },
       colors: {
-        "dark-gray": "#181818",
-        "light-gray": "#222222",
+        "dark-gray": "#272829",
+        "light-gray": "#3D3E42",
         "skills-bg": "#313233",
         "text-clr": "#b4b4b4",
         "yellow-text": "#FFC86B",
