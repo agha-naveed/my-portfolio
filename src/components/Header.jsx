@@ -4,7 +4,8 @@ import Navbar from './Navbar';
 import myPic from '../assets/img/my-picture.png';
 import { Link } from 'react-router';
 import SocialLogos from '../extraComponents/SocialLogos';
-import MyLoader from '../extraComponents/Loading';
+import flare from '../assets/img/flare.png'
+
 export default function Header() {
 
   return (
@@ -17,13 +18,18 @@ export default function Header() {
         <header className='lg:w-[95%] md:p-0 p-10 w-full h-full justify-center lg:flex grid relative z-10'>
           
           <div data-aos="fade-up-right" data-aos-duration="600" className='grid content-center place-self-center'>
-            <span className='flex place-self-center'>
+            
+            <img src={flare}
+            className='absolute'
+            alt="" />
+          
+            <span className='flex place-self-center relative z-20'>
               <h4 className='text-white font-poppins-light md:text-2xl text-xl'>I'M</h4>
               <h1 className='text-yellow-text lg:text-[60px] md:text-[40px] text-[34px] font-poppins-medium lg:w-[90%] w-full'>Agha Naveed</h1>
             </span>
 
 
-            <span>
+            <span className='relative z-20'>
               <h3 className='text-white font-poppins-regular md:text-[32px] text-[25px] lg:text-left text-center mb-8'>Web Developer / Programmer</h3>
             </span>
             
