@@ -74,13 +74,13 @@ export default function Projects() {
           </div>
 
           <div className='flex flex-wrap lg:justify-between relative z-[200] justify-center overflow-hidden'>
-            <div className='fixed left-0 top-0 z-[2000]'>
+            <div className={`fixed ${projectName ? "left-0" : "left-full"} c-trans top-0 z-[4000000]`}>
               <ProjectDetail value={projectName} />
             </div>
             {
               names.map((item, idx) => {
                 return (
-                <div key={`project-${idx}`} onClick={() => setProjectName(item)}>
+                <div key={`project-${idx}`} onClick={() => setProjectName(`${item}`)}>
                   <ProjectPic data={item} myClass={`${item}`} />
                 </div>
                 )
