@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import ParticlesComponent from './ParticlesComponent'
 import ProjectPic from './ProjectPic'
 import chatbot from '../assets/img/projects/chatbot.webp'
@@ -6,11 +6,16 @@ import libLms from '../assets/img/projects/lib_lms.webp'
 import musicPlayer from '../assets/img/projects/music_player.webp'
 import otpGen from '../assets/img/projects/otp_generator.webp'
 import OtherProject from '../extraComponents/OtherProject'
+import ProjectDetail from '../extraComponents/ProjectDetail'
 
 export default function Projects() {
-  
-  
-
+  const [projectName, setProjectName] = useState('')
+  const names = [chatbot, libLms, musicPlayer, otpGen]
+  useEffect(() => {
+    names.map((item) => {
+      console.log(item)
+    })
+  }, [])
   return (
     <>
       <div id='project-section' className='project-container h-auto w-full bg-dark-gray relative'>
@@ -69,12 +74,18 @@ export default function Projects() {
           </div>
 
           <div className='flex flex-wrap lg:justify-between relative z-[200] justify-center overflow-hidden'>
-              <ProjectPic data={chatbot} myClass={"chatbot"}/>
-              <ProjectPic data={libLms} myClass={"lib-lms"} />
-              <ProjectPic data={musicPlayer} myClass={"music-player"} />
-              <ProjectPic data={otpGen} myClass={"otp-gen"} />
-              <ProjectPic data={musicPlayer} myClass={"music-player"} />
-              <ProjectPic data={otpGen} myClass={"otp-gen"} />
+            <div className='fixed left-0 top-0 z-[2000]'>
+              <ProjectDetail value={projectName} />
+            </div>
+            {
+              names.map((item, idx) => {
+                return (
+                <div key={`project-${idx}`} onClick={() => setProjectName(item)}>
+                  <ProjectPic data={item} myClass={`${item}`} />
+                </div>
+                )
+              })
+            }
           </div>
 
           <div className='px-10 md:pt-10 md:pb-44 py-28'>

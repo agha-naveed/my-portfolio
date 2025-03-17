@@ -273,16 +273,16 @@
 /* ------ Project Section ------- */
 
 .chatbot:hover .project-pic-bg, 
-.lib-lms:hover .project-pic-bg, 
-.music-player:hover .project-pic-bg, 
-.otp-gen:hover .project-pic-bg {
+.libLms:hover .project-pic-bg, 
+.musicPlayer:hover .project-pic-bg, 
+.otpGen:hover .project-pic-bg {
   display: block;
 }
 
 .project-pic-bg:hover {
   display: none !important;
 }
-.chatbot::before, .lib-lms::before, .music-player::before, .otp-gen::before {
+.chatbot::before, .libLms::before, .musicPlayer::before, .otpGen::before {
   font-size: 60px;
   width: 100%;
   text-align: center;
@@ -317,24 +317,24 @@
   opacity: 1;
   top: 20px;
 }
-.lib-lms::before {
+.libLms::before {
   content: "Library Management System";
 }
-.lib-lms:hover::before {
+.libLms:hover::before {
   top: 20px;
   opacity: 1;
 }
-.music-player::before {
+.musicPlayer::before {
   content: "Music Player";
 }
-.music-player:hover::before {
+.musicPlayer:hover::before {
   opacity: 1;
   top: 20px;
 }
-.otp-gen::before {
+.otpGen::before {
   content: "OTP Generator";
 }
-.otp-gen:hover::before {
+.otpGen:hover::before {
   opacity: 1;
   top: 20px;
 }
