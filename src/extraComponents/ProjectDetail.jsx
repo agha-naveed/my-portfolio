@@ -2,6 +2,7 @@ import React from 'react'
 import { FaArrowLeft } from "react-icons/fa6";
 import lib1 from '../assets/img/projects/libLms/1.webp'
 import lib2 from '../assets/img/projects/libLms/2.webp'
+import { Link } from 'react-router';
 
 export default function ProjectDetail({myClass}) {
   return (
@@ -47,10 +48,14 @@ export default function ProjectDetail({myClass}) {
           </ul>
         </div>
 
-        <button
-        className='visit-btn cursor-none border-[3px] border-yellow-text text-xl text-yellow-text font-poppins-medium px-7 rounded-lg py-2'>
-          Visit
-        </button>
+        <div className='relative w-fit overflow-hidden rounded-lg hover-text flex mt-7'>
+          <Link to={"https://github.com/agha-naveed/library-management-system"} target='_blank'
+          className='visit-btn cursor-none border-[3px] border-yellow-text text-xl text-yellow-text font-poppins-medium px-7 rounded-lg py-2 group'>
+            <span className='relative z-30 group-hover:text-dark-gray'>
+              Visit
+            </span>
+          </Link>
+        </div>
       </div>
     </div>
   )

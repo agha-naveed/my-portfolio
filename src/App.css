@@ -361,3 +361,21 @@
   transform: scale(1) translate(-50px, 100px);
   transition: transform 1.3s cubic-bezier(.66, .00, .34, 1.00);
 }
+
+.visit-btn::after {
+  content: "";
+  position: absolute;
+  width: 160px;
+  height: 220px;
+  background-color: #FFC86B;
+  border-radius: 50%;
+  transform: scale(1) translate(-150px, 100px);
+  transition: transform 1.4s cubic-bezier(.66, .00, .34, 1.00);
+}
+.visit-btn:hover::after {
+  transform: scale(1.5) translate(-50px, -70px);
+}
+.visit-btn span {
+  transition: 0.2s ease-in-out;
+  transition-delay: 0.44s;
+}
