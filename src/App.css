@@ -306,7 +306,7 @@
   width: 100vw;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.342);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(4px);
   z-index: 1;
 }
 
@@ -345,7 +345,7 @@
   overflow: hidden;
 }
 .contact-icons span, .contact-icons svg {
-  transition: 0.1s ease-in-out;
+  transition: 0.2s ease-in-out;
   transition-delay: 0.44s;
 }
 .contact-icons:hover::after {
@@ -359,5 +359,5 @@
   background-color: #FFC86B;
   border-radius: 50%;
   transform: scale(1) translate(-50px, 100px);
-  transition: transform 1s cubic-bezier(.66, .00, .34, 1.00);
+  transition: transform 1.3s cubic-bezier(.66, .00, .34, 1.00);
 }

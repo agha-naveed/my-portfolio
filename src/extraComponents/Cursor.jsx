@@ -48,13 +48,15 @@ const CustomCursor = () => {
       width: '40px',
       height: '40px',
       backgroundColor: 'white',
-      top: '-15px',
-      left: '-15px'
+      border: '2px solid white',
+      top: '-16px',
+      left: '-16px'
     },
     text: {
       width: '60px',
       height: '60px',
       backgroundColor: 'white',
+      border: '3px solid white',
       top: '-25px',
       left: '-25px'
     },
@@ -94,7 +96,7 @@ const CustomCursor = () => {
           borderRadius: '50%',
           opacity: 0.7,
           backgroundColor: 'transparent',
-          border: '2px solid white',
+          border: cursorStyles[cursorType].border,
           transform: `translate3d(${cursorPos.x - 10}px, ${cursorPos.y - 10}px, 0)`,
           transition: 'transform 0.25s ease-out, width 0.2s ease-out, height 0.2s ease-out, left 0.2s ease, top 0.2s ease',
           zIndex: 4000,

@@ -13,7 +13,7 @@ export default function Projects() {
 
   return (
     <>
-      <div id='project-section' className='project-container h-auto w-full bg-dark-gray relative -z-10'>
+      <div id='project-section' className='project-container h-auto w-full bg-dark-gray relative'>
         
         <div className="container mx-auto p-40-80 grid gap-20">
         
@@ -68,7 +68,7 @@ export default function Projects() {
 
           </div>
 
-          <div className='flex flex-wrap lg:justify-between justify-center overflow-hidden'>
+          <div className='flex flex-wrap lg:justify-between relative z-[200] justify-center overflow-hidden'>
               <ProjectPic data={chatbot} myClass={"chatbot"}/>
               <ProjectPic data={libLms} myClass={"lib-lms"} />
               <ProjectPic data={musicPlayer} myClass={"music-player"} />
@@ -91,7 +91,7 @@ export default function Projects() {
         </div>
       </div>
 
-      <div className="relative sm:block hidden opacity-20 z-[-10]">
+      <div className="relative sm:block hidden opacity-20 ">
         <ParticlesComponent />
       </div>
     </>
