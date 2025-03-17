@@ -17,7 +17,7 @@ import python from '../assets/img/skills-logo/python.svg'
 import java from '../assets/img/skills-logo/java.svg'
 import wordpress from '../assets/img/skills-logo/wordpress.svg'
 import cpp from '../assets/img/skills-logo/cpp.svg'
-
+import ts from '../assets/img/skills-logo/typescript.svg'
 
 export default function Skills() {
   
@@ -28,7 +28,7 @@ export default function Skills() {
 
 
   return (
-    <div className='w-full h-auto bg-light-gray p-40-80'>
+    <div className='w-full h-auto bg-light-gray p-40-80 relative z-20'>
       
       <div className="container mx-auto relative items-center flex flex-col gap-20 py-20">
 
@@ -56,6 +56,10 @@ export default function Skills() {
             <div className='hover-text md:w-52 md:h-52 w-36 h-36 flex flex-col justify-center items-center bg-skills-bg gap-4 rounded-xl'>
               <img src={js} alt="JavaScript" className='w-[26%] z-10' />
               <span className='font-poppins-regular text-white md:text-xl z-10'>JavaScript</span>
+            </div>
+            <div className='hover-text md:w-52 md:h-52 w-36 h-36 flex flex-col justify-center items-center bg-skills-bg gap-4 rounded-xl'>
+              <img src={ts} alt="TypeScript" className='w-[26%] z-10' />
+              <span className='font-poppins-regular text-white md:text-xl z-10'>TypeScript</span>
             </div>
             <div className='hover-text md:w-52 md:h-52 w-36 h-36 flex flex-col justify-center items-center bg-skills-bg gap-4 rounded-xl'>
               <img src={bootstrap} alt="Bootstrap" className='w-[26%] z-10' />
@@ -94,10 +98,6 @@ export default function Skills() {
               <span className='font-poppins-regular text-white md:text-xl z-10'>Python</span>
             </div>
             <div className='hover-text md:w-52 md:h-52 w-36 h-36 flex flex-col justify-center items-center bg-skills-bg gap-4 rounded-xl'>
-              <img src={photoshop} alt="Photoshop" className='w-[26%] z-10' />
-              <span className='font-poppins-regular text-white md:text-xl z-10'>Photoshop</span>
-            </div>
-            <div className='hover-text md:w-52 md:h-52 w-36 h-36 flex flex-col justify-center items-center bg-skills-bg gap-4 rounded-xl'>
               <img src={cpp} alt="C++" className='w-[26%] z-10' />
               <span className='font-poppins-regular text-white md:text-xl z-10'>C++</span>
             </div>
@@ -108,6 +108,10 @@ export default function Skills() {
             <div className='hover-text md:w-52 md:h-52 w-36 h-36 flex flex-col justify-center items-center bg-skills-bg gap-4 rounded-xl'>
               <img src={wordpress} alt="Wordpress" className='w-[26%] z-10' />
               <span className='font-poppins-regular text-white md:text-xl z-10'>Wordpress</span>
+            </div>
+            <div className='hover-text md:w-52 md:h-52 w-36 h-36 flex flex-col justify-center items-center bg-skills-bg gap-4 rounded-xl'>
+              <img src={photoshop} alt="Photoshop" className='w-[26%] z-10' />
+              <span className='font-poppins-regular text-white md:text-xl z-10'>Photoshop</span>
             </div>
           </div>
         </section>

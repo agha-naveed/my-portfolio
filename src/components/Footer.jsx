@@ -4,7 +4,7 @@ import SocialLogos from '../extraComponents/SocialLogos'
 
 export default function Footer() {
     return (
-        <footer className='relative'>
+        <footer className='relative z-30'>
             <div className='w-full bg-light-gray pb-12'>
                 <div className='md:flex grid items-center place-content-center md:gap-14 relative -top-[30px]'>
                     <div className='w-full h-1 bg-yellow-text md:block hidden'></div>

@@ -91,7 +91,7 @@ export default function Projects() {
         </div>
       </div>
 
-      <div className="relative sm:block hidden opacity-20 ">
+      <div className="relative sm:block hidden opacity-20">
         <ParticlesComponent />
       </div>
     </>
