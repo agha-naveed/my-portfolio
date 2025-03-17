@@ -7,21 +7,12 @@ import Footer from './components/Footer';
 
 
 export default function Home() {
-    const [deviceType, setDeviceType] = useState('');
+    const [deviceType, setDeviceType] = useState('no-pc');
         
     useEffect(() => {
         const userAgent = navigator.userAgent;
-        console.log(userAgent)
-        if (/mobile/i.test(userAgent)) {
-            setDeviceType('mobile');
-        }
-        else if (/tablet/i.test(userAgent)) {
-            setDeviceType('tablet');
-        }
-        else if (/linux/i.test(userAgent) || /windows/i.test(userAgent) || /macintosh/i.test(userAgent)) {
+        if (/linux/i.test(userAgent) || /windows/i.test(userAgent) || /macintosh/i.test(userAgent)) {
             setDeviceType('desktop');
-        } else {
-            setDeviceType('Unknown');
         }
     }, [])
 

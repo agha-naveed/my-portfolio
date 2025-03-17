@@ -32,10 +32,10 @@ export default function OtherProject() {
                 </li>
 
                 <li className='list-[circle] text-white font-poppins-regular relative hover:z-[200]'>
-                    <Link to="https://agha-naveed.github.io/weather-app/" className='z-[10] group relative hover:text-yellow-text hover-text hover:px-[10px] transition-all' target='_blank' onMouseMove={handleMouseMove}>
+                    <Link to="https://agha-naveed.github.io/twitter/" className='z-[10] group relative hover:text-yellow-text hover-text hover:px-[10px] transition-all' target='_blank' onMouseMove={handleMouseMove}>
                         Twitter Clone
                         <div className='absolute top-6 hover:hidden left-10 w-[200px] z-[200]'>
-                            <img src={twitterClone} className='w-full hidden group-hover:block' alt="Weather App Image" style={{
+                            <img src={twitterClone} className='w-full hidden group-hover:block' alt="Twitter Clone" style={{
                                 transform: `translate(${(mousePosition.x / 20) * 5}%, ${(mousePosition.y / 20) * 5}%)`,
                                 }} />
                         </div>
@@ -43,10 +43,10 @@ export default function OtherProject() {
                 </li>
 
                 <li className='list-[circle] text-white font-poppins-regular relative hover:z-[200]'>
-                    <Link to="https://agha-naveed.github.io/weather-app/" className='z-[10] group relative hover:text-yellow-text hover-text hover:px-[10px] transition-all' target='_blank' onMouseMove={handleMouseMove}>
+                    <Link to="https://agha-naveed.github.io/password-strength-checker/" className='z-[10] group relative hover:text-yellow-text hover-text hover:px-[10px] transition-all' target='_blank' onMouseMove={handleMouseMove}>
                         Password Strength Checker
                         <div className='absolute top-6 hover:hidden left-10 w-[200px] z-[200]'>
-                            <img src={passStrength} className='w-full hidden group-hover:block' alt="Weather App Image" style={{
+                            <img src={passStrength} className='w-full hidden group-hover:block' alt="Password Strength Checker" style={{
                                 transform: `translate(${(mousePosition.x / 20) * 5}%, ${(mousePosition.y / 20) * 5}%)`,
                                 }} />
                         </div>
@@ -60,7 +60,7 @@ export default function OtherProject() {
                     <Link to="https://agha-naveed.github.io/old-portfolio/" className='z-[10] group relative hover:text-yellow-text hover-text hover:px-[10px] transition-all' target='_blank' onMouseMove={handleMouseMove}>
                         Old Portfolio
                         <div className='absolute top-6 hover:hidden left-10 w-[200px] z-[200]'>
-                            <img src={oldPortfolio} className='w-full hidden group-hover:block' alt="Weather App Image" style={{
+                            <img src={oldPortfolio} className='w-full hidden group-hover:block' alt="Agha Naveed Old Portfolio" style={{
                                 transform: `translate(${(mousePosition.x / 20) * 5}%, ${(mousePosition.y / 20) * 5}%)`,
                                 }} />
                         </div>

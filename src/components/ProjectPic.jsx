@@ -91,7 +91,6 @@ export default function ProjectPic({data, myClass}) {
 
 
   return (
-    
     <div className='p-6'>
       <div className={`${myClass} hover:z-[3000] project-pic w-auto h-auto relative`}>
         <div className={`project-pic-bg`}></div>
@@ -103,7 +102,6 @@ export default function ProjectPic({data, myClass}) {
             onMouseLeave={handleMouseLeave}
             style={{
             transform: `perspective(1000px) rotateX(${transformStyles.rotateX}deg) rotateY(${transformStyles.rotateY}deg) scale(${transformStyles.scale})`,
-            // boxShadow: transformStyles.boxShadow,
         }}
         >
             <div
