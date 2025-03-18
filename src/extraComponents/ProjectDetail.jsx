@@ -29,7 +29,7 @@ export default function ProjectDetail() {
   
   return (
     <>
-      <div className='w-screen h-screen bg-black overflow-x-hidden flex relative z-[4000000]'>
+      <div className='w-screen h-screen bg-black overflow-x-hidden flex relative z-[400330000]'>
         <div ref={ref} className={`h-screen bg-yellow-text c-trans`}></div>
         <div className='p-7 flex gap-10 w-full overflow-y-scroll'>
           <div className='w-[62vw] h-auto flex flex-col gap-20'>

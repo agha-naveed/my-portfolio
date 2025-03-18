@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef, useMemo, useContext } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import LogoComponent from '../extraComponents/Logo'
 import { Link } from 'react-router'
 import { IoSearch } from "react-icons/io5";
