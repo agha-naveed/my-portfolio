@@ -8,10 +8,17 @@ import closeContext from './closeContext';
 
 export default function ProjectDetail() {
   const ref = useRef(null)
+  const imgs = useRef(null)
+  const titleRef = useRef(null)
+  const yellowStripe = useRef(null)
+  const pr_text = useRef(null)
+  
+  
   const [w, setWidth] = useState("256px")
   const {project, setProject} = useContext(contextJS)
 
   const {doClose, setDoClose} = useContext(closeContext)
+
 
   useEffect(() => {
     ref.current.style.width = "256px"
@@ -20,6 +27,44 @@ export default function ProjectDetail() {
       setWidth("0px")
     }, 1700)
   }, [])
+
+  useEffect(() => {
+  
+    let images = imgs.current
+    let titleRf = titleRef.current
+    let yellowStrip = yellowStripe.current
+    let exTexts = document.querySelectorAll(".eTexts")
+
+    if(!doClose) {
+
+      images.style.transform = "translateX(100px)"
+      yellowStrip.style.left = "-100%"
+      titleRf.style.opacity = 0
+      images.style.opacity = 0
+
+      exTexts.forEach((i) => {
+        i.style.transform = "translateY(70px)"
+        i.style.opacity = 0
+      })
+      
+    }
+
+    else {
+      setTimeout(() => {
+        images.style.opacity = 1
+        images.style.transform = "translateX(0)"
+        yellowStrip.style.left = "100%"
+      }, 800)
+
+      setTimeout(() => {
+        titleRf.style.opacity = 1
+        exTexts.forEach((i) => {
+          i.style.transform = "translateY(0px)"
+          i.style.opacity = 1
+        })
+      }, 1200)
+    }
+  }, [project, doClose])
 
   useEffect(() => {
     if(w == "0px") {
@@ -31,8 +76,8 @@ export default function ProjectDetail() {
     <>
       <div className='w-screen h-screen bg-black overflow-x-hidden flex relative z-[400330000]'>
         <div ref={ref} className={`h-screen bg-yellow-text c-trans`}></div>
-        <div className='p-7 flex gap-10 w-full overflow-y-scroll'>
-          <div className='w-[62vw] h-auto flex flex-col gap-20'>
+        <div className='p-7 flex gap-10 w-full overflow-y-scroll overflow-x-hidden'>
+          <div className='w-[62vw] h-auto flex flex-col gap-20 c-trans' ref={imgs}>
             <img src={lib1} alt="Library MS" className='w-full' />
             <img src={lib2} alt="Library MS" className='w-full' />
           </div>
@@ -40,12 +85,13 @@ export default function ProjectDetail() {
             <button title='Go Back' className='cursor-none mt-5 mb-9' onClick={() => {setProject(""); setDoClose(false)}}>
               <FaArrowLeft className='cursor-none hover-text bg-yellow-text w-7 h-7 p-[6.5px] rounded-full' />
             </button>
-            <div className='text-white'>
-              <h3 className='font-poppins-semibold text-3xl text-wrap'>Library Management System</h3>
-              <p className='font-poppins-regular my-7'>Welcome to the Library Management System (LMS) software. This application is designed to efficiently manage library operations using Java programming language, SQL for database management, and MS Access as the backend database.</p>
+            <div className='text-white relative overflow-hidden'>
+              <div className='w-full h-9 absolute c-trans-2 bg-yellow-text' ref={yellowStripe}></div>
+              <h3 className='font-poppins-semibold text-3xl text-wrap c-trans' ref={titleRef}>Library Management System</h3>
+              <p className='eTexts font-poppins-regular my-7 c-trans'>Welcome to the Library Management System (LMS) software. This application is designed to efficiently manage library operations using Java programming language, SQL for database management, and MS Access as the backend database.</p>
             </div>
 
-            <div className='text-white'>
+            <div className='eTexts text-white c-trans'>
               <h4 className='font-poppins-semibold text-2xl'>Features:</h4>
               <ol className='list-decimal pl-8 py-3 font-poppins-regular'>
                 <li className='p-1'>Login System
@@ -64,7 +110,7 @@ export default function ProjectDetail() {
               </ol>
             </div>
 
-            <div className='text-white font-poppins-regular py-3'>
+            <div className='eTexts text-white font-poppins-regular py-3 c-trans'>
               <h4 className='font-poppins-semibold text-2xl'>System Requirements:</h4>
               <ul className='list-disc pl-8 flex flex-col gap-1 pt-3'>
                 <li><b>Java:</b> Ensure Java Runtime Environment (JRE) is installed.</li>
@@ -73,7 +119,7 @@ export default function ProjectDetail() {
               </ul>
             </div>
 
-            <div className='relative w-fit overflow-hidden rounded-lg hover-text flex mt-7'>
+            <div className='eTexts relative w-fit overflow-hidden rounded-lg hover-text flex mt-7 c-trans'>
               <Link to={"https://github.com/agha-naveed/library-management-system"} target='_blank'
               className='visit-btn cursor-none border-[3px] border-yellow-text text-xl text-yellow-text font-poppins-medium px-7 rounded-lg py-2 group'>
                 <span className='relative z-30 group-hover:text-dark-gray'>
