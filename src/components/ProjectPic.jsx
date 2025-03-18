@@ -73,7 +73,6 @@ export default function ProjectPic({data, myClass}) {
   const [src, setSrc] = useState('')
 
   useEffect(() => {
-
     const observer = new IntersectionObserver(
       (entries) => {
         const entry = entries[0];
@@ -99,13 +98,12 @@ export default function ProjectPic({data, myClass}) {
 
 
   return (
-    <div className=''>
-      
+    <>
       <div className={`${myClass} hover:z-[3000] project-pic w-auto h-auto relative`}>
         <div className={`project-pic-bg`}></div>
         <div
             ref={flipBoxRef}
-            className="relative z-[200] sm:w-80 w-64 rounded-lg overflow-hidden transition-transform duration-200 ease-out"
+            className="relative z-[200] sm:w-80 w-64 rounded-md overflow-hidden transition-transform duration-200 ease-out"
             onMouseMove={handleMouseMove}
             onMouseLeave={handleMouseLeave}
             style={{
@@ -136,6 +134,6 @@ export default function ProjectPic({data, myClass}) {
             </div>
         </div>
       </div>
-    </div>
+    </>
   )
 }

@@ -3,6 +3,8 @@ import ParticlesComponent from './ParticlesComponent'
 import ProjectPic from './ProjectPic'
 import chatbot from '../assets/img/projects/chatbot.webp'
 import libLms from '../assets/img/projects/lib_lms.webp'
+import sevenup from '../assets/img/projects/sevenup.webp'
+import store from '../assets/img/projects/store.webp'
 import musicPlayer from '../assets/img/projects/music_player.webp'
 import otpGen from '../assets/img/projects/otp_generator.webp'
 import OtherProject from '../extraComponents/OtherProject'
@@ -13,7 +15,7 @@ import closeContext from '../extraComponents/closeContext'
 
 export default function Projects() {
   const [projectName, setProjectName] = useState('')
-  const names = [chatbot, libLms, musicPlayer, otpGen]
+  const names = [store, sevenup, libLms, musicPlayer, chatbot, otpGen]
   const {setProject} = useContext(contextJS)
   const {doClose, setDoClose} = useContext(closeContext)
 
