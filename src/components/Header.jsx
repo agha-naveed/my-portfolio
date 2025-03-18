@@ -7,7 +7,7 @@ import SocialLogos from '../extraComponents/SocialLogos';
 
 export default function Header() {
   return (
-    <div className='w-full h-auto bg-dark-gray justify-items-center p-40-80 relative overflow-hidden z-20'>
+    <div className='w-full h-auto bg-dark-gray justify-items-center p-40-80 relative overflow-hidden z-30'>
       <div className="container mx-auto w-full relative grid gap-5 z-10">
         
         <Navbar />
