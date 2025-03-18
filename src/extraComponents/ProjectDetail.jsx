@@ -1,12 +1,17 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useContext, useEffect, useRef, useState } from 'react'
 import { FaArrowLeft } from "react-icons/fa6";
 import lib1 from '../assets/img/projects/libLms/1.webp'
 import lib2 from '../assets/img/projects/libLms/2.webp'
 import { Link } from 'react-router';
+import contextJS from './context';
+import closeContext from './closeContext';
 
 export default function ProjectDetail() {
   const ref = useRef(null)
   const [w, setWidth] = useState("256px")
+  const {project, setProject} = useContext(contextJS)
+
+  const {doClose, setDoClose} = useContext(closeContext)
 
   useEffect(() => {
     ref.current.style.width = "256px"
@@ -32,7 +37,7 @@ export default function ProjectDetail() {
             <img src={lib2} alt="Library MS" className='w-full' />
           </div>
           <div className='w-[36vw]'>
-            <button title='Go Back' className='cursor-none mt-5 mb-9'>
+            <button title='Go Back' className='cursor-none mt-5 mb-9' onClick={() => {setProject(""); setDoClose(false)}}>
               <FaArrowLeft className='cursor-none hover-text bg-yellow-text w-7 h-7 p-[6.5px] rounded-full' />
             </button>
             <div className='text-white'>

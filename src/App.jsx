@@ -1,15 +1,19 @@
 import './App.css'
 import { Outlet } from 'react-router';
 import contextJS from './extraComponents/context';
+import closeContext from './extraComponents/closeContext'
 import { useState } from 'react';
 
 export default function App() {
   const [project, setProject] = useState('')
+  const [doClose, setDoClose] = useState(false)
   return (
     <div className='h-screen w-full cursor-none'>
-      <contextJS.Provider value={{project, setProject}}>
-        <Outlet />
-      </contextJS.Provider>
+      <closeContext.Provider value={{doClose, setDoClose}}>
+        <contextJS.Provider value={{project, setProject}}>
+          <Outlet />
+        </contextJS.Provider>
+      </closeContext.Provider>
     </div>
   );
 }

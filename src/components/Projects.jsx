@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useContext, useEffect, useInsertionEffect, useState } from 'react'
 import ParticlesComponent from './ParticlesComponent'
 import ProjectPic from './ProjectPic'
 import chatbot from '../assets/img/projects/chatbot.webp'
@@ -8,18 +8,32 @@ import otpGen from '../assets/img/projects/otp_generator.webp'
 import OtherProject from '../extraComponents/OtherProject'
 import ProjectDetail from '../extraComponents/ProjectDetail'
 import contextJS from '../extraComponents/context'
+import closeContext from '../extraComponents/closeContext'
 
 
 export default function Projects() {
   const [projectName, setProjectName] = useState('')
   const names = [chatbot, libLms, musicPlayer, otpGen]
   const {setProject} = useContext(contextJS)
+  const {doClose, setDoClose} = useContext(closeContext)
 
+  useInsertionEffect(() => {
+    setDoClose(false)
+  }, [])
   useEffect(() => {
     names.map((item) => {
       console.log(item)
     })
   }, [])
+  useEffect(() => {
+    if(projectName.length > 0) {
+      setDoClose(true)
+    }
+    else {
+      setDoClose(false)
+    }
+  }, [projectName])
+
   return (
     <>
       <div id='project-section' className='project-container h-auto w-full bg-dark-gray relative'>
@@ -78,7 +92,7 @@ export default function Projects() {
           </div>
 
           <div className='flex flex-wrap lg:justify-between relative z-[200] justify-center overflow-hidden'>
-            <div className={`fixed ${projectName ? "left-0" : "left-full"} c-trans top-0 z-[4000000]`}>
+            <div className={`fixed ${doClose ? "left-0" : "left-full"} c-trans top-0 z-[4000000]`}>
               <ProjectDetail value={projectName} />
             </div>
             {
@@ -87,6 +101,7 @@ export default function Projects() {
                   <div className='p-6'>
                     <div key={`project-${idx}`}
                     onClick={() => {
+                      setDoClose(true)
                       setProjectName(`${item}`)
                       setProject(item)
                     }
