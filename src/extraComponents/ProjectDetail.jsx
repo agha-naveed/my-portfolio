@@ -14,7 +14,6 @@ export default function ProjectDetail() {
   const imgs = useRef(null)
   const titleRef = useRef(null)
   const yellowStripe = useRef(null)
-  const pr_text = useRef(null)
   
   
   const [w, setWidth] = useState("256px")
@@ -37,9 +36,13 @@ export default function ProjectDetail() {
     let titleRf = titleRef.current
     let yellowStrip = yellowStripe.current
     let exTexts = document.querySelectorAll(".eTexts")
+    let backArrow = document.querySelector("#back-arrow")
 
     if(!doClose) {
-
+      if(backArrow) {
+        backArrow.style.opacity = 0
+        backArrow.style.transform = "translateX(100px)"
+      }
       images.style.transform = "translateX(100px)"
       yellowStrip.style.left = "-100%"
       titleRf.style.opacity = 0
@@ -54,6 +57,10 @@ export default function ProjectDetail() {
 
     else {
       setTimeout(() => {
+        if(backArrow) {
+          backArrow.style.opacity = 1
+          backArrow.style.transform = "translateX(0px)"
+        }
         images.style.opacity = 1
         images.style.transform = "translateX(0)"
         yellowStrip.style.left = "100%"
@@ -88,7 +95,12 @@ export default function ProjectDetail() {
               <img src={sevenup1} alt="Library MS" className='w-full' />
             </div>
             <div className='w-[36vw]'>
-              <button title='Go Back' className='cursor-none mt-5 mb-9' onClick={() => {setProject(""); setDoClose(false)}}>
+              <button title='Go Back' id='back-arrow' className='cursor-none mt-5 mb-9 c-trans-2' onClick={() => {
+                  setTimeout(() => {
+                    setProject("");
+                  }, 400)
+                  setDoClose(false)
+                }}>
                 <FaArrowLeft className='cursor-none hover-text bg-yellow-text w-7 h-7 p-[6.5px] rounded-full' />
               </button>
               <div className='text-white relative overflow-hidden'>
