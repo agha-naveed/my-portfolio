@@ -383,3 +383,6 @@
 .c-trans {
   transition: 0.8s all;
 }
+.c-trans-1 {
+  transition: 0.25s ease-out;
+}

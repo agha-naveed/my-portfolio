@@ -2,7 +2,12 @@ import React, { useState, useEffect, useRef, useContext } from 'react';
 import contextJS from '../extraComponents/context';
 
 export default function ProjectPic({data, myClass}) {
-    const flipBoxRef = useRef(null);
+
+
+  const {project} = useContext(contextJS)
+  const ref = useRef(null)
+  const flipBoxRef = useRef(null);
+
   const [transformStyles, setTransformStyles] = useState({
     rotateX: 0,
     rotateY: 0,
@@ -68,6 +73,7 @@ export default function ProjectPic({data, myClass}) {
   const [src, setSrc] = useState('')
 
   useEffect(() => {
+
     const observer = new IntersectionObserver(
       (entries) => {
         const entry = entries[0];
@@ -91,8 +97,6 @@ export default function ProjectPic({data, myClass}) {
   }, []);
 
 
-  const {project} = useContext(contextJS)
-
 
   return (
     <div className=''>
@@ -113,11 +117,11 @@ export default function ProjectPic({data, myClass}) {
             bg-black
             absolute
             z-[30000]
-            c-trans
+            c-trans-1
             ${myClass == project ?
             "-translate-x-0" : "-translate-x-full"}
             `}>
-              <div className='h-full w-16 bg-yellow-text justify-self-end'></div>
+              <div ref={ref} className='w-16 c-trans-1 h-full bg-yellow-text justify-self-end'></div>
             </div>
             <div
             className="absolute top-0 left-0 w-full h-full pointer-events-none z-10 rounded-lg"

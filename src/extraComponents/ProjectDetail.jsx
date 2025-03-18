@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { FaArrowLeft } from "react-icons/fa6";
 import lib1 from '../assets/img/projects/libLms/1.webp'
 import lib2 from '../assets/img/projects/libLms/2.webp'
@@ -6,18 +6,26 @@ import { Link } from 'react-router';
 
 export default function ProjectDetail() {
   const ref = useRef(null)
+  const [w, setWidth] = useState("256px")
 
   useEffect(() => {
     ref.current.style.width = "256px"
+    setWidth("256px")
     setTimeout(() => {
-      ref.current.style.width = "0"
+      setWidth("0px")
     }, 1700)
   }, [])
+
+  useEffect(() => {
+    if(w == "0px") {
+      ref.current.style.width = "0px"
+    }
+  }, [w])
   
   return (
     <>
       <div className='w-screen h-screen bg-black overflow-x-hidden flex relative z-[4000000]'>
-        <div ref={ref} className='h-screen bg-yellow-text c-trans'></div>
+        <div ref={ref} className={`h-screen bg-yellow-text c-trans`}></div>
         <div className='p-7 flex gap-10 w-full overflow-y-scroll'>
           <div className='w-[62vw] h-auto flex flex-col gap-20'>
             <img src={lib1} alt="Library MS" className='w-full' />
