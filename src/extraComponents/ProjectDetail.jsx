@@ -8,14 +8,16 @@ export default function ProjectDetail() {
   const ref = useRef(null)
 
   useEffect(() => {
+    ref.current.style.width = "256px"
     setTimeout(() => {
       ref.current.style.width = "0"
-    }, 1600)
+    }, 1700)
   }, [])
+  
   return (
     <>
       <div className='w-screen h-screen bg-black overflow-x-hidden flex relative z-[4000000]'>
-        <div ref={ref} className='w-64 h-screen bg-yellow-text c-trans'></div>
+        <div ref={ref} className='h-screen bg-yellow-text c-trans'></div>
         <div className='p-7 flex gap-10 w-full overflow-y-scroll'>
           <div className='w-[62vw] h-auto flex flex-col gap-20'>
             <img src={lib1} alt="Library MS" className='w-full' />

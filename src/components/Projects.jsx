@@ -74,9 +74,9 @@ export default function Projects() {
           </div>
 
           <div className='flex flex-wrap lg:justify-between relative z-[200] justify-center overflow-hidden'>
-            <div className={`fixed ${projectName ? "left-0" : "left-full"} c-trans top-0 z-[4000000]`}>
+            {/* <div className={`fixed ${projectName ? "left-0" : "left-full"} c-trans top-0 z-[4000000]`}>
               <ProjectDetail value={projectName} />
-            </div>
+            </div> */}
             {
               names.map((item, idx) => {
                 return (
