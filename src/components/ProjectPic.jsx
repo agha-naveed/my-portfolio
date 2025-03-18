@@ -1,4 +1,5 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useContext } from 'react';
+import contextJS from '../extraComponents/context';
 
 export default function ProjectPic({data, myClass}) {
     const flipBoxRef = useRef(null);
@@ -90,8 +91,11 @@ export default function ProjectPic({data, myClass}) {
   }, []);
 
 
+  const {project} = useContext(contextJS)
+
+
   return (
-    <div className='p-6'>
+    <div className=''>
       
       <div className={`${myClass} hover:z-[3000] project-pic w-auto h-auto relative`}>
         <div className={`project-pic-bg`}></div>
@@ -104,7 +108,17 @@ export default function ProjectPic({data, myClass}) {
             transform: `perspective(1000px) rotateX(${transformStyles.rotateX}deg) rotateY(${transformStyles.rotateY}deg) scale(${transformStyles.scale})`,
         }}
         >
-          
+            <div className={`
+            w-full h-full
+            bg-black
+            absolute
+            z-[30000]
+            c-trans
+            ${myClass == project ?
+            "-translate-x-0" : "-translate-x-full"}
+            `}>
+              <div className='h-full w-16 bg-yellow-text justify-self-end'></div>
+            </div>
             <div
             className="absolute top-0 left-0 w-full h-full pointer-events-none z-10 rounded-lg"
             style={{

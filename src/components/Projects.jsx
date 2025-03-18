@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import ParticlesComponent from './ParticlesComponent'
 import ProjectPic from './ProjectPic'
 import chatbot from '../assets/img/projects/chatbot.webp'
@@ -7,10 +7,14 @@ import musicPlayer from '../assets/img/projects/music_player.webp'
 import otpGen from '../assets/img/projects/otp_generator.webp'
 import OtherProject from '../extraComponents/OtherProject'
 import ProjectDetail from '../extraComponents/ProjectDetail'
+import contextJS from '../extraComponents/context'
+
 
 export default function Projects() {
   const [projectName, setProjectName] = useState('')
   const names = [chatbot, libLms, musicPlayer, otpGen]
+  const {setProject} = useContext(contextJS)
+
   useEffect(() => {
     names.map((item) => {
       console.log(item)
@@ -80,9 +84,16 @@ export default function Projects() {
             {
               names.map((item, idx) => {
                 return (
-                <div key={`project-${idx}`} onClick={() => setProjectName(`${item}`)}>
-                  <ProjectPic data={item} myClass={`${item}`} />
-                </div>
+                  <div className='p-6'>
+                    <div key={`project-${idx}`}
+                    onClick={() => {
+                      setProjectName(`${item}`)
+                      setProject(item)
+                    }
+                    }>
+                      <ProjectPic data={item} myClass={`${item}`} />
+                    </div>
+                  </div>
                 )
               })
             }
