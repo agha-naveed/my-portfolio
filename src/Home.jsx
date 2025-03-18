@@ -5,6 +5,7 @@ import Projects from './components/Projects'
 import Cursor from './extraComponents/Cursor';
 import Footer from './components/Footer';
 import { Link } from 'react-router';
+import LogoComponent from './extraComponents/Logo';
 
 
 export default function Home() {
@@ -13,7 +14,7 @@ export default function Home() {
     
       useEffect(() => {
         const handleScroll = () => {
-          if (window.scrollY > 50) {
+          if (window.scrollY > 200) {
             setShowMenu(true);
           } else {
             setShowMenu(false);
@@ -35,11 +36,18 @@ export default function Home() {
 
     return (
         <div className='w-full md:h-full'>
-            <ul className={`flex md:flex-row flex-col lg:w-fit w-full fixed text-black z-[1000] ${showMenu ? "top-5" : "-top-full"} left-1/2 -translatex-1/2 transition-all bg-white px-3 py-2 rounded-lg`}>
-                <li className='py-2'><Link to={"/"} className='hover-text md:px-[18px] md:py-[8px]'>Home</Link></li>
-                <li className='py-2'><Link to={"/a"} className='hover-text md:px-[18px] transition-all  md:py-[8px]'>Skills</Link></li>
-                <li className='py-2'><Link to={"/#project-section"} className='hover-text md:px-[18px] transition-all md:py-[8px]'>Projects</Link></li>
-            </ul>
+            <div className={`flex bg-menu-grad fixed text-white z-[1000] ${showMenu ? "top-0" : "-top-20"} transition-all w-full py-4 rounded-lg`}>
+              <div className='w-full flex justify-between container mx-auto'>
+                <LogoComponent />
+
+                <ul className={`flex md:flex-row flex-col w-fit`}>
+                    <li className='py-2'><Link to={"/"} className='hover-text md:px-[18px] md:py-[8px]'>Home</Link></li>
+                    <li className='py-2'><Link to={"/a"} className='hover-text md:px-[18px] transition-all  md:py-[8px]'>Skills</Link></li>
+                    <li className='py-2'><Link to={"/#project-section"} className='hover-text md:px-[18px] transition-all md:py-[8px]'>Projects</Link></li>
+                </ul>
+              </div>
+
+            </div>
             
             <div className={`${deviceType == "desktop" ? "block" : "hidden"}`}>
                 <Cursor />

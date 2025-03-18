@@ -7,7 +7,8 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        "insta-logo": "radial-gradient(circle at 30% 110%, #ffdb8b 0%, #ee653d 25%, #d42e81 50%, #a237b6 75%, #3e57bc 100% )"
+        "insta-logo": "radial-gradient(circle at 30% 110%, #ffdb8b 0%, #ee653d 25%, #d42e81 50%, #a237b6 75%, #3e57bc 100% )",
+        "menu-grad": "linear-gradient(rgba(0, 0, 0, 0.603), transparent)"
       },
       colors: {
         "dark-gray": "#272829",
