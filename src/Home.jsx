@@ -7,13 +7,13 @@ import Footer from './components/Footer';
 export default function Home() {
     return (
         <div className='w-full md:h-full'>
-          <div className="md:block hidden">
-              <Cursor />
-          </div>
-          <Header />
-          <Skills />
-          <Projects />
-          <Footer />
+            <div className="md:block hidden">
+                <Cursor />
+            </div>
+            <Header />
+            <Skills />
+            <Projects />
+            <Footer />
         </div>
     )
 }
