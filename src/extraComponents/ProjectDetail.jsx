@@ -76,7 +76,7 @@ export default function ProjectDetail() {
   return (
     <>
       {
-        project == "/src/assets/img/projects/sevenup.webp" ?
+        project == "/assets/sevenup-owal1RN2.webp" ?
         <div className='w-screen h-screen bg-black overflow-x-hidden flex relative z-[400330000]'>
           <div ref={ref} className={`h-screen bg-yellow-text c-trans`}></div>
           <div className='p-7 flex gap-10 w-full overflow-y-scroll overflow-x-hidden'>
