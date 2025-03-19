@@ -45,20 +45,20 @@ const CustomCursor = () => {
 
   const cursorStyles = {
     default: {
-      width: '40px',
-      height: '40px',
+      width: '30px',
+      height: '30px',
       backgroundColor: 'white',
       border: '2px solid white',
-      top: '-16px',
-      left: '-16px'
+      top: '-11px',
+      left: '-11px'
     },
     text: {
-      width: '60px',
-      height: '60px',
+      width: '50px',
+      height: '50px',
       backgroundColor: 'white',
       border: '3px solid white',
-      top: '-25px',
-      left: '-25px'
+      top: '-21.5px',
+      left: '-21.5px'
     },
     image: {
       width: 0,
