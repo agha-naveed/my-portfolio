@@ -8,7 +8,7 @@ export default function App() {
   const [project, setProject] = useState('')
   const [doClose, setDoClose] = useState(false)
   return (
-    <div className='h-screen w-full cursor-none'>
+    <div className='h-full w-full cursor-none'>
       <closeContext.Provider value={{doClose, setDoClose}}>
         <contextJS.Provider value={{project, setProject}}>
           <Outlet />

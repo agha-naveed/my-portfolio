@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useInsertionEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import ParticlesComponent from './ParticlesComponent'
 import ProjectPic from './ProjectPic'
 import chatbot from '../assets/img/projects/chatbot.webp'
@@ -19,7 +19,7 @@ export default function Projects() {
   const {setProject} = useContext(contextJS)
   const {doClose, setDoClose} = useContext(closeContext)
 
-  useInsertionEffect(() => {
+  useEffect(() => {
     setDoClose(false)
   }, [])
   useEffect(() => {
@@ -94,14 +94,14 @@ export default function Projects() {
           </div>
 
           <div className='flex flex-wrap lg:justify-between relative z-[200] justify-center overflow-hidden'>
-            <div className={`fixed ${doClose ? "left-0" : "left-full"} c-trans top-0 z-[4000000]`}>
+            <div className={`fixed ${doClose ? "left-0" : "left-full"} w-[101.2%] h-full overflow-x-hidden overflow-y-scroll c-trans top-0 z-[4000]`}>
               <ProjectDetail value={projectName} />
             </div>
             {
               names.map((item, idx) => {
                 return (
-                  <div className='p-6'>
-                    <div key={`project-${idx}`}
+                  <div key={`project-pic-${idx}`} className='p-6'>
+                    <div
                     onClick={() => {
                       setDoClose(true)
                       setProjectName(`${item}`)

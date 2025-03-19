@@ -3,10 +3,13 @@ import Skills from './components/Skills'
 import Projects from './components/Projects'
 import Cursor from './extraComponents/Cursor';
 import Footer from './components/Footer';
+import closeContext from './extraComponents/closeContext';
+import { useContext } from 'react';
 
 export default function Home() {
+    const {doClose, setDoClose} = useContext(closeContext)
     return (
-        <div className='w-full md:h-full'>
+        <div className={`w-full h-full ${doClose ? "overflow-y-hidden" : ""}`}>
             <div className="md:block hidden">
                 <Cursor />
             </div>

@@ -81,9 +81,9 @@ export default function ProjectDetail() {
       {
         // project == "/assets/sevenup-owal1RN2.webp" ?
         project == "/src/assets/img/projects/sevenup.webp" ?
-        <div className='w-screen h-screen bg-black overflow-x-hidden flex relative z-[4000]'>
-          <div ref={ref} className={`h-screen bg-yellow-text c-trans`}></div>
-          <div className='p-7 flex md:flex-row flex-col-reverse gap-10 w-full overflow-y-scroll overflow-x-hidden'>
+        <div className='w-full min-h-full bg-black overflow-x-hidden flex relative z-[4000]'>
+          <div ref={ref} className={`min-h-screen bg-yellow-text c-trans`}></div>
+          <div className='p-7 flex md:flex-row flex-col-reverse gap-10 w-full overflow-x-hidden'>
             <div className='md:w-[62vw] w-full h-auto flex flex-col md:gap-20 gap-7 c-trans' ref={imgs}>
               <img src={sevenup} alt="7up Site Redesign" className='w-full' />
               <img src={sevenup2} alt="Library MS" className='w-full' />
@@ -135,7 +135,7 @@ export default function ProjectDetail() {
         </div>
         :
         project == "/src/assets/img/projects/store.webp?t=1742396682935" ?
-        <div className='w-screen h-screen bg-black overflow-x-hidden flex relative z-[4000]'>
+        <div className='w-screen min-h-full bg-black overflow-x-hidden flex relative z-[4000]'>
           <div ref={ref} className={`h-screen bg-yellow-text c-trans`}></div>
           <div className='p-7 flex md:flex-row flex-col-reverse gap-10 w-full overflow-y-scroll overflow-x-hidden'>
             <div className='md:w-[62vw] w-full h-auto flex flex-col md:gap-20 gap-7 c-trans' ref={imgs}>
@@ -197,8 +197,61 @@ export default function ProjectDetail() {
           </div>
         </div>
         :
+        project == "/src/assets/img/projects/music_player.webp" ?
+        <div className='w-full min-h-full bg-black overflow-x-hidden flex relative z-[4000]'>
+          <div ref={ref} className={`min-h-screen bg-yellow-text c-trans`}></div>
+          <div className='p-7 flex md:flex-row flex-col-reverse gap-10 w-full overflow-x-hidden'>
+            <div className='md:w-[62vw] w-full h-auto flex flex-col md:gap-20 gap-7 c-trans' ref={imgs}>
+              <img src={sevenup} alt="7up Site Redesign" className='w-full' />
+              <img src={sevenup2} alt="Library MS" className='w-full' />
+              <img src={sevenup1} alt="Library MS" className='w-full' />
+            </div>
+            <div className='md:w-[36vw] w-full'>
+              <button title='Go Back' className='cursor-none mt-5 mb-9 c-trans-2' onClick={() => {
+                  setTimeout(() => {
+                    setProject("");
+                  }, 400)
+                  setDoClose(false)
+                }}>
+                <FaArrowLeft className='cursor-none hover-text bg-yellow-text w-7 h-7 p-[6.5px] rounded-full' />
+              </button>
+              <div className='text-white relative overflow-hidden'>
+                <div className='w-full h-9 absolute c-trans-2 bg-yellow-text' ref={yellowStripe}></div>
+                <h3 className='font-poppins-semibold text-3xl text-wrap c-trans' ref={titleRef}>Music Player</h3>
+                <p className='eTexts font-poppins-regular my-7 c-trans'>The 7Up website has been redesigned with dynamic elements to enhance user interaction. The 7Up can moves in response to the mouse scroll, creating a playful and engaging effect. Additionally, a smooth horizontal scroll animation powered by GSAP (GreenSock Animation Platform) adds a visually captivating navigation experience.</p>
+              </div>
 
-        <div className='w-screen h-screen bg-black overflow-x-hidden flex relative z-[4000]'>
+              <div className='eTexts text-white c-trans'>
+                <h4 className='font-poppins-semibold text-2xl'>Features:</h4>
+                <ol className='list-decimal pl-8 py-3 font-poppins-regular'>
+                  <li className='p-1'>Cane move with Mouse Scroll</li>
+                  <li className='py-1'>7up Products</li>
+                  <li className='py-1'>Smooth Scroll</li>
+                </ol>
+              </div>
+
+              <div className='eTexts text-white font-poppins-regular py-3 c-trans'>
+                <h4 className='font-poppins-semibold text-2xl'>Technologies Used:</h4>
+                <ul className='list-disc pl-8 flex flex-col gap-1 pt-3'>
+                  <li><b>React:</b> for Single-Page Interactive Experience.</li>
+                  <li><b>GSAP:</b> Playful touch to the Interface.</li>
+                  <li><b>Locomotive Scroll:</b> Smooth Scrolling.</li>
+                </ul>
+              </div>
+
+              <div className='eTexts relative w-fit overflow-hidden rounded-lg hover-text flex mt-7 c-trans'>
+                <Link to={"https://7up-site-redesign.vercel.app"} target='_blank'
+                className='visit-btn cursor-none border-[3px] border-yellow-text text-xl text-yellow-text font-poppins-medium px-7 rounded-lg py-2 group'>
+                  <span className='relative z-30 group-hover:text-dark-gray'>
+                    Visit
+                  </span>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+        :
+        <div className='w-screen min-h-full bg-black overflow-x-hidden flex relative z-[4000]'>
           <div ref={ref} className={`h-screen bg-yellow-text c-trans`}></div>
           <div className='p-7 flex md:flex-row flex-col-reverse gap-10 w-full overflow-y-scroll overflow-x-hidden'>
             <div className='md:w-[62vw] w-full h-auto flex flex-col gap-20 c-trans' ref={imgs}>
