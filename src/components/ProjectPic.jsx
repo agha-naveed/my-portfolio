@@ -73,7 +73,6 @@ export default function ProjectPic({data, myClass}) {
   const [src, setSrc] = useState('')
 
   useEffect(() => {
-    console.log("This is my project: "+project)
     const observer = new IntersectionObserver(
       (entries) => {
         const entry = entries[0];
