@@ -7,7 +7,7 @@ import closeContext from './extraComponents/closeContext';
 import { useContext } from 'react';
 
 export default function Home() {
-    const {doClose, setDoClose} = useContext(closeContext)
+    const {doClose} = useContext(closeContext)
     return (
         <div className={`w-full h-full ${doClose ? "overflow-y-hidden" : ""}`}>
             <div className="md:block hidden">

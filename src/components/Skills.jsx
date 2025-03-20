@@ -28,7 +28,7 @@ export default function Skills() {
 
 
   return (
-    <div className='w-full h-auto bg-light-gray p-40-80 relative z-20'>
+    <div className='w-full h-auto bg-light-gray p-40-80 relative z-20' id='skills-section'>
       
       <div className="container mx-auto relative items-center flex flex-col gap-20 py-20">
 
