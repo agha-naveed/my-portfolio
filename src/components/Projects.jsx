@@ -1,12 +1,10 @@
 import React, { useContext, useEffect, useState } from 'react'
 import ParticlesComponent from './ParticlesComponent'
 import ProjectPic from './ProjectPic'
-import chatbot from '../assets/img/projects/chatbot.webp'
 import libLms from '../assets/img/projects/lib_lms.webp'
 import sevenup from '../assets/img/projects/sevenup.webp'
 import store from '../assets/img/projects/store.webp'
 import musicPlayer from '../assets/img/projects/music_player.webp'
-import otpGen from '../assets/img/projects/otp_generator.webp'
 import OtherProject from '../extraComponents/OtherProject'
 import ProjectDetail from '../extraComponents/ProjectDetail'
 import contextJS from '../extraComponents/context'
@@ -15,18 +13,18 @@ import closeContext from '../extraComponents/closeContext'
 
 export default function Projects() {
   const [projectName, setProjectName] = useState('')
-  const names = [store, sevenup, libLms, musicPlayer, chatbot, otpGen]
+  const names = [store, sevenup, libLms, musicPlayer]
   const {setProject} = useContext(contextJS)
   const {doClose, setDoClose} = useContext(closeContext)
 
   useEffect(() => {
     setDoClose(false)
   }, [])
-  useEffect(() => {
-    names.map((item) => {
-      console.log(item)
-    })
-  }, [])
+  // useEffect(() => {
+  //   names.map((item) => {
+  //     console.log(item)
+  //   })
+  // }, [])
   useEffect(() => {
     if(projectName.length > 0) {
       setDoClose(true)

@@ -81,8 +81,7 @@ export default function ProjectDetail() {
   return (
     <>
       {
-        // project == "/assets/sevenup-owal1RN2.webp" ?
-        project == "/src/assets/img/projects/sevenup.webp" ?
+        project == "/assets/sevenup-owal1RN2.webp" ?
         <div className='w-full min-h-full bg-black overflow-x-hidden flex relative z-[4000]'>
           <div ref={ref} className={`min-h-screen bg-yellow-text c-trans`}></div>
           <div className='p-7 flex md:flex-row flex-col-reverse gap-10 w-full overflow-x-hidden'>
@@ -136,7 +135,7 @@ export default function ProjectDetail() {
           </div>
         </div>
         :
-        project == "/src/assets/img/projects/store.webp" ?
+        project == "/assets/store-JUvzdpkM.webp" ?
         <div className='w-screen min-h-full bg-black overflow-x-hidden flex relative z-[4000]'>
           <div ref={ref} className={`h-screen bg-yellow-text c-trans`}></div>
           <div className='p-7 flex md:flex-row flex-col-reverse gap-10 w-full overflow-y-scroll overflow-x-hidden'>
@@ -199,7 +198,7 @@ export default function ProjectDetail() {
           </div>
         </div>
         :
-        project == "/src/assets/img/projects/music_player.webp" ?
+        project == "/assets/music_player-C9DeQ6Rj.webp" ?
         <div className='w-full min-h-full bg-black overflow-x-hidden flex relative z-[4000]'>
           <div ref={ref} className={`min-h-screen bg-yellow-text c-trans`}></div>
           <div className='p-7 flex md:flex-row flex-col-reverse gap-10 w-full overflow-x-hidden'>
