@@ -49,7 +49,7 @@ export default function Navbar() {
 
 
       <div className='flex justify-center'>
-        <nav className={`content-center transition-all bg-dark-gray rounded-lg px-2 text-text-clr md:justify-center md:w-fit w-full md:flex ${toggleMenu ? "grid" : "hidden"} text-center items-center text-[18.5px] fixed top-0`}>
+        <nav className={`content-center transition-all bg-dark-gray rounded-lg px-2 text-text-clr md:justify-center md:w-fit w-full md:flex ${toggleMenu ? "grid" : "hidden"} text-center items-center text-[18.5px]`}>
         
           <ul className='flex md:flex-row flex-col lg:w-fit w-full'>
             <li className='py-2'><Link to={"/"} className='hover-text md:px-[18px] md:py-[8px] !text-white'>Home</Link></li>
