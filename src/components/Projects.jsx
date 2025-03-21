@@ -5,6 +5,7 @@ import libLms from '../assets/img/projects/lib_lms.webp'
 import sevenup from '../assets/img/projects/sevenup.webp'
 import store from '../assets/img/projects/store.webp'
 import musicPlayer from '../assets/img/projects/music_player.webp'
+import pharmacy from '../assets/img/projects/pharmacy.webp'
 import OtherProject from '../extraComponents/OtherProject'
 import ProjectDetail from '../extraComponents/ProjectDetail'
 import contextJS from '../extraComponents/context'
@@ -13,18 +14,13 @@ import closeContext from '../extraComponents/closeContext'
 
 export default function Projects() {
   const [projectName, setProjectName] = useState('')
-  const names = [store, sevenup, libLms, musicPlayer]
+  const names = [store, sevenup, libLms, pharmacy, musicPlayer]
   const {setProject} = useContext(contextJS)
   const {doClose, setDoClose} = useContext(closeContext)
 
   useEffect(() => {
     setDoClose(false)
   }, [])
-  // useEffect(() => {
-  //   names.map((item) => {
-  //     console.log(item)
-  //   })
-  // }, [])
   useEffect(() => {
     if(projectName.length > 0) {
       setDoClose(true)
