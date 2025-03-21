@@ -10,6 +10,11 @@ import store1 from '../assets/img/projects/store/1.webp'
 import store2 from '../assets/img/projects/store/2.webp'
 import m_player1 from '../assets/img/projects/music_player/1.webp'
 import m_player2 from '../assets/img/projects/music_player/2.webp'
+import ph1 from '../assets/img/projects/pharmacy/1.webp'
+import ph2 from '../assets/img/projects/pharmacy/2.webp'
+import ph3 from '../assets/img/projects/pharmacy/3.webp'
+import ph4 from '../assets/img/projects/pharmacy/4.webp'
+import ph5 from '../assets/img/projects/pharmacy/5.webp'
 import { Link } from 'react-router';
 import contextJS from './context';
 import closeContext from './closeContext';
@@ -36,7 +41,7 @@ export default function ProjectDetail() {
   }, [])
 
   useEffect(() => {
-  
+    console.log(project)
     let images = imgs.current
     let titleRf = titleRef.current
     let yellowStrip = yellowStripe.current
@@ -221,6 +226,63 @@ export default function ProjectDetail() {
               <div className='text-white relative overflow-hidden'>
                 <div className='w-full h-9 absolute c-trans-2 bg-yellow-text' ref={yellowStripe}></div>
                 <h3 className='font-poppins-semibold text-3xl text-wrap c-trans' ref={titleRef}>Music Player</h3>
+                <p className='eTexts font-poppins-regular my-7 c-trans'>The Music Player marks a novel, web-based music application developed using HTML, CSS, and JavaScript. In this project, formidable graphical user interface is fused with some data structures and algorithms aimed at providing an efficient and pleasing music experience.</p>
+              </div>
+
+              <div className='eTexts text-white c-trans'>
+                <h4 className='font-poppins-semibold text-2xl'>Features:</h4>
+                <ol className='list-decimal pl-8 py-3 font-poppins-regular'>
+                  <li className='p-1'><b>Stunning GUI:</b> Experience an aesthetically pleasing and interactive interface designed with modern HTML and CSS.</li>
+                  <li className='py-1'><b>Advanced Data Structures:</b> Leveraging DSA concepts manages your music library efficiently, ensuring smooth playback and easy organization of your tracks.</li>
+                  <li className='py-1'>Smooth Scroll</li>
+                </ol>
+              </div>
+
+              <div className='eTexts text-white font-poppins-regular py-3 c-trans'>
+                <h4 className='font-poppins-semibold text-2xl'>Data Structures:</h4>
+                <ul className='list-disc pl-8 flex flex-col gap-1 pt-3'>
+                  <li><b>Array:</b> Manages Playlists.</li>
+                  <li><b>Doubly Linked List:</b> Allows easy forward and backward navigation through playlists.</li>
+                  <li><b>Stack:</b> Manages and displays searched items efficiently.</li>
+                  <li><b>Bubble Sort:</b> Organizes playlists with effective sorting.</li>
+                </ul>
+              </div>
+
+              <div className='eTexts relative w-fit overflow-hidden rounded-lg hover-text flex mt-7 c-trans'>
+                <Link to={"https://agha-naveed.github.io/music-player"} target='_blank'
+                className='visit-btn cursor-none border-[3px] border-yellow-text text-xl text-yellow-text font-poppins-medium px-7 rounded-lg py-2 group'>
+                  <span className='relative z-30 group-hover:text-dark-gray'>
+                    Visit
+                  </span>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+        :
+        project == "/src/assets/img/projects/pharmacy.webp?t=1742547051237" ?
+        <div className='w-full min-h-full bg-black overflow-x-hidden flex relative z-[4000]'>
+          <div ref={ref} className={`min-h-screen bg-yellow-text c-trans`}></div>
+          <div className='p-7 flex md:flex-row flex-col-reverse gap-10 w-full overflow-x-hidden'>
+            <div className='md:w-[62vw] w-full h-auto flex flex-col md:gap-20 gap-7 c-trans' ref={imgs}>
+              <img src={ph1} alt="Pharmacy Software UI" className='w-full' />
+              <img src={ph2} alt="Pharmacy Software UI" className='w-full' />
+              <img src={ph3} alt="Pharmacy Software UI" className='w-full' />
+              <img src={ph4} alt="Pharmacy Software UI" className='w-full' />
+              <img src={ph5} alt="Pharmacy Software UI" className='w-full' />
+            </div>
+            <div className='md:w-[36vw] w-full'>
+              <button title='Go Back' className='cursor-none mt-5 mb-9 c-trans-2' onClick={() => {
+                  setTimeout(() => {
+                    setProject("");
+                  }, 400)
+                  setDoClose(false)
+                }}>
+                <FaArrowLeft className='cursor-none hover-text bg-yellow-text w-7 h-7 p-[6.5px] rounded-full' />
+              </button>
+              <div className='text-white relative overflow-hidden'>
+                <div className='w-full h-9 absolute c-trans-2 bg-yellow-text' ref={yellowStripe}></div>
+                <h3 className='font-poppins-semibold text-3xl text-wrap c-trans' ref={titleRef}>Pharmacy Web App</h3>
                 <p className='eTexts font-poppins-regular my-7 c-trans'>The Music Player marks a novel, web-based music application developed using HTML, CSS, and JavaScript. In this project, formidable graphical user interface is fused with some data structures and algorithms aimed at providing an efficient and pleasing music experience.</p>
               </div>
 

@@ -14,7 +14,7 @@ import closeContext from '../extraComponents/closeContext'
 
 export default function Projects() {
   const [projectName, setProjectName] = useState('')
-  const names = [store, sevenup, libLms, pharmacy, musicPlayer]
+  const names = [store, sevenup, libLms, pharmacy, musicPlayer, pharmacy]
   const {setProject} = useContext(contextJS)
   const {doClose, setDoClose} = useContext(closeContext)
 
@@ -94,16 +94,14 @@ export default function Projects() {
             {
               names.map((item, idx) => {
                 return (
-                  <div key={`project-pic-${idx}`} className='p-6'>
-                    <div
-                    onClick={() => {
-                      setDoClose(true)
-                      setProjectName(`${item}`)
-                      setProject(item)
-                    }
-                    }>
-                      <ProjectPic data={item} myClass={`${item}`} />
-                    </div>
+                  <div className='p-6' key={`project-pic-${idx}`}
+                  onClick={() => {
+                    setDoClose(true)
+                    setProjectName(`${item}`)
+                    setProject(item)
+                  }
+                  }>
+                    <ProjectPic data={item} myClass={`${item}`} />
                   </div>
                 )
               })
