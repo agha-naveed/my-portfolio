@@ -339,39 +339,21 @@ export default function ProjectDetail() {
               <div className='text-white relative overflow-hidden'>
                 <div className='w-full h-9 absolute c-trans-2 bg-yellow-text' ref={yellowStripe}></div>
                 <h3 className='font-poppins-semibold text-3xl text-wrap c-trans' ref={titleRef}>AI Chatbot</h3>
-                <p className='eTexts font-poppins-regular my-7 c-trans'>Welcome to the Library Management System (LMS) software. This application is designed to efficiently manage library operations using Java programming language, SQL for database management, and MS Access as the backend database.</p>
+                <p className='eTexts font-poppins-regular my-7 c-trans'>Welcome to the Chatbot project! A modern, responsive chatbot with an intuitive and polished user interface.
+                </p>
               </div>
 
               <div className='eTexts text-white c-trans'>
                 <h4 className='font-poppins-semibold text-2xl'>Features:</h4>
                 <ol className='list-decimal pl-8 py-3 font-poppins-regular'>
-                  <li className='p-1'>Login System
-                    <ul className='list-disc pl-5 py-1'>
-                      <li>To access the LMS, users must authenticate through a login screen. This ensures security and restricts unauthorized access.</li>
-                    </ul>
-                  </li>
-
-                  <li className='py-1'>Dashboard
-                    <ul className='list-disc pl-5 py-1'>
-                      <li>Upon successful login, users are presented with a comprehensive dashboard</li>
-                      <li>Library Statistics</li>
-                      <li>Book Management</li>
-                    </ul>
-                  </li>
+                  <li className='p-1'><b>Interactive Chatbot: </b>Powered by the AI API, the chatbot provides engaging and dynamic interactions.</li>
+                  <li className='p-1'><b>Modern Styling: </b>TailwindCSS enables a sleek, modern design that is both functional and visually appealing.</li>
+                  <li className='p-1'><b>Responsive Design: </b>The user interface adapts seamlessly to different screen sizes, ensuring an optimal experience across all devices.</li>
                 </ol>
               </div>
 
-              <div className='eTexts text-white font-poppins-regular py-3 c-trans'>
-                <h4 className='font-poppins-semibold text-2xl'>System Requirements:</h4>
-                <ul className='list-disc pl-8 flex flex-col gap-1 pt-3'>
-                  <li><b>Java:</b> Ensure Java Runtime Environment (JRE) is installed.</li>
-                  <li><b>Database:</b> Requires MS Access installed with proper permissions.</li>
-                  <li><b>SQL:</b> Utilizes SQL queries for database operations.</li>
-                </ul>
-              </div>
-
               <div className='eTexts relative w-fit overflow-hidden rounded-lg hover-text flex mt-7 c-trans'>
-                <Link to={"https://github.com/agha-naveed/library-management-system"} target='_blank'
+                <Link to={"https://agha-ai.vercel.app"} target='_blank'
                 className='visit-btn cursor-none border-[3px] border-yellow-text text-xl text-yellow-text font-poppins-medium px-7 rounded-lg py-2 group'>
                   <span className='relative z-30 group-hover:text-dark-gray'>
                     Visit
