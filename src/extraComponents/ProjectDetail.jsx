@@ -45,7 +45,6 @@ export default function ProjectDetail() {
   }, [])
 
   useEffect(() => {
-    console.log(project)
     let images = imgs.current
     let titleRf = titleRef.current
     let yellowStrip = yellowStripe.current
@@ -322,7 +321,8 @@ export default function ProjectDetail() {
           </div>
         </div>
         :
-        project == "/src/assets/img/projects/chatbot.webp" ?
+        // project == "/src/assets/img/projects/chatbot.webp" ?
+        project == "/assets/chatbot-QzexNphD.webp"?
         <div className='w-screen min-h-full bg-black overflow-x-hidden flex relative z-[4000]'>
           <div ref={ref} className={`h-screen bg-yellow-text c-trans`}></div>
           <div className='p-7 flex md:flex-row flex-col-reverse gap-10 w-full overflow-y-scroll overflow-x-hidden'>
