@@ -15,6 +15,10 @@ import ph2 from '../assets/img/projects/pharmacy/2.webp'
 import ph3 from '../assets/img/projects/pharmacy/3.webp'
 import ph4 from '../assets/img/projects/pharmacy/4.webp'
 import ph5 from '../assets/img/projects/pharmacy/5.webp'
+import chatbot1 from '../assets/img/projects/chatbot/1.webp'
+import chatbot2 from '../assets/img/projects/chatbot/2.webp'
+import chatbot3 from '../assets/img/projects/chatbot/3.webp'
+import chatbot4 from '../assets/img/projects/chatbot/4.webp'
 import { Link } from 'react-router';
 import contextJS from './context';
 import closeContext from './closeContext';
@@ -308,6 +312,66 @@ export default function ProjectDetail() {
 
               <div className='eTexts relative w-fit overflow-hidden rounded-lg hover-text flex mt-7 c-trans'>
                 <Link to={"https://agha-naveed.github.io/music-player"} target='_blank'
+                className='visit-btn cursor-none border-[3px] border-yellow-text text-xl text-yellow-text font-poppins-medium px-7 rounded-lg py-2 group'>
+                  <span className='relative z-30 group-hover:text-dark-gray'>
+                    Visit
+                  </span>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+        :
+        project == "/src/assets/img/projects/chatbot.webp" ?
+        <div className='w-screen min-h-full bg-black overflow-x-hidden flex relative z-[4000]'>
+          <div ref={ref} className={`h-screen bg-yellow-text c-trans`}></div>
+          <div className='p-7 flex md:flex-row flex-col-reverse gap-10 w-full overflow-y-scroll overflow-x-hidden'>
+            <div className='md:w-[62vw] w-full h-auto flex flex-col gap-20 c-trans' ref={imgs}>
+              <img src={chatbot1} alt="Library MS" className='w-full' />
+              <img src={chatbot2} alt="Library MS" className='w-full' />
+              <img src={chatbot3} alt="Library MS" className='w-full' />
+              <img src={chatbot4} alt="Library MS" className='w-full' />
+            </div>
+            <div className='md:w-[36vw] w-full'>
+              <button title='Go Back' className='cursor-none mt-5 mb-9' onClick={() => {setProject(""); setDoClose(false)}}>
+                <FaArrowLeft className='cursor-none hover-text bg-yellow-text w-7 h-7 p-[6.5px] rounded-full' />
+              </button>
+              <div className='text-white relative overflow-hidden'>
+                <div className='w-full h-9 absolute c-trans-2 bg-yellow-text' ref={yellowStripe}></div>
+                <h3 className='font-poppins-semibold text-3xl text-wrap c-trans' ref={titleRef}>AI Chatbot</h3>
+                <p className='eTexts font-poppins-regular my-7 c-trans'>Welcome to the Library Management System (LMS) software. This application is designed to efficiently manage library operations using Java programming language, SQL for database management, and MS Access as the backend database.</p>
+              </div>
+
+              <div className='eTexts text-white c-trans'>
+                <h4 className='font-poppins-semibold text-2xl'>Features:</h4>
+                <ol className='list-decimal pl-8 py-3 font-poppins-regular'>
+                  <li className='p-1'>Login System
+                    <ul className='list-disc pl-5 py-1'>
+                      <li>To access the LMS, users must authenticate through a login screen. This ensures security and restricts unauthorized access.</li>
+                    </ul>
+                  </li>
+
+                  <li className='py-1'>Dashboard
+                    <ul className='list-disc pl-5 py-1'>
+                      <li>Upon successful login, users are presented with a comprehensive dashboard</li>
+                      <li>Library Statistics</li>
+                      <li>Book Management</li>
+                    </ul>
+                  </li>
+                </ol>
+              </div>
+
+              <div className='eTexts text-white font-poppins-regular py-3 c-trans'>
+                <h4 className='font-poppins-semibold text-2xl'>System Requirements:</h4>
+                <ul className='list-disc pl-8 flex flex-col gap-1 pt-3'>
+                  <li><b>Java:</b> Ensure Java Runtime Environment (JRE) is installed.</li>
+                  <li><b>Database:</b> Requires MS Access installed with proper permissions.</li>
+                  <li><b>SQL:</b> Utilizes SQL queries for database operations.</li>
+                </ul>
+              </div>
+
+              <div className='eTexts relative w-fit overflow-hidden rounded-lg hover-text flex mt-7 c-trans'>
+                <Link to={"https://github.com/agha-naveed/library-management-system"} target='_blank'
                 className='visit-btn cursor-none border-[3px] border-yellow-text text-xl text-yellow-text font-poppins-medium px-7 rounded-lg py-2 group'>
                   <span className='relative z-30 group-hover:text-dark-gray'>
                     Visit

@@ -6,6 +6,7 @@ import sevenup from '../assets/img/projects/sevenup.webp'
 import store from '../assets/img/projects/store.webp'
 import musicPlayer from '../assets/img/projects/music_player.webp'
 import pharmacy from '../assets/img/projects/pharmacy.webp'
+import chatbot from '../assets/img/projects/chatbot.webp'
 import OtherProject from '../extraComponents/OtherProject'
 import ProjectDetail from '../extraComponents/ProjectDetail'
 import contextJS from '../extraComponents/context'
@@ -14,7 +15,7 @@ import closeContext from '../extraComponents/closeContext'
 
 export default function Projects() {
   const [projectName, setProjectName] = useState('')
-  const names = [store, sevenup, libLms, pharmacy, musicPlayer, pharmacy]
+  const names = [store, sevenup, libLms, pharmacy, chatbot, musicPlayer]
   const {setProject} = useContext(contextJS)
   const {doClose, setDoClose} = useContext(closeContext)
 
